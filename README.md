@@ -23,6 +23,7 @@ This repo covers Terraform with Hands-on LABs using AWS: Providers, Resources, V
   - [Modules](#modules)
   - [Workspaces](#workspaces)
   - [Backends and Remote States](#backends_remote_states)
+- [Terraform Best Practices](#best_practice)
 - [Terraform Project: AWS - EC2](#project1)
 - [Details](#details)
 - [Other Useful Resources Related Terraform](#resource)
@@ -62,6 +63,8 @@ Why should we use / learn Terraform?
 ### Workspaces <a name="workspaces"></a>
 
 ### Backends and Remote States <a name="backends_remote_states"></a>
+
+## Terraform Best Practices <a name="best_practice"></a>
 
 ## Terraform Project: AWS - EC2 <a name="project1"></a>
 
