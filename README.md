@@ -3,7 +3,7 @@ This repo covers Terraform with Hands-on LABs using AWS: Providers, Resources, V
 
 **Keywords:** Terraform, Infrastructure as Code, AWS, Cloud Provisioning
 
-# Quick Look (HowTo): Scenarios - Hands-on Terraform LABs
+# Quick Look (HowTo): Scenarios - Hands-on LABs
 - [LAB: Terraform Install, AWS Configuration with Terraform]()
 - [LAB: Create Docker Image Using Terraform Without Cloud]()
 - [LAB: Create Basic EC2 (Ubuntu 20.04)]()
