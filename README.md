@@ -1,7 +1,9 @@
-# Fast-Terraform
+# Fast-Terraform (with AWS)
 This repo covers Terraform with Hands-on LABs using AWS: Providers, Resources, Variables, Values, Provisioners, Modules and details. Possible usage scenarios are aimed to update over time.
 
 **Keywords:** Terraform, Infrastructure as Code, AWS, Cloud Provisioning
+
+**PS:** AWS Services are created using Terraform in the LABs. 
 
 # Quick Look (HowTo): Scenarios - Hands-on LABs
 - [LAB: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Install-AWS-Configuration.md)
