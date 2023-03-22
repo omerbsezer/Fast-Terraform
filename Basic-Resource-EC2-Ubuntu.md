@@ -123,8 +123,8 @@ terraform destroy
 
 ![image](https://user-images.githubusercontent.com/10358317/227008272-9838affe-afe6-400d-8391-39fcf47bc5b1.png)
   
-- On AWS EC2 Instances, EC2 was terminated, it'll be disappeared in max. 1 hour:
+- On AWS EC2 Instances, EC2 was terminated, it'll be disappeared in max. 1 hour. Once an EC2 is terminated, that EC2 is deleted permanently:
 
 ![image](https://user-images.githubusercontent.com/10358317/227008611-4c7e0d5f-2765-47f5-9b6f-af78d4d7314f.png)
  
-
+- Destroy command is important to terminate the resources. If you forget the destroy command, your EC2 runs until termination and you MUST pay the usage price of EC2. 
