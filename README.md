@@ -4,9 +4,9 @@ This repo covers Terraform with Hands-on LABs using AWS: Providers, Resources, V
 **Keywords:** Terraform, Infrastructure as Code, AWS, Cloud Provisioning
 
 # Quick Look (HowTo): Scenarios - Hands-on LABs
-- [LAB: Terraform Install, AWS Configuration with Terraform]()
+- [LAB: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Install-AWS-Configuration.md)
 - [LAB: Create Docker Image Using Terraform Without Cloud]()
-- [LAB: Create Basic EC2 (Ubuntu 20.04)]()
+- [LAB: Create Basic Resource EC2 Ubuntu 22.04](https://github.com/omerbsezer/Fast-Terraform/blob/main/Basic-Resource-EC2-Ubuntu.md)
 - [LAB: Create EC2s with Variables, Locals, Output]()
 - [LAB: Create IAM User with Meta Arguments (Count, For_Each, Map)]()
 - [LAB: Create EC2s (Windows 2019 Server, Ubuntu 20.04) with SSH and RDP connections]()
