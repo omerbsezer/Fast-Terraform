@@ -1,2 +1,0 @@
-3 ec2s, output: https://jhooq.com/how-to-use-terraform-output-values/
-for each: https://jhooq.com/terraform-for-and-for-each-loop/
