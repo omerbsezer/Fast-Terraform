@@ -127,9 +127,12 @@ terraform destroy
 
 ![image](https://user-images.githubusercontent.com/10358317/227008611-4c7e0d5f-2765-47f5-9b6f-af78d4d7314f.png)
  
-- Destroy command is important to terminate the resources. If you forget the destroy command, your EC2 runs until termination and you MUST pay the usage price of EC2.
+- Destroy command is important to terminate the resources. 
+- If you forget the destroy command, your EC2 runs until termination and you MUST pay the usage price of EC2.
 
 ![image](https://user-images.githubusercontent.com/10358317/227049834-12b0223c-fd10-46ca-9602-391e6267434f.png)
+
+- It is really IMPORTANT to check whether unnecessary paid services are closed or not.
 
 ![image](https://user-images.githubusercontent.com/10358317/227050101-0dd27ac2-b10f-4812-90f9-18cfbc51de80.png)
 
