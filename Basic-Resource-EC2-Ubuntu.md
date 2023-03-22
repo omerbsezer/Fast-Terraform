@@ -119,7 +119,7 @@ terraform apply
 terraform destroy
 ``` 
 
-![image](https://user-images.githubusercontent.com/10358317/227006493-c63d6ffb-d53a-4357-ba96-1942f8aaa0d4.png)
+![image](https://user-images.githubusercontent.com/10358317/227011791-0cb05a5c-f5cd-4548-93de-5dd7227aec55.png)
 
 ![image](https://user-images.githubusercontent.com/10358317/227008272-9838affe-afe6-400d-8391-39fcf47bc5b1.png)
   
