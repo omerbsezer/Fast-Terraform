@@ -18,7 +18,7 @@ resource "docker_image" "windows" {
   keep_locally = true
 }
 
-# docker container run -p 80:8000 --name=tutorial -dit mcr.microsoft.com/powershell:lts-windowsservercore-1809 powershell
+# docker container run -p 80:8000 --name=tutorial -it mcr.microsoft.com/powershell:lts-windowsservercore-1809 powershell
 resource "docker_container" "windows" {
   image = docker_image.windows.image_id
   name  = "tutorial"
@@ -26,7 +26,6 @@ resource "docker_container" "windows" {
   stdin_open = true             # docker run -i
   tty        = true             # docker run -t
   
-  attach     = true             # docker run -d
   entrypoint = ["powershell"]
   
   ports {
