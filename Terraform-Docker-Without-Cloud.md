@@ -54,7 +54,7 @@ resource "docker_container" "windows" {
 ``` 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/labs/terraform-docker-without-cloud/main.tf
 
-![image](https://user-images.githubusercontent.com/10358317/227278811-3ab15947-4dd2-4d43-aad1-b9101bf3d6e9.png)
+![image](https://user-images.githubusercontent.com/10358317/227287393-09ff08a1-9db2-4fc5-98e8-1a20c2bdf9be.png)
 
 - Run init command:
 
