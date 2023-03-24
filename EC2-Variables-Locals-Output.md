@@ -231,6 +231,8 @@ locals {
 .....
 ```
 
+![image](https://user-images.githubusercontent.com/10358317/227581270-6cdba303-e29c-486e-abf3-831529a459b9.png)
+
 - Run plan command with PROD tfvar file:
 
 ``` 
