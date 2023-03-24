@@ -17,28 +17,51 @@ locals {
   staging_env = "staging"
 }
 
-resource "aws_vpc" "staging-vpc" {
+resource "aws_vpc" "my_vpc" {
   cidr_block = "10.0.0.0/16"
-
+  enable_dns_hostnames = true
   tags = {
     Name = "${local.staging_env}-vpc-tag"
   }
 }
 
-resource "aws_subnet" "staging-subnet" {
-  vpc_id = aws_vpc.staging-vpc.id
+resource "aws_subnet" "my_subnet" {
+  vpc_id = aws_vpc.my_vpc.id
   cidr_block = "10.0.0.0/16"
-
+  availability_zone = var.availability_zone
   tags = {
     Name = "${local.staging_env}-subnet-tag"
   }
 }
 
+resource "aws_internet_gateway" "my_vpc_igw" {
+  vpc_id = aws_vpc.my_vpc.id
+  tags = {
+    Name = "${local.staging_env}-Internet Gateway"
+  }
+}
+
+resource "aws_route_table" "my_vpc_eu_central_1c_public" {
+    vpc_id = aws_vpc.my_vpc.id
+    route {
+        cidr_block = "0.0.0.0/0"
+        gateway_id = aws_internet_gateway.my_vpc_igw.id
+    }
+    tags = {
+        Name = "${local.staging_env}- Public Subnet Route Table"
+    }
+}
+resource "aws_route_table_association" "my_vpc_eu_central_1c_public" {
+    subnet_id      = aws_subnet.my_subnet.id
+    route_table_id = aws_route_table.my_vpc_eu_central_1c_public.id
+}
+
 resource "aws_instance" "ec2_example" {
    
-   ami           = var.ami
-   instance_type = var.instance_type
-   subnet_id     = aws_subnet.staging-subnet.id
+   ami                         = var.ami
+   instance_type               = var.instance_type
+   subnet_id                   = aws_subnet.my_subnet.id
+   associate_public_ip_address = true
    
    tags = {
            Name = var.tag
@@ -67,6 +90,8 @@ output "instance_ips" {
 
 # terraform plan --var-file="terraform-dev.tfvars"
 # terraform apply --var-file="terraform-dev.tfvars"
+# terraform destroy --var-file="terraform-dev.tfvars"
 
 # terraform plan --var-file="terraform-prod.tfvars"
 # terraform apply --var-file="terraform-prod.tfvars"
+# terraform destroy --var-file="terraform-prod.tfvars"

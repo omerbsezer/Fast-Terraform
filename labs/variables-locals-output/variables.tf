@@ -14,7 +14,14 @@ variable "location" {
     default = "eu-central-1"
 }
 
+variable  "availability_zone" {
+    type = string
+    description = "The project availability zone"
+    default = "eu-central-1c"
+} 
+
 variable "ami" {
     type = string
     description = "The project region"
 }
+
