@@ -109,7 +109,7 @@ output "instance_ips" {
 ![image](https://user-images.githubusercontent.com/10358317/227576390-d65cfefb-ac47-4873-9b49-31774174d2d8.png)
 
 
-- Create variable.yaml:
+- Create variables.tf:
 ```
 variable "instance_type" {
     type = string
@@ -221,6 +221,15 @@ terraform destroy --var-file="terraform-dev.tfvars"
 
 ![image](https://user-images.githubusercontent.com/10358317/227575704-5e0dcbc5-8bb4-4009-895e-f6560af461cc.png)
 
+- Update locals for PROD in main.tf:
+
+```
+....
+locals {
+  staging_env = "product"
+}
+.....
+```
 
 - Run plan command with PROD tfvar file:
 
@@ -228,14 +237,39 @@ terraform destroy --var-file="terraform-dev.tfvars"
 terraform plan --var-file="terraform-prod.tfvars"
 ``` 
 
+![image](https://user-images.githubusercontent.com/10358317/227578564-ff43db34-2e35-45d8-bffa-f5d132dd0967.png)
+
 - Run apply command to create resources, with PROD tfvar file. Then, Terraform asks to confirm, write "yes":
 
 ``` 
 terraform apply --var-file="terraform-prod.tfvars"
 ```  
 
+![image](https://user-images.githubusercontent.com/10358317/227578878-4d3e2d4c-2878-4b90-8751-246598748da6.png)
+
+![image](https://user-images.githubusercontent.com/10358317/227579018-07f2cccb-28a2-407b-805d-fdf7e6a47ed7.png)
+
+
+- On AWS EC2 Instances:
+
+![image](https://user-images.githubusercontent.com/10358317/227579473-a9f883ee-28d7-4a39-9647-6371712303ea.png)
+
+- On VPC Section:
+
+![image](https://user-images.githubusercontent.com/10358317/227579952-e70efbd3-0d42-46b7-b661-ad7b4f9ba41e.png)
+
+
 - Destroy PROD Environment:
 
 ```
-terraform destroy
+terraform destroy --var-file="terraform-prod.tfvars"
 ```
+
+![image](https://user-images.githubusercontent.com/10358317/227580295-cb38df2d-0dbe-457f-bc10-d4cd89e952ba.png)
+
+![image](https://user-images.githubusercontent.com/10358317/227580410-a3c039ac-82f4-4078-81a0-8342b6d8fa78.png)
+
+- On EC2 Instances, all instances are terminated:
+
+![image](https://user-images.githubusercontent.com/10358317/227580749-328c2a30-ae0c-441f-9fa0-e40f20fa818b.png)
+
