@@ -18,7 +18,7 @@ locals {
 }
 
 resource "aws_vpc" "staging-vpc" {
-  cidr_block = "10.5.0.0/16"
+  cidr_block = "10.0.0.0/16"
 
   tags = {
     Name = "${local.staging_env}-vpc-tag"
@@ -27,7 +27,7 @@ resource "aws_vpc" "staging-vpc" {
 
 resource "aws_subnet" "staging-subnet" {
   vpc_id = aws_vpc.staging-vpc.id
-  cidr_block = "10.5.0.0/16"
+  cidr_block = "10.0.0.0/16"
 
   tags = {
     Name = "${local.staging_env}-subnet-tag"
@@ -63,10 +63,10 @@ output "instance_ips" {
   }
 } 
 
-# terraform init --var-file="terraform-dev.tfvars"
+# terraform init 
+
 # terraform plan --var-file="terraform-dev.tfvars"
 # terraform apply --var-file="terraform-dev.tfvars"
 
-# terraform init --var-file="terraform-prod.tfvars"
 # terraform plan --var-file="terraform-prod.tfvars"
 # terraform apply --var-file="terraform-prod.tfvars"
