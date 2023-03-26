@@ -10,7 +10,7 @@ This repo covers Terraform with Hands-on LABs using AWS: Providers, Resources, V
 - [LAB: Create Docker Image Using Terraform Without Cloud](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Docker-Without-Cloud.md)
 - [LAB: Create Basic Resource EC2 Ubuntu 22.04](https://github.com/omerbsezer/Fast-Terraform/blob/main/Basic-Resource-EC2-Ubuntu.md)
 - [LAB: Create EC2s with Variables, Locals, Output](https://github.com/omerbsezer/Fast-Terraform/blob/main/EC2-Variables-Locals-Output.md)
-- [LAB: Create IAM User with Meta Arguments (Count, For_Each, Map)]()
+- [LAB: Create IAM Users, User Groups, Policies, Attachment Policy-User Group, with Meta Arguments (Count, For_Each, Map)]()
 - [LAB: Create EC2s (Windows 2019 Server, Ubuntu 20.04) with SSH and RDP connections]()
 - [LAB: Use Data Sources with EC2]()
 - [LAB: EC2 With Provisioners, Null Resources]()
