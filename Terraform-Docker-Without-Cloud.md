@@ -16,7 +16,7 @@ This scenario shows:
   - Windows: https://docs.docker.com/desktop/install/windows-install/
   - Mac: https://docs.docker.com/desktop/install/mac-install/ 
 
-### Steps
+## Steps
 
 - Create main.tf and copy the code:
  
