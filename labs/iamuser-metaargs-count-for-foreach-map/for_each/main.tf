@@ -16,7 +16,7 @@ terraform {
 #####################################################
 # User - User Group Attachment (With Index Count)
 resource "aws_iam_user_group_membership" "user1_group_attach" {
-  user = aws_iam_user.user_example[0].name
+  user = aws_iam_user.user_example["username1_admin_dev"].name
 
   groups = [
     aws_iam_group.admin_group.name,
@@ -25,7 +25,7 @@ resource "aws_iam_user_group_membership" "user1_group_attach" {
 }
 
 resource "aws_iam_user_group_membership" "user2_group_attach" {
-  user = aws_iam_user.user_example[1].id
+  user = aws_iam_user.user_example["username2_admin"].id
 
   groups = [
     aws_iam_group.admin_group.name
@@ -33,7 +33,7 @@ resource "aws_iam_user_group_membership" "user2_group_attach" {
 }
 
 resource "aws_iam_user_group_membership" "user3_group_attach" {
-  user = aws_iam_user.user_example[2].name
+  user = aws_iam_user.user_example["username3_dev_s3"].name
 
   groups = [
     aws_iam_group.dev_group.name
@@ -58,7 +58,7 @@ data "aws_iam_policy_document" "admin_policy" {
   }
 }
 resource "aws_iam_policy" "admin_policy" {
-  name        = "Admin Policy"
+  name        = "admin-policy"
   description = "Admin policy"
   policy      = data.aws_iam_policy_document.admin_policy.json
 }
@@ -75,7 +75,7 @@ data "aws_iam_policy_document" "s3_policy" {
 }
 
 resource "aws_iam_policy" "s3_policy" {
-  name        = "S3 Policy"
+  name        = "s3-policy"
   description = "S3 policy"
   policy      = data.aws_iam_policy_document.s3_policy.json
 }
@@ -93,7 +93,7 @@ resource "aws_iam_group_policy_attachment" "dev_group_s3_policy_attach" {
 }
 #####################################################
 # With for_each
-resource "aws_iam_user" "example" {
+resource "aws_iam_user" "user_example" {
   for_each = var.user_names
   name  = each.value
 }
