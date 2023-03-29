@@ -11,9 +11,9 @@ This scenario shows:
 - You should have a look following lab: 
   - [LAB: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Install-AWS-Configuration.md)
 
-### Steps
+## Steps
 
-#### Count
+### Count
 
 - Create main.tf under count directory and copy the code:
  
@@ -190,7 +190,7 @@ terraform destroy
 
 ![image](https://user-images.githubusercontent.com/10358317/228511808-0ce2ba63-a000-4344-bd60-e985bcb46382.png)
 
-#### For Each
+### For Each
 
 - To test "for_each", main.tf under for_each.
 - Some different from previous one: 
@@ -355,7 +355,7 @@ terraform destroy
 ![image](https://user-images.githubusercontent.com/10358317/228517742-bfe17919-ce01-4400-a2ac-dade7a041dbd.png)
 
 
-#### Map
+### Map
 
 - You can also use map to define usernames, following yaml file shows how to use maps
 
