@@ -9,21 +9,6 @@ terraform {
   required_version = ">= 1.2.0"
 }
 
-provider "aws" {
-   region     =  "eu-central-1"
-}
-
-resource "aws_instance" "ec2_example" {
-
-   ami           = "ami-0d1ddd83282187d18" # Ubuntu 22.04 eu-central-1 Frankfurt
-   instance_type = "t2.nano"
-   count = 1
-
-   tags = {
-           Name = "Terraform EC2"
-   }
-
-}
 #####################################################
 # With for_each
 resource "aws_iam_user" "example" {
@@ -31,16 +16,16 @@ resource "aws_iam_user" "example" {
   name  = each.value
 }
 # With Map
-variable "iam_users" {
+variable "user_names" {
   description = "map"
   type        = map(string)
   default     = {
-    user1      = "normal user"
-    user2      = "admin user"
-    user3      = "root user"
+    user1      = "username1"
+    user2      = "username2"
+    user3      = "username3"
   }
 }
 # with for loop on map 
 output "user_with_roles" {
-  value = [for name, role in var.iam_users : "${name} is the ${role}"]
+  value = [for name, role in var.user_names : "${name} is the ${role}"]
 }
