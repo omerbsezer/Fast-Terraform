@@ -57,9 +57,9 @@ This repo covers Terraform with Hands-on LABs using AWS: Providers, Resources, V
 
 Why should we use / learn Terraform?
 - Terraform is cloud-agnostic (in-dependent of Cloud Provider: AWS, Azure, Google Cloud) and popular tool to create/provision Cloud Infrastructure resources / objects (e.g. Virtual Private Cloud, Virtual Machines, Lambda, etc.)
-  - Similar to Native Infrastructure as Code: CloudFormation (AWS), Resource Manager (Azure), Google Cloud Deployment Manager (Google Cloud) 
+  - Similar to Native Infrastructure as Code (IaC): CloudFormation (AWS), Resource Manager (Azure), Google Cloud Deployment Manager (Google Cloud) 
 - It is free, open source (https://github.com/hashicorp/terraform) and has a large community with enterprise support options.
-- Commands, tasks, codes turn into the Infrastructure As Code (IaC).
+- Commands, tasks, codes turn into the IaC.
   - With IaC, tasks is savable, versionable, repetable and testable.
   - With IaC, desired configuration is defined as 'Declerative Way'.
 - **Agentless:** Terraform doesn’t require any software to be installed on the managed infrastructure
@@ -68,7 +68,7 @@ Why should we use / learn Terraform?
   - https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 - Terraform uses a modular structure  
 
-  ![image](https://user-images.githubusercontent.com/10358317/202700302-d651cf08-dd55-44ea-a88c-8ee4186d9438.png) (ref: ibm.github.io)
+![image](https://user-images.githubusercontent.com/10358317/228590709-16eb7cc7-58f2-40f9-ace7-bae7f4309ec7.png)
 
 ## What is Terraform? <a name="what_is_terraform"></a>
 
