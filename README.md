@@ -68,7 +68,8 @@ Why should we use / learn Terraform?
   - https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 - Terraform uses a modular structure  
 
-![image](https://user-images.githubusercontent.com/10358317/228590709-16eb7cc7-58f2-40f9-ace7-bae7f4309ec7.png)
+![image](https://user-images.githubusercontent.com/10358317/228594238-dddc325b-6297-4eec-a1b2-aa3652e3d818.png) (ref: Redis)
+
 
 ## What is Terraform? <a name="what_is_terraform"></a>
 
@@ -109,3 +110,4 @@ Why should we use / learn Terraform?
 ## Other Useful Resources Related Terraform <a name="resource"></a>
 
 ## References <a name="references"></a>
+- Redis: https://developer.redis.com/create/aws/terraform/
