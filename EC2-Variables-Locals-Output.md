@@ -10,7 +10,7 @@ This scenario shows:
 - You should have a look following lab: 
   - [LAB: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Install-AWS-Configuration.md)
 
-### Steps
+## Steps
 
 - Create main.tf and copy the code:
  
