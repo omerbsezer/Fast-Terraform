@@ -3,7 +3,7 @@
 This scenario shows:
 - how to configure your Terraform with AWS
 
-### Steps
+## Steps
 
 - Install Terraform:
   -  https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli 
