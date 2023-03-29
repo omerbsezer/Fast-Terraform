@@ -193,8 +193,8 @@ terraform destroy
 ### For Each
 
 - To test "for_each", main.tf under for_each.
-- Some different from previous one: 
-  - not index, wtih name. e.g. aws_iam_user.user_example["username1_admin_dev"].name
+- Some differents from previous one: 
+  - not index, with name. e.g. aws_iam_user.user_example["username1_admin_dev"].name
   - s3 policy, attachment
   - for_each implementation
   
