@@ -311,13 +311,7 @@ terraform destroy
 
 ![image](https://user-images.githubusercontent.com/10358317/228982134-2a648783-0f11-47e9-865d-1dc92dffdd0f.png)
 
-  
-
-  
-  
-  
-
-
-
-
+- We can also monitor the CPU, Disk, Network Usage on AWS EC2:
+	
+![image](https://user-images.githubusercontent.com/10358317/228983384-7b4a0e36-0605-4f33-901f-2a0ebd79c4f6.png)
 
