@@ -117,11 +117,11 @@ resource "aws_instance" "ubuntu2004" {
 resource "aws_instance" "win2019" {
 	ami                         = "ami-02c2da541ae36c6fc" # Windows 2019 Server eu-central-1 Frankfurt
 	instance_type               = "t2.medium"
-  key_name                    = "testkey"
-  vpc_security_group_ids      = [aws_security_group.allow_ssh.id]
-  subnet_id                   = aws_subnet.public.id  
+        key_name                    = "testkey"
+        vpc_security_group_ids      = [aws_security_group.allow_ssh.id]
+        subnet_id                   = aws_subnet.public.id  
 	associate_public_ip_address = true
-    tags = {
+        tags = {
 		Name = "Win 2019 Server"
 	}
 }
