@@ -146,7 +146,7 @@ resource "aws_instance" "ubuntu2004" {
   associate_public_ip_address = true
   user_data = <<-EOF
 		           #! /bin/bash
-               sudo apt-get update
+                           sudo apt-get update
 		           sudo apt-get install -y apache2
 		           sudo systemctl start apache2
 		           sudo systemctl enable apache2
@@ -160,11 +160,11 @@ resource "aws_instance" "ubuntu2004" {
 resource "aws_instance" "win2019" {
 	ami                         = "ami-02c2da541ae36c6fc" # Windows 2019 Server eu-central-1 Frankfurt
 	instance_type               = "t2.micro"
-  key_name                    = "testkey"
-  vpc_security_group_ids      = [aws_security_group.allow_ssh.id]
-  subnet_id                   = aws_subnet.public.id  
+        key_name                    = "testkey"
+        vpc_security_group_ids      = [aws_security_group.allow_ssh.id]
+        subnet_id                   = aws_subnet.public.id  
 	associate_public_ip_address = true
-    tags = {
+        tags = {
 		Name = "Win 2019 Server"
 	}
 }
