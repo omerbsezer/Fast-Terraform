@@ -1,9 +1,10 @@
 ## LAB: Create EC2s (Windows 2019 Server, Ubuntu 20.04) with SSH and RDP connections
 
 This scenario shows:
-- how to create EC2s (Ubuntu 20.04, Windows 2019 Server)
+- how to create Key-pairs (public and private keys) on AWS.
+- how to create EC2s (Ubuntu 20.04, Windows 2019 Server).
 - how to create Virtual Private Cloud (VPC), VPC Components (Public Subnet, Internet Gateway, Route Table) and link to each others.
-- how to create Security Groups (for SSH and Remote Desktop)
+- how to create Security Groups (for SSH and Remote Desktop).
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/labs/ec2-vpc-ubuntu-win-ssh-rdp/main.tf
 
@@ -16,7 +17,7 @@ This scenario shows:
 
 - SSH key-pairs (public and private key) are used to connect remote server. Public key (xx.pub) is on the remote server, with private key, user can connect using SSH.
 
-- There are 2 ways of creating SSH key-pairs (public and private key):
+- There are 2 ways of creating key-pairs (public and private key):
   - Creating them on Cloud (AWS)
   - Creating them on-premise 
 
