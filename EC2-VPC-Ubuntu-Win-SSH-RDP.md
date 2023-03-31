@@ -18,8 +18,8 @@ This scenario shows:
 - SSH key-pairs (public and private key) are used to connect remote server. Public key (xx.pub) is on the remote server, with private key, user can connect using SSH.
 
 - There are 2 ways of creating key-pairs (public and private key):
-  - Creating them on Cloud (AWS)
-  - Creating them on-premise 
+  - Creating them on cloud (AWS)
+  - Creating them on on-premise 
 
 - Creating key-pairs on AWS: Go to EC2 > Key-pairs
 
