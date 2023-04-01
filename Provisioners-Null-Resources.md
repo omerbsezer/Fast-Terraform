@@ -85,7 +85,7 @@ resource "null_resource" "example" {
 ...
 ``` 
 
-![image](https://user-images.githubusercontent.com/10358317/229301780-05c9978f-15da-44e4-96aa-61b45cc782a3.png)
+![image](https://user-images.githubusercontent.com/10358317/229303293-52a67375-9d3f-43f0-86a3-955ff6e6613a.png)
 
 - Create main.tf
 
