@@ -276,7 +276,7 @@ ifconfig
   
 - Now, we reach Windows using RDP:
   
-![image](https://user-images.githubusercontent.com/10358317/228978962-a1238e08-3e10-4d5f-8af1-6bd66bb383e6.png)
+![image](https://user-images.githubusercontent.com/10358317/229282800-7ee0cd35-fd46-4ece-9b04-45fa5c785fef.png)
   
 - Pinging to Ubuntu20.04 from Windows:
   
