@@ -267,7 +267,7 @@ terraform destroy --var-file="terraform-prod.tfvars"
 
 ![image](https://user-images.githubusercontent.com/10358317/229284826-cbaf8761-e960-44ed-867d-3b1f6e3ae88f.png)
 
-![image](https://user-images.githubusercontent.com/10358317/227580410-a3c039ac-82f4-4078-81a0-8342b6d8fa78.png)
+![image](https://user-images.githubusercontent.com/10358317/229284932-f216c36c-235d-4511-8510-11f613321422.png)
 
 - On EC2 Instances, all instances are terminated:
 
