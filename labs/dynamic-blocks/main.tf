@@ -99,7 +99,7 @@ resource "aws_security_group" "main" {
 resource "aws_instance" "ubuntu2204" {
   ami                         = "ami-0d1ddd83282187d18" # Ubuntu 22.04 eu-central-1 Frankfurt
   instance_type               = "t2.nano"
-  key_name                    = "awskey"
+  key_name                    = "testkey"
   vpc_security_group_ids      = [aws_security_group.main.id]
   subnet_id                   = aws_subnet.public.id
   associate_public_ip_address = true
