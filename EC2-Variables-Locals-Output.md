@@ -219,7 +219,7 @@ terraform destroy --var-file="terraform-dev.tfvars"
 
 ![image](https://user-images.githubusercontent.com/10358317/229284618-506f4daf-70c7-4411-b399-9e865b4d81a1.png)
 
-![image](https://user-images.githubusercontent.com/10358317/227575704-5e0dcbc5-8bb4-4009-895e-f6560af461cc.png)
+![image](https://user-images.githubusercontent.com/10358317/229284719-ac78448b-7386-4fe8-afcc-8f3a6ae6edc8.png)
 
 - Update locals for PROD in main.tf:
 
