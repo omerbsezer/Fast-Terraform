@@ -34,7 +34,7 @@ data "aws_instance" "data_instance" {
     }
 
     depends_on = [
-      "aws_instance.instance"
+      aws_instance.instance
     ]
 } 
 
