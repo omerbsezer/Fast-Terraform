@@ -217,7 +217,7 @@ terraform apply --var-file="terraform-dev.tfvars"
 terraform destroy --var-file="terraform-dev.tfvars"
 ```
 
-![image](https://user-images.githubusercontent.com/10358317/227575492-565b6904-9c3e-485f-8648-7c30767ef020.png)
+![image](https://user-images.githubusercontent.com/10358317/229284618-506f4daf-70c7-4411-b399-9e865b4d81a1.png)
 
 ![image](https://user-images.githubusercontent.com/10358317/227575704-5e0dcbc5-8bb4-4009-895e-f6560af461cc.png)
 
