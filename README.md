@@ -13,7 +13,7 @@ This repo covers Terraform with LABs using AWS: Resources, Data Sources, Variabl
 - [LAB: Create IAM Users, User Groups, Policies, Attachment Policy-User Group, with Meta Arguments (Count, For_Each, Map)](https://github.com/omerbsezer/Fast-Terraform/blob/main/IAM-User-Group-Policy-Count-ForEach-Map.md)
 - [LAB: Create EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](https://github.com/omerbsezer/Fast-Terraform/blob/main/EC2-VPC-Ubuntu-Win-SSH-RDP.md)
 - [LAB: Dynamic Blocks with Security Groups, EC2, VPC](https://github.com/omerbsezer/Fast-Terraform/blob/main/SG-DynamicBlocks-VPC-EC2.md)
-- [LAB: Use Data Sources with EC2 (Depends_on)]()
+- [LAB: Data Sources with EC2 (Depends_on)](https://github.com/omerbsezer/Fast-Terraform/blob/main/Data-Sources-EC2.md)
 - [LAB: EC2 With Provisioners, Null Resources]()
 - [LAB: EC2 With Modules]()
 - [LAB: Workspaces]()
