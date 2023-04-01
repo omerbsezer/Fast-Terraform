@@ -303,7 +303,7 @@ ifconfig
 terraform destroy 
 ``` 
   
-![image](https://user-images.githubusercontent.com/10358317/228981838-0aac4336-9a87-4eb3-bc84-df88db0054ef.png)
+![image](https://user-images.githubusercontent.com/10358317/229281383-6c8e01ea-af3a-4477-9be6-a10096318333.png)
   
 ![image](https://user-images.githubusercontent.com/10358317/229281239-b1713771-2960-4746-a1bd-f7543913bd66.png)
 
