@@ -149,7 +149,7 @@ terraform validate
 terraform plan
 ``` 
 
-![image](https://user-images.githubusercontent.com/10358317/228507492-42db7312-5ccc-4b98-956a-aef9c3177993.png)
+![image](https://user-images.githubusercontent.com/10358317/229285029-7915460b-24fa-472d-bf32-515d389fdd03.png)
 
 - Run apply command:
 
@@ -157,9 +157,9 @@ terraform plan
 terraform apply
 ``` 
 
-![image](https://user-images.githubusercontent.com/10358317/228508039-b05e8c68-b121-4f31-8af8-f7cab9caf1c8.png)
+![image](https://user-images.githubusercontent.com/10358317/229285059-a60d56f4-fe38-43d1-816d-e9537cedf884.png)
 
-![image](https://user-images.githubusercontent.com/10358317/228508497-1499ad15-3999-4d66-be13-0e9fbf5f579d.png)
+![image](https://user-images.githubusercontent.com/10358317/229285114-09358bae-94dc-49b1-bec4-a7951a6bd3d8.png)
 
 - On AWS > IAM > Users, users are created:
 
@@ -188,7 +188,7 @@ terraform apply
 terraform destroy
 ```
 
-![image](https://user-images.githubusercontent.com/10358317/228511808-0ce2ba63-a000-4344-bd60-e985bcb46382.png)
+![image](https://user-images.githubusercontent.com/10358317/229285219-a0693f5b-f730-4f09-bcc4-5ddfab11b8b7.png)
 
 ### For Each
 
@@ -335,7 +335,7 @@ terraform plan
 terraform apply
 ``` 
 
-![image](https://user-images.githubusercontent.com/10358317/228515035-0c1ef737-fede-4889-bc63-63e2bcc75aef.png)
+![image](https://user-images.githubusercontent.com/10358317/229285279-fe30ddd9-3cec-46c1-88d5-8a504994a956.png)
 
 ![image](https://user-images.githubusercontent.com/10358317/228515164-73df4541-e651-40b9-b6d3-068797d7060b.png)
 
