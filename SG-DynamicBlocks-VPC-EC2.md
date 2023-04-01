@@ -197,5 +197,12 @@ terraform apply
 
 ![image](https://user-images.githubusercontent.com/10358317/229287707-b5f215cd-0faf-4cbc-bc1d-868d96f2672d.png)
 
+- Destroy infrastructure:
 
+```
+terraform destroy 
+``` 
 
+![image](https://user-images.githubusercontent.com/10358317/229287838-c3ffcaa2-a931-4c9b-9efe-40760d76a6af.png)
+
+![image](https://user-images.githubusercontent.com/10358317/229287904-a2ff9428-f15b-4b2e-a2fb-749d11f4e317.png)
