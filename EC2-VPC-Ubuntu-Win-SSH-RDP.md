@@ -214,7 +214,7 @@ terraform apply
 
 ![image](https://user-images.githubusercontent.com/10358317/228975493-a28ece3e-b00d-436e-aab1-de7b679378f3.png)
 
-![image](https://user-images.githubusercontent.com/10358317/228975635-14e8b12a-5fd5-403b-b244-20667e3aa997.png)
+![image](https://user-images.githubusercontent.com/10358317/229282068-a4f293cf-cde7-4b6b-9e9e-48bd40822aae.png)
 
 - On AWS EC2 > Instances, Ubuntu 20.04:
 
