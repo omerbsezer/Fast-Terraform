@@ -305,7 +305,7 @@ terraform destroy
   
 ![image](https://user-images.githubusercontent.com/10358317/228981838-0aac4336-9a87-4eb3-bc84-df88db0054ef.png)
   
-![image](https://user-images.githubusercontent.com/10358317/228982041-15b33a91-629f-4e8e-8e27-cb9199f34f89.png)
+![image](https://user-images.githubusercontent.com/10358317/229281239-b1713771-2960-4746-a1bd-f7543913bd66.png)
 
 - Be sure that instances are terminated. Because if they works, we pay the fee of them:
 
