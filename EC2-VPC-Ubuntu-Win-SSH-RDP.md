@@ -19,7 +19,9 @@ This scenario shows:
 
 - There are 2 ways of creating key-pairs (public and private key):
   - Creating them on cloud (AWS)
+  	- EC2 > Key-pairs > Create Key-Pair
   - Creating them on on-premise 
+  	- "ssh-keygen -t rsa -b 2048" 
 
 - Creating key-pairs on AWS: Go to EC2 > Key-pairs
 
