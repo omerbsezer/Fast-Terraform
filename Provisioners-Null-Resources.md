@@ -260,5 +260,7 @@ terraform destroy
 
 ![image](https://user-images.githubusercontent.com/10358317/229303188-3fd076c2-fac4-4ef2-8c7d-958c0f825640.png)
 
+- On AWS EC2 Instance:
+
 ![image](https://user-images.githubusercontent.com/10358317/229303226-adaead1f-6f6a-4138-9640-4dfce873166c.png)
 
