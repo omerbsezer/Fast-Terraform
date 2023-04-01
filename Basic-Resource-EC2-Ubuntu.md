@@ -121,7 +121,7 @@ terraform destroy
 
 ![image](https://user-images.githubusercontent.com/10358317/229283240-60381539-93e7-4795-bdb0-7ab179cf7ed4.png)
 
-![image](https://user-images.githubusercontent.com/10358317/227008272-9838affe-afe6-400d-8391-39fcf47bc5b1.png)
+![image](https://user-images.githubusercontent.com/10358317/229283607-5eb607f0-ad8a-46fb-9f1b-e6aee38fb4db.png)
   
 - On AWS EC2 Instances, EC2 was terminated, it'll be disappeared in max. 1 hour. Once an EC2 is terminated, that EC2 is deleted permanently:
 
