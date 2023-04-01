@@ -1,9 +1,10 @@
-## LAB: Data Sources with EC2 (Depends_on)
+## LAB: LAB: Provisioners (file, remote-exec), Null Resources (local-exec), Key-Pair, SSH Connection
 
 This scenario shows:
-- how to create file, run command using remote-exec provisioners
-- how to create file using provisioner file
-- how to create file, run command on local pc
+- how to create file, run command using "remote-exec" provisioners on remote instance,
+- how to create file using provisioner "file" on remote instance,
+- how to create file, run command using "local-exec" on local pc,
+- how to create key-pairs for SSH connection.
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/labs/provisioners-nullresources/main.tf
 
