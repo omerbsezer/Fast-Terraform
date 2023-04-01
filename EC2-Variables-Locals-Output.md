@@ -249,7 +249,6 @@ terraform apply --var-file="terraform-prod.tfvars"
 
 ![image](https://user-images.githubusercontent.com/10358317/227578878-4d3e2d4c-2878-4b90-8751-246598748da6.png)
 
-![image](https://user-images.githubusercontent.com/10358317/229284358-9910ae96-6067-41bb-94f9-af111c7f306f.png)
 
 
 - On AWS EC2 Instances:
