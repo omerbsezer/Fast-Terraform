@@ -1,4 +1,4 @@
-## LAB: Modules EC2
+## LAB: Modules with EC2
 
 This scenario shows:
 - how to create and use modules 
