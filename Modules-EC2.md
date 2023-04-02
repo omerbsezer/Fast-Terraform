@@ -153,8 +153,5 @@ terraform destroy
 
 - On AWS, EC2s are terminated:
 
-![image](https://user-images.githubusercontent.com/10358317/229364715-f076fddd-927b-4da2-9b0f-59d16b5e0a85.png)
-
-
-
+![image](https://user-images.githubusercontent.com/10358317/229364904-22116720-7b4a-42d3-8b10-a34fc9dccafb.png)
 
