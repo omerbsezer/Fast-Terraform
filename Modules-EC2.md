@@ -24,7 +24,7 @@ This scenario shows:
 
 ### Module Calls (Main.tf)
 
-**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/labs/modules/main.tf
+**Main.tf Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/labs/modules/main.tf
 
 ``` 
 ...
@@ -54,7 +54,7 @@ module "webserver-2" {
 
 ### Module1
 
-**Module1 Variables Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/labs/modules/module1/variables.tf
+**Module1 Variables.tf Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/labs/modules/module1/variables.tf
 
 ``` 
 variable "instance_type" {
@@ -92,7 +92,7 @@ variable "ami" {
 
 - Module2 variables.tf is same as module1 variables.tf
 
-**Module2 Variables Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/labs/modules/module2/variables.tf
+**Module2 Variables.tf Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/labs/modules/module2/variables.tf
 
 - Module2 main.tf code is different from module1 main.tf
 
