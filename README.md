@@ -15,7 +15,7 @@ This repo covers Terraform with LABs using AWS: Resources, Data Sources, Variabl
 - [LAB: Dynamic Blocks with Security Groups, EC2, VPC](https://github.com/omerbsezer/Fast-Terraform/blob/main/SG-DynamicBlocks-VPC-EC2.md)
 - [LAB: Data Sources with EC2 (Depends_on)](https://github.com/omerbsezer/Fast-Terraform/blob/main/Data-Sources-EC2.md)
 - [LAB: Provisioners (file, remote-exec), Null Resources (local-exec), Key-Pair, SSH Connection](https://github.com/omerbsezer/Fast-Terraform/blob/main/Provisioners-Null-Resources.md)
-- [LAB: EC2 With Modules]()
+- [LAB: Modules with EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/Modules-EC2.md)
 - [LAB: Workspaces]()
 - [LAB: Templates]()
 - [LAB: Backends - Remote States]()
