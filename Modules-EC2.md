@@ -21,7 +21,10 @@ This scenario shows:
 - Main.tf refers modules (directories)
 - Each modules have variables.tf
 
-**Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/labs/modules
+
+### Module Calls (Main.tf)
+
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/labs/modules/main.tf
 
 ``` 
 ...
@@ -49,6 +52,53 @@ module "webserver-2" {
 
 ![image](https://user-images.githubusercontent.com/10358317/229362702-43148537-03fc-4876-9883-ccee83a63f56.png)
 
+### Module1
+
+**Module1 Variables Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/labs/modules/module1/variables.tf
+
+``` 
+variable "instance_type" {
+    type = string
+    description = "EC2 Instance Type"
+}
+
+variable "tag" {
+    type = string
+    description = "The tag for the EC2 instance"
+}
+
+variable "location" {
+    type = string
+    description = "The project region"
+    default = "eu-central-1"
+}
+
+variable  "availability_zone" {
+    type = string
+    description = "The project availability zone"
+    default = "eu-central-1c"
+} 
+
+variable "ami" {
+    type = string
+    description = "The project region"
+}
+``` 
+
+**Module1 Main.tf Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/labs/modules/module1/main.tf
+
+
+### Module2
+
+- Module2 variables.tf is same as module1 variables.tf
+
+**Module2 Variables Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/labs/modules/module2/variables.tf
+
+- Module2 main.tf code is different from module1 main.tf
+
+**Module2 Main.tf Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/labs/modules/module2/main.tf
+
+### Terraform Run
 
 - Run init, validate command:
 
