@@ -5,7 +5,7 @@ This repo covers Terraform with LABs using AWS: Resources, Data Sources, Variabl
 
 **PS:** AWS Services are created using Terraform in the LABs. 
 
-# Quick Look (HowTo): Scenarios - Hands-on LABs
+# Quick Look (HowTo): Hands-on LABs
 - [LAB: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Install-AWS-Configuration.md)
 - [LAB: Create Docker Image Using Terraform Without Cloud](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Docker-Without-Cloud.md)
 - [LAB: Create Basic Resource EC2 Ubuntu 22.04](https://github.com/omerbsezer/Fast-Terraform/blob/main/Basic-Resource-EC2-Ubuntu.md)
@@ -19,12 +19,14 @@ This repo covers Terraform with LABs using AWS: Resources, Data Sources, Variabl
 - [LAB: Workspaces]()
 - [LAB: Templates]()
 - [LAB: Backends - Remote States]()
-- [LAB: Create EC2 with EBS and EFS]()
-- [LAB: Create Lambda, EventBridge]()
-- [LAB: Create ECS (Elastic Container Service)]()
-- [LAB: Create EKS (Elastic Kubernetes Service)]()
-- [LAB: Create ELB, EC2, Auto Scaling Group]()
-- [LAB: Create RDS, S3, IAM]()
+
+# Quick Look (HowTo): Application
+- [Application: Lambda Function, IAM Role, IAM Policy, Python Code using Terraform]()
+- [Application: EC2 with EBS and EFS using Terraform]()
+- [Application: Creating ECS (Elastic Container Service), Pushing/Pulling Image ECR (Elastic Container Registry)]()
+- [Application: Creating EKS (Elastic Kubernetes Service)]()
+- [Application: ELB, EC2, Auto Scaling Group]()
+- [Application: S3, Lambda]()
 
 # Table of Contents
 - [Motivation](#motivation)
