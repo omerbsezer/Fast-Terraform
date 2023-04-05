@@ -3,7 +3,7 @@
 This scenario shows:
 - how to create, manage workspaces using EC2 and variables.
 
-**Code:** 
+**Code:**  https://github.com/omerbsezer/Fast-Terraform/tree/main/labs/workspace
 
 ### Prerequisite
 
