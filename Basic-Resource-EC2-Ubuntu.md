@@ -1,4 +1,4 @@
-## LAB: Create Basic Resource EC2 Ubuntu 22.04
+## LAB: Resources => Provision Basic EC2 (Ubuntu 22.04)
 
 This scenario shows:
 - how to create EC2 with Ubuntu 22.04
