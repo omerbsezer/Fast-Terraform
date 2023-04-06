@@ -1,4 +1,4 @@
-## LAB: Create EC2s with Variables, Locals, Output
+## LAB: Variables, Locals, Output => Provision EC2s
 
 This scenario shows:
 - how to create EC2 using Variables, Locals and Output
