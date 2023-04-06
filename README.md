@@ -37,20 +37,19 @@ This repo covers Terraform with LABs using AWS: Resources, Data Sources, Variabl
   - [Providers](#providers)
   - [Resources](#resources)
   - [Variables (tfvar)](#variables)
-  - [Locals](#locals)
-  - [Output Values](#output_values)
-  - [Meta Arguments (for loop, for_each loop, count, depends_on, lifecycle)](#meta_arguments)
-  - [Expressions](#expressions)
+  - [Values (Locals, Outputs)](#values)
+  - [Meta Arguments](#meta_arguments)
   - [Dynamic Blocks](#dynamic_blocks)
+  - [Data Sources](#datasources)
   - [Provisioners (file, remote_exec, local_exec), Null Resource](#provisioners)
   - [Modules](#modules)
   - [Workspaces](#workspaces)
-  - [Data Sources](#data_sources)
+  - [Templates](#templates)
   - [Backends and Remote States](#backends_remote_states)
 - [Terraform Debugging and Validation](#debugging_validation)
-- [Terraform Import](#import)  
-- [Terraform Template](#template)
 - [Terraform Best Practices](#best_practice)
+- [Terraform AWS Applications](#applications)
+  - [Application: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](#ec2_vpc_key_pair_ssh_rdp)
 - [Details](#details)
 - [Other Useful Resources Related Terraform](#resource)
 - [References](#references)
@@ -79,31 +78,79 @@ Why should we use / learn Terraform?
 
 ## Terraform File Components <a name="terrafom_file_components"></a>
 
+
+### Providers <a name="providers"></a>
+
+
 ### Resources <a name="resources"></a>
+
+
+- Go to LAB to learn:
+  - [LAB: Resources => Provision Basic EC2 (Ubuntu 22.04)](https://github.com/omerbsezer/Fast-Terraform/blob/main/Basic-Resource-EC2-Ubuntu.md)
 
 ### Variables (tfvar) <a name="variables"></a>
 
-### Datasources <a name="datasources"></a>
 
-### Values (Local, Output) <a name="values"></a>
+- Go to LAB to learn:
+  - [LAB: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/EC2-Variables-Locals-Output.md)
+
+### Values (Locals, Outputs) <a name="values"></a>
+
+
+- Go to LAB to learn:
+  - [LAB: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/EC2-Variables-Locals-Output.md)
 
 ### Meta Arguments <a name="meta_arguments"></a>
 
-### Expressions <a name="expressions"></a>
+
+- Go to LAB to learn:
+  - [LAB: Meta Arguments (Count, For_Each, Map) => Provision IAM Users, User Groups, Policies, Attachment Policy-User Group](https://github.com/omerbsezer/Fast-Terraform/blob/main/IAM-User-Group-Policy-Count-ForEach-Map.md)
 
 ### Dynamic Blocks <a name="dynamic_blocks"></a>
 
+
+- Go to LAB to learn:
+  - [LAB: Dynamic Blocks => Provision Security Groups, EC2, VPC](https://github.com/omerbsezer/Fast-Terraform/blob/main/SG-DynamicBlocks-VPC-EC2.md)
+
+### Data Sources <a name="datasources"></a>
+
+
+- Go to LAB to learn:
+  - [LAB: Data Sources with Depends_on => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/Data-Sources-EC2.md)
+
 ### Provisioners <a name="provisioners"></a>
+
+- Go to LAB to learn:
+  - [LAB: Provisioners (file, remote-exec), Null Resources (local-exec) => Provision Key-Pair, SSH Connection](https://github.com/omerbsezer/Fast-Terraform/blob/main/Provisioners-Null-Resources.md)
 
 ### Modules <a name="modules"></a>
 
+- Go to LAB to learn:
+  - [LAB: Modules => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/Modules-EC2.md)
+
 ### Workspaces <a name="workspaces"></a>
+
+- Go to LAB to learn:
+  - 
+
+### Templates <a name="templates"></a>
+
+- Go to LAB to learn:
+  - 
 
 ### Backends and Remote States <a name="backends_remote_states"></a>
 
+- Go to LAB to learn:
+  - 
+
 ## Terraform Best Practices <a name="best_practice"></a>
 
-## Terraform Project: AWS - EC2 <a name="project1"></a>
+## Terraform AWS Applications <a name="applications"></a>
+
+### Application: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections <a name="ec2_vpc_key_pair_ssh_rdp"></a>
+
+- Go to Application to learn how to implement:
+ - [Application: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](https://github.com/omerbsezer/Fast-Terraform/blob/main/EC2-VPC-Ubuntu-Win-SSH-RDP.md)
 
 ## Details <a name="details"></a>
 
