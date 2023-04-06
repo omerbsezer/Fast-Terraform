@@ -1,4 +1,4 @@
-## LAB: Create IAM Users, User Groups, Policies, Attachment Policy-User Group, with Meta Arguments (Count, For_Each, Map)
+## LAB: Meta Arguments (Count, For_Each, Map) => Provision IAM Users, User Groups, Policies, Attachment Policy-User Group
 
 This scenario shows:
 - how to create IAM User, User Groups, Permission Policies, Attachment Policy-User Group
