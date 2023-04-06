@@ -21,7 +21,8 @@ This repo covers Terraform with LABs using AWS: Resources, Data Sources, Variabl
 
 # Quick Look (HowTo): Application
 - [Application: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](https://github.com/omerbsezer/Fast-Terraform/blob/main/EC2-VPC-Ubuntu-Win-SSH-RDP.md)
-- [Application: Lambda Function, IAM Role, IAM Policy, Python Code using Terraform]()
+- [Application: Lambda Function, IAM Role, IAM Policy, Simple Python Code]()
+- [Application: Create Thumbnail Application using Python, Lambda]()
 - [Application: EC2 with EBS and EFS using Terraform]()
 - [Application: Creating ECS (Elastic Container Service), Pushing/Pulling Image ECR (Elastic Container Registry)]()
 - [Application: Creating EKS (Elastic Kubernetes Service)]()
