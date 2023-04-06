@@ -1,4 +1,4 @@
-## LAB: Data Sources with EC2 (Depends_on)
+## LAB: Data Sources with Depends_on => Provision EC2
 
 This scenario shows:
 - how to use Data Source to fetch/retrieve data (existed resource information) from AWS
