@@ -1,4 +1,4 @@
-## LAB: Create EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections
+## Application: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections
 
 This scenario shows:
 - how to create Key-pairs (public and private keys) on AWS.
