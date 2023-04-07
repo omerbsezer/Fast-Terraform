@@ -3,7 +3,7 @@
 This scenario shows:
 - how to use backend and save Terraform state file on S3
 
-**Code:**  
+**Code:**  https://github.com/omerbsezer/Fast-Terraform/blob/main/labs/backend-remote-state/
 
 ### Prerequisite
 
@@ -58,6 +58,8 @@ resource "aws_instance" "instance" {
    }
 }
 ```
+
+**Code:**  https://github.com/omerbsezer/Fast-Terraform/blob/main/labs/backend-remote-state/main.tf
 
 ![image](https://user-images.githubusercontent.com/10358317/230646618-f1200c13-eb83-4bcd-b353-a6c9a02272bd.png)
 
