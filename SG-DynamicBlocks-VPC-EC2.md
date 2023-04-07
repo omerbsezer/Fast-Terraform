@@ -1,4 +1,4 @@
-## LAB: Dynamic Blocks with Security Groups, EC2, VPC
+## LAB: Dynamic Blocks => Provision Security Groups, EC2, VPC
 
 This scenario shows:
 - how to create Dynamic Blocks for Security Group Definition
