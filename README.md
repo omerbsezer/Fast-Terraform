@@ -22,7 +22,7 @@ These LABs focus on Terraform features, help to learn Terraform:
 - [LAB: Backends - Remote States => Provision ]()
 
 # Quick Look (HowTo): Application
-These Applications focus on how to create and use AWS components (EC2, Lambda, ECS, EKS, ASG, ELB, API Gateway, S3) with Terraform:
+These Applications focus on how to create and use AWS components (EC2, EBS, EFS, Lambda, ECS, EKS, ASG, ELB, API Gateway, S3, DynamoDB) with Terraform:
 
 - [Application: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](https://github.com/omerbsezer/Fast-Terraform/blob/main/EC2-VPC-Ubuntu-Win-SSH-RDP.md)
 - [Application: Lambda Function, IAM Role, IAM Policy, Simple Python Code]()
