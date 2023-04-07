@@ -140,13 +140,15 @@ Why should we use / learn Terraform?
 
 ### Templates <a name="templates"></a>
 
+
 - Go to LAB to learn:
-  - 
+  - [LAB: Templates => Provision]()
 
 ### Backends and Remote States <a name="backends_remote_states"></a>
 
+
 - Go to LAB to learn:
-  - 
+  - [LAB: Backends - Remote States => Provision ]()
 
 ## Terraform Best Practices <a name="best_practice"></a>
 
