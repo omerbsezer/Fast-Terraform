@@ -5,7 +5,7 @@ This repo covers Terraform with LABs using AWS: Resources, Data Sources, Variabl
 
 **PS:** AWS Services are created using Terraform in the LABs. 
 
-# Quick Look (HowTo): Hands-on LABs
+# Quick Look (HowTo): Terraform Hands-on LABs
 These LABs focus on Terraform features, help to learn Terraform:
 
 - [LAB: Installing Terraform, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Install-AWS-Configuration.md)
@@ -21,8 +21,8 @@ These LABs focus on Terraform features, help to learn Terraform:
 - [LAB: Templates => Provision IAM User, User Access Key, Policy](https://github.com/omerbsezer/Fast-Terraform/blob/main/Templates-User-Policy.md)
 - [LAB: Backends - Remote States => Provision ]()
 
-# Quick Look (HowTo): Application
-These Applications focus on how to create and use AWS components (EC2, EBS, EFS, Lambda, ECS, EKS, ASG, ELB, API Gateway, S3, DynamoDB) with Terraform:
+# Quick Look (HowTo): AWS Applications with Terraform
+These applications focus on how to create and use AWS components (EC2, EBS, EFS, Lambda, ECS, EKS, ASG, ELB, API Gateway, S3, DynamoDB) with Terraform:
 
 - [Application: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](https://github.com/omerbsezer/Fast-Terraform/blob/main/EC2-VPC-Ubuntu-Win-SSH-RDP.md)
 - [Application: Lambda Function, IAM Role, IAM Policy, Simple Python Code]()
