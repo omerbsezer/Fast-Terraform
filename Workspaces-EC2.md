@@ -1,4 +1,4 @@
-## LAB: Terraform Workspace with EC2
+## LAB: Workspaces => Provision
 
 This scenario shows:
 - how to create, manage workspaces using EC2 and variables.
