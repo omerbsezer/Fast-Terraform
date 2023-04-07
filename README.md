@@ -15,7 +15,7 @@ This repo covers Terraform with LABs using AWS: Resources, Data Sources, Variabl
 - [LAB: Data Sources with Depends_on => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/Data-Sources-EC2.md)
 - [LAB: Provisioners (file, remote-exec), Null Resources (local-exec) => Provision Key-Pair, SSH Connection to EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/Provisioners-Null-Resources.md)
 - [LAB: Modules => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/Modules-EC2.md)
-- [LAB: Workspaces => Provision ]()
+- [LAB: Workspaces => Provision EC2 with Different tfvars Files](https://github.com/omerbsezer/Fast-Terraform/blob/main/Workspaces-EC2.md)
 - [LAB: Templates => Provision]()
 - [LAB: Backends - Remote States => Provision ]()
 
@@ -132,7 +132,7 @@ Why should we use / learn Terraform?
 ### Workspaces <a name="workspaces"></a>
 
 - Go to LAB to learn:
-  - 
+  - [LAB: Workspaces => Provision EC2 with Different tfvars Files](https://github.com/omerbsezer/Fast-Terraform/blob/main/Workspaces-EC2.md)
 
 ### Templates <a name="templates"></a>
 
