@@ -1,4 +1,4 @@
-## LAB: Workspaces => Provision
+## LAB: Workspaces => Provision EC2 with Different tfvars Files
 
 This scenario shows:
 - how to create, manage workspaces using EC2 and variables.
