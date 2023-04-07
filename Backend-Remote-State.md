@@ -46,16 +46,16 @@ terraform {
 }
 
 provider "aws" {
-	region = "eu-central-1"
+   region = "eu-central-1"
 }
 
 resource "aws_instance" "instance" {
-	ami           = "ami-0d1ddd83282187d18" # Ubuntu 22.04 eu-central-1 Frankfurt
-	instance_type = "t2.nano"
+   ami           = "ami-0d1ddd83282187d18" # Ubuntu 22.04 eu-central-1 Frankfurt
+   instance_type = "t2.nano"
 
-	tags = {
-		Name = "Basic Instance"
-	}
+   tags = {
+      Name = "Basic Instance"
+   }
 }
 ```
 
