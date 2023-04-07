@@ -91,31 +91,31 @@ Why should we use / learn Terraform?
 
 
 - Go to LAB to learn:
-  - [LAB: Resources => Provision Basic EC2 (Ubuntu 22.04)](https://github.com/omerbsezer/Fast-Terraform/blob/main/Basic-Resource-EC2-Ubuntu.md)
+  - [LAB: Resources => Provision Basic EC2 (Ubuntu 22.04)](https://github.com/omerbsezer/Fast-Terraform/blob/main/Resources-Basic-EC2.md)
 
 ### Variables (tfvar) <a name="variables"></a>
 
 
 - Go to LAB to learn:
-  - [LAB: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/EC2-Variables-Locals-Output.md)
+  - [LAB: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/Variables-Locals-Output-EC2.md)
 
 ### Values (Locals, Outputs) <a name="values"></a>
 
 
 - Go to LAB to learn:
-  - [LAB: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/EC2-Variables-Locals-Output.md)
+  - [LAB: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/Variables-Locals-Output-EC2.md)
 
 ### Meta Arguments <a name="meta_arguments"></a>
 
 
 - Go to LAB to learn:
-  - [LAB: Meta Arguments (Count, For_Each, Map) => Provision IAM Users, User Groups, Policies, Attachment Policy-User Group](https://github.com/omerbsezer/Fast-Terraform/blob/main/IAM-User-Group-Policy-Count-ForEach-Map.md)
+  - [LAB: Meta Arguments (Count, For_Each, Map) => Provision IAM Users, Groups, Policies, Attachment Policy-User](https://github.com/omerbsezer/Fast-Terraform/blob/main/Meta-Arguments-IAM-User-Group-Policy.md)
 
 ### Dynamic Blocks <a name="dynamic_blocks"></a>
 
 
 - Go to LAB to learn:
-  - [LAB: Dynamic Blocks => Provision Security Groups, EC2, VPC](https://github.com/omerbsezer/Fast-Terraform/blob/main/SG-DynamicBlocks-VPC-EC2.md)
+  - [LAB: Dynamic Blocks => Provision Security Groups, EC2, VPC](https://github.com/omerbsezer/Fast-Terraform/blob/main/Dynamic-Blocks-Security-Groups-EC2.md)
 
 ### Data Sources <a name="datasources"></a>
 
