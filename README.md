@@ -1,5 +1,8 @@
 # Fast-Terraform (with AWS)
-This repo covers Terraform with LABs using AWS: Resources, Data Sources, Variables, Meta Arguments, Provisioners, Dynamic Blocks, Modules, Workspaces, Provisioning AWS Resources (EC2, VPC, IAM Users, User Groups, Policies, Roles, ECS, EKS, Lambda) and details. Possible usage scenarios are aimed to update over time.
+This repo covers Terraform with LABs using AWS: 
+- Resources, Data Sources, Variables, Meta Arguments, Provisioners, Dynamic Blocks, Modules, Workspaces, 
+- Provisioning AWS Resources (EC2, VPC, IAM Users, User Groups, Policies, Roles, ECS, EKS, Lambda) and details. 
+- Possible usage scenarios are aimed to update over time.
 
 **Keywords:** Terraform, Infrastructure as Code, AWS, Cloud Provisioning
 
