@@ -14,7 +14,7 @@ This scenario shows:
 
 - With templates,
   - avoid to write same code snippets multiple time,
-  - shorten the code 
+  - provide to shorten the code 
 
 - Create main.tf file.
 - This file creates IAM user, user access key, give some permission policy for EC2, S3, Lambda, DynamoDb. 
