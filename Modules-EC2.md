@@ -1,4 +1,4 @@
-## LAB: Modules with EC2
+## LAB: Modules => Provision EC2
 
 This scenario shows:
 - how to create and use modules 
