@@ -1,4 +1,4 @@
-## LAB: Terraform Docker Without Cloud
+## LAB: Terraform Docker => Pull Docker Image, Create Docker Container on Local Machine
 
 This scenario shows:
 - how to use Terraform to manage Docker commands (image pull, container create, etc.)
