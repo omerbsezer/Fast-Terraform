@@ -18,7 +18,7 @@ These LABs focus on Terraform features, help to learn Terraform:
 - [LAB: Provisioners (file, remote-exec), Null Resources (local-exec) => Provision Key-Pair, SSH Connection](https://github.com/omerbsezer/Fast-Terraform/blob/main/Provisioners-Null-Resources.md)
 - [LAB: Modules => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/Modules-EC2.md)
 - [LAB: Workspaces => Provision EC2 with Different tfvars Files](https://github.com/omerbsezer/Fast-Terraform/blob/main/Workspaces-EC2.md)
-- [LAB: Templates => Provision]()
+- [LAB: Templates => Provision IAM User, User Access Key, Policy](https://github.com/omerbsezer/Fast-Terraform/blob/main/Templates-User-Policy.md)
 - [LAB: Backends - Remote States => Provision ]()
 
 # Quick Look (HowTo): Application
@@ -142,7 +142,7 @@ Why should we use / learn Terraform?
 
 
 - Go to LAB to learn:
-  - [LAB: Templates => Provision]()
+  - [LAB: Templates => Provision IAM User, User Access Key, Policy](https://github.com/omerbsezer/Fast-Terraform/blob/main/Templates-User-Policy.md)
 
 ### Backends and Remote States <a name="backends_remote_states"></a>
 
