@@ -3,8 +3,6 @@ This repo covers Terraform with LABs using AWS: Resources, Data Sources, Variabl
 
 **Keywords:** Terraform, Infrastructure as Code, AWS, Cloud Provisioning
 
-**PS:** AWS Services are created using Terraform in the LABs. 
-
 # Quick Look (HowTo): Terraform Hands-on LABs
 These LABs focus on Terraform features, help to learn Terraform:
 
@@ -19,7 +17,7 @@ These LABs focus on Terraform features, help to learn Terraform:
 - [LAB: Modules => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/Modules-EC2.md)
 - [LAB: Workspaces => Provision EC2 with Different tfvars Files](https://github.com/omerbsezer/Fast-Terraform/blob/main/Workspaces-EC2.md)
 - [LAB: Templates => Provision IAM User, User Access Key, Policy](https://github.com/omerbsezer/Fast-Terraform/blob/main/Templates-User-Policy.md)
-- [LAB: Backends - Remote States => Provision ]()
+- [LAB: Backend - Remote States => Provision EC2 and Save State File on S3](https://github.com/omerbsezer/Fast-Terraform/blob/main/Backend-Remote-State.md)
 
 # Quick Look (HowTo): AWS Applications with Terraform
 These applications focus on how to create and use AWS components (EC2, EBS, EFS, Lambda, ECS, EKS, ASG, ELB, API Gateway, S3, DynamoDB) with Terraform:
@@ -144,11 +142,11 @@ Why should we use / learn Terraform?
 - Go to LAB to learn:
   - [LAB: Templates => Provision IAM User, User Access Key, Policy](https://github.com/omerbsezer/Fast-Terraform/blob/main/Templates-User-Policy.md)
 
-### Backends and Remote States <a name="backends_remote_states"></a>
+### Backend and Remote States <a name="backends_remote_states"></a>
 
 
 - Go to LAB to learn:
-  - [LAB: Backends - Remote States => Provision ]()
+  - [LAB: Backend - Remote States => Provision EC2 and Save State File on S3](https://github.com/omerbsezer/Fast-Terraform/blob/main/Backend-Remote-State.md)
 
 ## Terraform Best Practices <a name="best_practice"></a>
 
