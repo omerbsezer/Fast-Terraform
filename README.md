@@ -91,64 +91,64 @@ Why should we use / learn Terraform?
 
 
 - Go to LAB to learn:
-  - [LAB: Resources => Provision Basic EC2 (Ubuntu 22.04)](https://github.com/omerbsezer/Fast-Terraform/blob/main/Resources-Basic-EC2.md)
+  - [LAB-02: Resources => Provision Basic EC2 (Ubuntu 22.04)](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB02-Resources-Basic-EC2.md)
 
 ### Variables (tfvar) <a name="variables"></a>
 
 
 - Go to LAB to learn:
-  - [LAB: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/Variables-Locals-Output-EC2.md)
+  - [LAB-03: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB03-Variables-Locals-Output-EC2.md)
 
 ### Values (Locals, Outputs) <a name="values"></a>
 
 
 - Go to LAB to learn:
-  - [LAB: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/Variables-Locals-Output-EC2.md)
+  - [LAB-03: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB03-Variables-Locals-Output-EC2.md)
 
 ### Meta Arguments <a name="meta_arguments"></a>
 
 
 - Go to LAB to learn:
-  - [LAB: Meta Arguments (Count, For_Each, Map) => Provision IAM Users, Groups, Policies, Attachment Policy-User](https://github.com/omerbsezer/Fast-Terraform/blob/main/Meta-Arguments-IAM-User-Group-Policy.md)
+  - [LAB-04: Meta Arguments (Count, For_Each, Map) => Provision IAM Users, Groups, Policies, Attachment Policy-User](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB04-Meta-Arguments-IAM-User-Group-Policy.md)
 
 ### Dynamic Blocks <a name="dynamic_blocks"></a>
 
 
 - Go to LAB to learn:
-  - [LAB: Dynamic Blocks => Provision Security Groups, EC2, VPC](https://github.com/omerbsezer/Fast-Terraform/blob/main/Dynamic-Blocks-Security-Groups-EC2.md)
+  - [LAB-05: Dynamic Blocks => Provision Security Groups, EC2, VPC](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB05-Dynamic-Blocks-Security-Groups-EC2.md)
 
 ### Data Sources <a name="datasources"></a>
 
 
 - Go to LAB to learn:
-  - [LAB: Data Sources with Depends_on => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/Data-Sources-EC2.md)
+  - [LAB-06: Data Sources with Depends_on => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB06-Data-Sources-EC2.md)
 
 ### Provisioners <a name="provisioners"></a>
 
 - Go to LAB to learn:
-  - [LAB: Provisioners (file, remote-exec), Null Resources (local-exec) => Provision Key-Pair, SSH Connection](https://github.com/omerbsezer/Fast-Terraform/blob/main/Provisioners-Null-Resources.md)
+  - [LAB-07: Provisioners (file, remote-exec), Null Resources (local-exec) => Provision Key-Pair, SSH Connection](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB07-Provisioners-Null-Resources.md)
 
 ### Modules <a name="modules"></a>
 
 - Go to LAB to learn:
-  - [LAB: Modules => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/Modules-EC2.md)
+  - [LAB-08: Modules => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB08-Modules-EC2.md)
 
 ### Workspaces <a name="workspaces"></a>
 
 - Go to LAB to learn:
-  - [LAB: Workspaces => Provision EC2 with Different tfvars Files](https://github.com/omerbsezer/Fast-Terraform/blob/main/Workspaces-EC2.md)
+  - [LAB-09: Workspaces => Provision EC2 with Different tfvars Files](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB09-Workspaces-EC2.md)
 
 ### Templates <a name="templates"></a>
 
 
 - Go to LAB to learn:
-  - [LAB: Templates => Provision IAM User, User Access Key, Policy](https://github.com/omerbsezer/Fast-Terraform/blob/main/Templates-User-Policy.md)
+  - [LAB-10: Templates => Provision IAM User, User Access Key, Policy](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB10-Templates-User-Policy.md)
 
 ### Backend and Remote States <a name="backends_remote_states"></a>
 
 
 - Go to LAB to learn:
-  - [LAB: Backend - Remote States => Provision EC2 and Save State File on S3](https://github.com/omerbsezer/Fast-Terraform/blob/main/Backend-Remote-State.md)
+  - [LAB-11: Backend - Remote States => Provision EC2 and Save State File on S3](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB11-Backend-Remote-State.md)
 
 ## Terraform Best Practices <a name="best_practice"></a>
 
