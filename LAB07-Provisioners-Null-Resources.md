@@ -1,4 +1,4 @@
-## LAB: Provisioners (file, remote-exec), Null Resources (local-exec) => Provision Key-Pair, SSH Connection
+## LAB-07: Provisioners (file, remote-exec), Null Resources (local-exec) => Provision Key-Pair, SSH Connection
 
 This scenario shows:
 - how to create file, run command using "remote-exec" provisioners on remote instance,
@@ -11,7 +11,7 @@ This scenario shows:
 ### Prerequisite
 
 - You should have a look following lab: 
-  - [LAB: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Install-AWS-Configuration.md)
+  - [LAB-00: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB00-Terraform-Install-AWS-Configuration.md)
   
 ## Steps
 
