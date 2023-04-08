@@ -8,18 +8,18 @@ This repo covers Terraform with LABs using AWS:
 # Quick Look (HowTo): Terraform Hands-on LABs
 These LABs focus on Terraform features, help to learn Terraform:
 
-- [LAB: Installing Terraform, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Install-AWS-Configuration.md)
-- [LAB: Terraform Docker => Pull Docker Image, Create Docker Container on Local Machine](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Docker-Without-Cloud.md)
-- [LAB: Resources => Provision Basic EC2 (Ubuntu 22.04)](https://github.com/omerbsezer/Fast-Terraform/blob/main/Resources-Basic-EC2.md)
-- [LAB: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/Variables-Locals-Output-EC2.md)
-- [LAB: Meta Arguments (Count, For_Each, Map) => Provision IAM Users, Groups, Policies, Attachment Policy-User](https://github.com/omerbsezer/Fast-Terraform/blob/main/Meta-Arguments-IAM-User-Group-Policy.md)
-- [LAB: Dynamic Blocks => Provision Security Groups, EC2, VPC](https://github.com/omerbsezer/Fast-Terraform/blob/main/Dynamic-Blocks-Security-Groups-EC2.md)
-- [LAB: Data Sources with Depends_on => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/Data-Sources-EC2.md)
-- [LAB: Provisioners (file, remote-exec), Null Resources (local-exec) => Provision Key-Pair, SSH Connection](https://github.com/omerbsezer/Fast-Terraform/blob/main/Provisioners-Null-Resources.md)
-- [LAB: Modules => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/Modules-EC2.md)
-- [LAB: Workspaces => Provision EC2 with Different tfvars Files](https://github.com/omerbsezer/Fast-Terraform/blob/main/Workspaces-EC2.md)
-- [LAB: Templates => Provision IAM User, User Access Key, Policy](https://github.com/omerbsezer/Fast-Terraform/blob/main/Templates-User-Policy.md)
-- [LAB: Backend - Remote States => Provision EC2 and Save State File on S3](https://github.com/omerbsezer/Fast-Terraform/blob/main/Backend-Remote-State.md)
+- [LAB-0: Installing Terraform, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Install-AWS-Configuration.md)
+- [LAB-1: Terraform Docker => Pull Docker Image, Create Docker Container on Local Machine](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Docker-Without-Cloud.md)
+- [LAB-2: Resources => Provision Basic EC2 (Ubuntu 22.04)](https://github.com/omerbsezer/Fast-Terraform/blob/main/Resources-Basic-EC2.md)
+- [LAB-3: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/Variables-Locals-Output-EC2.md)
+- [LAB-4: Meta Arguments (Count, For_Each, Map) => Provision IAM Users, Groups, Policies, Attachment Policy-User](https://github.com/omerbsezer/Fast-Terraform/blob/main/Meta-Arguments-IAM-User-Group-Policy.md)
+- [LAB-5: Dynamic Blocks => Provision Security Groups, EC2, VPC](https://github.com/omerbsezer/Fast-Terraform/blob/main/Dynamic-Blocks-Security-Groups-EC2.md)
+- [LAB-6: Data Sources with Depends_on => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/Data-Sources-EC2.md)
+- [LAB-7: Provisioners (file, remote-exec), Null Resources (local-exec) => Provision Key-Pair, SSH Connection](https://github.com/omerbsezer/Fast-Terraform/blob/main/Provisioners-Null-Resources.md)
+- [LAB-8: Modules => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/Modules-EC2.md)
+- [LAB-9: Workspaces => Provision EC2 with Different tfvars Files](https://github.com/omerbsezer/Fast-Terraform/blob/main/Workspaces-EC2.md)
+- [LAB-10: Templates => Provision IAM User, User Access Key, Policy](https://github.com/omerbsezer/Fast-Terraform/blob/main/Templates-User-Policy.md)
+- [LAB-11: Backend - Remote States => Provision EC2 and Save State File on S3](https://github.com/omerbsezer/Fast-Terraform/blob/main/Backend-Remote-State.md)
 
 # Quick Look (HowTo): AWS Terraform Samples
 These samples focus on how to create and use AWS components (EC2, EBS, EFS, Lambda, ECS, EKS, ASG, ELB, API Gateway, S3, DynamoDB) with Terraform:
