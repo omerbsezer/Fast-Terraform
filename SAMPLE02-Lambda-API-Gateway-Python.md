@@ -285,6 +285,9 @@ terraform destroy
 
 ![image](https://user-images.githubusercontent.com/10358317/230724579-86f8228a-efcb-4ae8-bcc3-009fa54a5d14.png)
 
+- On AWS Lambda, function is deleted:
+
+![image](https://user-images.githubusercontent.com/10358317/230724707-4e5070cf-a801-4b3e-9aa7-560b279a48a5.png)
 
 ## References
 - https://www.tecracer.com/blog/2021/08/iam-what-happens-when-you-assume-a-role.html
