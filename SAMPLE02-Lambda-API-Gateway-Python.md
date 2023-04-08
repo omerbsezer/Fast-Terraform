@@ -237,6 +237,8 @@ terraform apply
 
 ![image](https://user-images.githubusercontent.com/10358317/230723292-5496d0f0-977d-46e4-96ee-239808e56284.png)
 
+- Status code 200, OK is returned successfully:
+
 ![image](https://user-images.githubusercontent.com/10358317/230723342-bb606c2f-b9d6-47d0-93b6-e935e00481e1.png)
 
 - Execution Role is created, seen on Lambda
