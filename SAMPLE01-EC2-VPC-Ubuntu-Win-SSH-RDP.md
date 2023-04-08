@@ -1,6 +1,6 @@
-## Sample: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections
+## SAMPLE-01: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections
 
-This scenario shows:
+This sample shows:
 - how to create Key-pairs (public and private keys) on AWS.
 - how to create EC2s (Ubuntu 20.04, Windows 2019 Server).
 - how to create Virtual Private Cloud (VPC), VPC Components (Public Subnet, Internet Gateway, Route Table) and link to each others.
@@ -11,7 +11,7 @@ This scenario shows:
 ### Prerequisite
 
 - You should have a look following lab: 
-  - [LAB: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Install-AWS-Configuration.md)
+  - [LAB-00: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB00-Terraform-Install-AWS-Configuration.md)
 
 ## Steps
 
