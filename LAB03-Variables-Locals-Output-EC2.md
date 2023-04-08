@@ -1,4 +1,4 @@
-## LAB: Variables, Locals, Output => Provision EC2s
+## LAB-03: Variables, Locals, Output => Provision EC2s
 
 This scenario shows:
 - how to create EC2 using Variables, Locals and Output
@@ -8,7 +8,7 @@ This scenario shows:
 ### Prerequisite
 
 - You should have a look following lab: 
-  - [LAB: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Install-AWS-Configuration.md)
+  - [LAB-00: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB00-Terraform-Install-AWS-Configuration.md)
 
 ## Steps
 
