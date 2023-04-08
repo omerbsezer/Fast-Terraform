@@ -1,4 +1,4 @@
-## Application: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections
+## Sample: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections
 
 This scenario shows:
 - how to create Key-pairs (public and private keys) on AWS.
@@ -6,7 +6,7 @@ This scenario shows:
 - how to create Virtual Private Cloud (VPC), VPC Components (Public Subnet, Internet Gateway, Route Table) and link to each others.
 - how to create Security Groups (for SSH and Remote Desktop).
 
-**Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/application/ec2-vpc-ubuntu-win-ssh-rdp
+**Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ec2-vpc-ubuntu-win-ssh-rdp
 
 ### Prerequisite
 
