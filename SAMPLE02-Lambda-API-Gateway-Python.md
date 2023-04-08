@@ -1,7 +1,10 @@
 ## SAMPLE-02: Lambda, API Gateway, Basic Python Code
 
 This sample shows:
-- how 
+- how to create Lambda function with Python code
+- how to create lambda role, policy, policy-role attachment, lambda api gateway permission, zipping code
+- how to create api-gateway resource and method definition, lambda - api gateway connection, deploying api gateway, api-gateway deployment URL as output
+- details on AWS Lambda, API-Gateway, IAM  
 
 There are 3 main parts:
 - lambda.tf: It includes lambda function, lambda role, policy, policy-role attachment, lambda api gateway permission, zipping code
@@ -16,7 +19,6 @@ There are 3 main parts:
   - [LAB-00: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB00-Terraform-Install-AWS-Configuration.md)
 
 ## Steps
-
 
 - Create lambda.tf:
  
@@ -280,6 +282,9 @@ terraform apply
 ``` 
 terraform destroy
 ``` 
+
+![image](https://user-images.githubusercontent.com/10358317/230724579-86f8228a-efcb-4ae8-bcc3-009fa54a5d14.png)
+
 
 ## References
 - https://www.tecracer.com/blog/2021/08/iam-what-happens-when-you-assume-a-role.html
