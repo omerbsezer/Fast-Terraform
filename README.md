@@ -5,7 +5,7 @@ This repo covers Terraform with LABs using AWS:
 
 **Keywords:** Terraform, Infrastructure as Code, AWS, Cloud Provisioning
 
-# Quick Look (HowTo): Terraform Hands-on LABs
+# Quick Look (How-To): Terraform Hands-on LABs
 These LABs focus on Terraform features, help to learn Terraform:
 
 - [LAB-00: Installing Terraform, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB00-Terraform-Install-AWS-Configuration.md)
@@ -21,17 +21,17 @@ These LABs focus on Terraform features, help to learn Terraform:
 - [LAB-10: Templates => Provision IAM User, User Access Key, Policy](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB10-Templates-User-Policy.md)
 - [LAB-11: Backend - Remote States => Provision EC2 and Save State File on S3](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB11-Backend-Remote-State.md)
 
-# Quick Look (HowTo): AWS Terraform Samples
+# Quick Look (How-To): AWS Terraform Samples
 These samples focus on how to create and use AWS components (EC2, EBS, EFS, Lambda, ECS, EKS, ASG, ELB, API Gateway, S3, DynamoDB) with Terraform:
 
-- [Sample: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](https://github.com/omerbsezer/Fast-Terraform/blob/main/EC2-VPC-Ubuntu-Win-SSH-RDP.md)
-- [Sample: Lambda Function, IAM Role, IAM Policy, Simple Python Code]()
-- [Sample: Create Thumbnail Application using Python, Lambda]()
-- [Sample: EC2 with EBS and EFS using Terraform]()
-- [Sample: Creating ECS (Elastic Container Service), Pushing/Pulling Image ECR (Elastic Container Registry)]()
-- [Sample: Creating EKS (Elastic Kubernetes Service)]()
-- [Sample: ELB, EC2, Auto Scaling Group]()
-- [Sample: S3, Lambda]()
+- [SAMPLE-01: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE01-EC2-VPC-Ubuntu-Win-SSH-RDP.md)
+- [SAMPLE-02: Lambda Function, IAM Role, IAM Policy, Simple Python Code]()
+- [SAMPLE-03: Create Thumbnail Application using Python, Lambda]()
+- [SAMPLE-04: EC2 with EBS and EFS using Terraform]()
+- [SAMPLE-05: Creating ECS (Elastic Container Service), Pushing/Pulling Image ECR (Elastic Container Registry)]()
+- [SAMPLE-06: Creating EKS (Elastic Kubernetes Service)]()
+- [SAMPLE-07: ELB, EC2, Auto Scaling Group]()
+- [SAMPLE-08: S3, Lambda]()
 
 # Table of Contents
 - [Motivation](#motivation)
