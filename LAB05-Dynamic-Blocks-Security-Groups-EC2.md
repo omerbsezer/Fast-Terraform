@@ -1,4 +1,4 @@
-## LAB: Dynamic Blocks => Provision Security Groups, EC2, VPC
+## LAB-05: Dynamic Blocks => Provision Security Groups, EC2, VPC
 
 This scenario shows:
 - how to create Dynamic Blocks for Security Group Definition
@@ -8,7 +8,7 @@ This scenario shows:
 ### Prerequisite
 
 - You should have a look following lab: 
-  - [LAB: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Install-AWS-Configuration.md)
+  - [LAB-00: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB00-Terraform-Install-AWS-Configuration.md)
 
 ## Steps
 
