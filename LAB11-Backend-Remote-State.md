@@ -1,4 +1,4 @@
-## LAB: Backend - Remote States => Provision EC2 and Save State File on S3
+## LAB-11: Backend - Remote States => Provision EC2 and Save State File on S3
 
 This scenario shows:
 - how to use backend and save Terraform state file on S3
@@ -8,7 +8,7 @@ This scenario shows:
 ### Prerequisite
 
 - You should have a look following lab: 
-  - [LAB: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Install-AWS-Configuration.md)
+  - [LAB-00: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB00-Terraform-Install-AWS-Configuration.md)
 
 ## Steps
 
