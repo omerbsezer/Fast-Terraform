@@ -25,7 +25,7 @@ These LABs focus on Terraform features, help to learn Terraform:
 These samples focus on how to create and use AWS components (EC2, EBS, EFS, Lambda, ECS, EKS, ASG, ELB, API Gateway, S3, DynamoDB) with Terraform:
 
 - [SAMPLE-01: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE01-EC2-VPC-Ubuntu-Win-SSH-RDP.md)
-- [SAMPLE-02: Lambda Function, IAM Role, IAM Policy, Simple Python Code]()
+- [SAMPLE-02: Lambda Function, IAM Role, IAM Policy, Simple Python Code](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE02-Lambda-API-Gateway-Python.md)
 - [SAMPLE-03: Create Thumbnail Application using Python, Lambda]()
 - [SAMPLE-04: EC2 with EBS and EFS using Terraform]()
 - [SAMPLE-05: Creating ECS (Elastic Container Service), Pushing/Pulling Image ECR (Elastic Container Registry)]()
