@@ -181,7 +181,7 @@ output "instance_win2019_public_ip" {
 }
 ``` 
 
-**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/application/ec2-vpc-ubuntu-win-ssh-rdp/main.tf
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/ec2-vpc-ubuntu-win-ssh-rdp/main.tf
 
 ![image](https://user-images.githubusercontent.com/10358317/228973324-4bc1c6ad-1099-4f56-8e6f-c002f719d9d4.png)
 
