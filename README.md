@@ -2,7 +2,6 @@
 This repo covers Terraform with LABs using AWS: 
 - Resources, Data Sources, Variables, Meta Arguments, Provisioners, Dynamic Blocks, Modules, Workspaces, 
 - Provisioning AWS Resources (EC2, VPC, IAM Users, User Groups, Policies, Roles, ECS, EKS, Lambda) and details. 
-- Possible usage scenarios are aimed to update over time.
 
 **Keywords:** Terraform, Infrastructure as Code, AWS, Cloud Provisioning
 
@@ -22,17 +21,17 @@ These LABs focus on Terraform features, help to learn Terraform:
 - [LAB: Templates => Provision IAM User, User Access Key, Policy](https://github.com/omerbsezer/Fast-Terraform/blob/main/Templates-User-Policy.md)
 - [LAB: Backend - Remote States => Provision EC2 and Save State File on S3](https://github.com/omerbsezer/Fast-Terraform/blob/main/Backend-Remote-State.md)
 
-# Quick Look (HowTo): AWS Applications with Terraform
-These applications focus on how to create and use AWS components (EC2, EBS, EFS, Lambda, ECS, EKS, ASG, ELB, API Gateway, S3, DynamoDB) with Terraform:
+# Quick Look (HowTo): AWS Terraform Samples
+These samples focus on how to create and use AWS components (EC2, EBS, EFS, Lambda, ECS, EKS, ASG, ELB, API Gateway, S3, DynamoDB) with Terraform:
 
-- [Application: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](https://github.com/omerbsezer/Fast-Terraform/blob/main/EC2-VPC-Ubuntu-Win-SSH-RDP.md)
-- [Application: Lambda Function, IAM Role, IAM Policy, Simple Python Code]()
-- [Application: Create Thumbnail Application using Python, Lambda]()
-- [Application: EC2 with EBS and EFS using Terraform]()
-- [Application: Creating ECS (Elastic Container Service), Pushing/Pulling Image ECR (Elastic Container Registry)]()
-- [Application: Creating EKS (Elastic Kubernetes Service)]()
-- [Application: ELB, EC2, Auto Scaling Group]()
-- [Application: S3, Lambda]()
+- [Sample: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](https://github.com/omerbsezer/Fast-Terraform/blob/main/EC2-VPC-Ubuntu-Win-SSH-RDP.md)
+- [Sample: Lambda Function, IAM Role, IAM Policy, Simple Python Code]()
+- [Sample: Create Thumbnail Application using Python, Lambda]()
+- [Sample: EC2 with EBS and EFS using Terraform]()
+- [Sample: Creating ECS (Elastic Container Service), Pushing/Pulling Image ECR (Elastic Container Registry)]()
+- [Sample: Creating EKS (Elastic Kubernetes Service)]()
+- [Sample: ELB, EC2, Auto Scaling Group]()
+- [Sample: S3, Lambda]()
 
 # Table of Contents
 - [Motivation](#motivation)
@@ -153,12 +152,12 @@ Why should we use / learn Terraform?
 
 ## Terraform Best Practices <a name="best_practice"></a>
 
-## Terraform AWS Applications <a name="applications"></a>
+## AWS Terraform Samples <a name="samples"></a>
 
-### Application: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections <a name="ec2_vpc_key_pair_ssh_rdp"></a>
+### Sample: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections <a name="ec2_vpc_key_pair_ssh_rdp"></a>
 
-- Go to Application:
-  - [Application: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](https://github.com/omerbsezer/Fast-Terraform/blob/main/EC2-VPC-Ubuntu-Win-SSH-RDP.md)
+- Go to Sample:
+  - [Sample: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](https://github.com/omerbsezer/Fast-Terraform/blob/main/EC2-VPC-Ubuntu-Win-SSH-RDP.md)
 
 ## Details <a name="details"></a>
 
