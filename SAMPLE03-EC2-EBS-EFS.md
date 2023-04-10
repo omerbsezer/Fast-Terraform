@@ -10,7 +10,7 @@ There are 3 main parts:
 - efs.tf: It includes EFS configuration for Ubuntu EC2. 
 - ebs.tf: It includes EBS configuration for both Ubuntu and Windows EC2s.
 
-**Code:** 
+**Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ec2-ebs-efs
 
 ### Prerequisite
 
@@ -186,7 +186,7 @@ output "instance_win2019_public_ip" {
 }
 ```
 
-**Code:** 
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/ec2-ebs-efs/main.tf
 
 ![image](https://user-images.githubusercontent.com/10358317/228973324-4bc1c6ad-1099-4f56-8e6f-c002f719d9d4.png)
 
@@ -226,7 +226,7 @@ resource "aws_volume_attachment" "win2019_ebs_windows" {
 }
 ```
 
-**Code:** 
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/ec2-ebs-efs/ebs.tf
 
 ![image](https://user-images.githubusercontent.com/10358317/230891729-cda1f5a7-0d7e-4763-ad26-709b23596ad5.png)
 
@@ -312,7 +312,7 @@ resource "null_resource" "configure_nfs" {
 }
 ```
 
-**Code:**
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/ec2-ebs-efs/efs.tf
 
 ![image](https://user-images.githubusercontent.com/10358317/230891861-918ccb30-f78e-45be-9780-5d9046a829de.png)
 
