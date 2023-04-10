@@ -1,4 +1,4 @@
-## SAMPLE-02: EC2 EBS EFS
+## SAMPLE-03: EC2 EBS EFS
 
 This sample shows:
 - how to create EBS, mount on Ubuntu and Windows
@@ -297,7 +297,7 @@ resource "null_resource" "configure_nfs" {
   connection {
     type     = "ssh"
     user     = "ubuntu"
-    private_key = file("awskey.pem")
+    private_key = file("testkey.pem")
     host     = aws_instance.ubuntu2004.public_ip
   }
 
