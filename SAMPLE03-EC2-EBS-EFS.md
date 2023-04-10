@@ -414,7 +414,11 @@ e.g. sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=60
 
 ![image](https://user-images.githubusercontent.com/10358317/230898135-6f8d7012-10b3-4e4b-bf29-27619166782d.png)
 
+- New Simple Volume:
+
 ![image](https://user-images.githubusercontent.com/10358317/230898370-40f2b976-3a7c-4b7b-ae3e-0897b0c3a277.png)
+
+- Final configuration:
 
 ![image](https://user-images.githubusercontent.com/10358317/230898488-a35862a9-d171-40b5-8f1d-4f97a986346a.png)
 
