@@ -121,8 +121,8 @@ resource "aws_instance" "win2019" {
   subnet_id                   = aws_subnet.public.id  
   associate_public_ip_address = true
   tags = {
-		Name = "Win 2019 Server"
-	}
+    Name = "Win 2019 Server"
+  }
 }
 
 output "instance_ubuntu2004_public_ip" {
