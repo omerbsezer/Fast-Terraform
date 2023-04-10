@@ -12,6 +12,18 @@ There are 3 main parts:
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ec2-ebs-efs
 
+# Table of Contents
+- [Key-Pair](#keypair)
+- [VPC, EC2, SG Implementation](#vpc)
+- [EBS Implementation](#ebs)
+- [EFS Implementation](#efs)
+- [Terraform Run](#run)
+- [EBS Final Setup and Test on Ubuntu](#ebsfinalubuntu)
+- [EFS Final Setup and Test on Ubuntu](#efsfinalubuntu)
+- [EBS Final Setup and Test on Windows](#ebsfinalwindows)
+
+
+
 ### Prerequisite
 
 - You should have a look following lab: 
@@ -19,7 +31,7 @@ There are 3 main parts:
 
 ## Steps
 
-### Key-Pair
+### Key-Pair <a name="keypair"></a>
 
  SSH key-pairs (public and private key) are used to connect remote server. Public key (xx.pub) is on the remote server, with private key, user can connect using SSH.
 
@@ -45,7 +57,7 @@ There are 3 main parts:
 
 ![image](https://user-images.githubusercontent.com/10358317/228974784-de1b9be4-9083-45ec-a9ab-5a1e54aee2c5.png)
 
-### VPC, EC2, SG Implementation
+### VPC, EC2, SG Implementation <a name="vpc"></a>
 
 - Create main.tf:
  
@@ -190,7 +202,7 @@ output "instance_win2019_public_ip" {
 
 ![image](https://user-images.githubusercontent.com/10358317/228973324-4bc1c6ad-1099-4f56-8e6f-c002f719d9d4.png)
 
-### EBS
+### EBS Implementation <a name="ebs"></a>
 
 - Create ebs.tf:
  
@@ -230,7 +242,7 @@ resource "aws_volume_attachment" "win2019_ebs_windows" {
 
 ![image](https://user-images.githubusercontent.com/10358317/230891729-cda1f5a7-0d7e-4763-ad26-709b23596ad5.png)
 
-### EFS
+### EFS Implementation <a name="efs"></a>
 
 - Create efs.tf:
  
@@ -316,7 +328,7 @@ resource "null_resource" "configure_nfs" {
 
 ![image](https://user-images.githubusercontent.com/10358317/230891861-918ccb30-f78e-45be-9780-5d9046a829de.png)
 
-### Terraform Run
+### Terraform Run <a name="run"></a>
 
 - Run init, validate, plan, apply commands:
 
@@ -331,7 +343,7 @@ terraform apply
 
 ![image](https://user-images.githubusercontent.com/10358317/230893093-c7e6f1dd-f5f0-4b57-9c67-b56d6a872fbb.png)
 
-### EBS Final Setup and Test on Ubuntu
+### EBS Final Setup and Test on Ubuntu <a name="ebsfinalubuntu"></a>
 
 - On AWS EC2:
 
@@ -369,7 +381,7 @@ df -h .
 
 ![image](https://user-images.githubusercontent.com/10358317/230894735-e13ebfb7-fb47-4d98-ae11-7e2358294c92.png)
 
-### EFS Final Setup and Test on Ubuntu
+### EFS Final Setup and Test on Ubuntu <a name="efsfinalubuntu"></a>
 
 - Go to EFS Service, new EFS filesystem:
 
@@ -394,7 +406,7 @@ e.g. sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=60
 
 ![image](https://user-images.githubusercontent.com/10358317/230896271-ded8a2f6-cfb8-4d18-a29d-fba4277126cc.png)
 
-### EBS Final Setup and Test on Windows
+### EBS Final Setup and Test on Windows <a name="ebsfinalwindows"></a>
 
 - Connect Windows with RDP, get password using pem key:
 
