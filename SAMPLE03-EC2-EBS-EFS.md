@@ -10,7 +10,7 @@ There are 3 main parts:
 - efs.tf: It includes EFS configuration for Ubuntu EC2. 
 - ebs.tf: It includes EBS configuration for both Ubuntu and Windows EC2s.
 
-![image](https://user-images.githubusercontent.com/10358317/230903321-5bca3385-9564-44f1-bde8-fe1c873c870a.png) (ref: AWS)
+![image](https://user-images.githubusercontent.com/10358317/230903321-5bca3385-9564-44f1-bde8-fe1c873c870a.png)
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ec2-ebs-efs
 
