@@ -1,9 +1,9 @@
-## SAMPLE-03: EC2 EBS EFS
+## SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances)
 
 This sample shows:
-- how to create EBS, mount on Ubuntu and Windows
-- how to create EFS, mount on Ubuntu
-  - EFS is not supported on Windows: https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/AmazonEFS.html
+- how to create EBS, mount on Ubuntu and Windows Instances.
+- how to create EFS, mount on Ubuntu Instance.
+  - EFS is not supported on Windows Instance: https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/AmazonEFS.html
 
 There are 3 main parts:
 - **main.tf**: It includes 2 EC2 (Ubuntu, Windows), VPC, subnet, IGW, route table, security group implementation.
