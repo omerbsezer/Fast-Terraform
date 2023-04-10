@@ -10,6 +10,8 @@ There are 3 main parts:
 - efs.tf: It includes EFS configuration for Ubuntu EC2. 
 - ebs.tf: It includes EBS configuration for both Ubuntu and Windows EC2s.
 
+![image](https://user-images.githubusercontent.com/10358317/230903321-5bca3385-9564-44f1-bde8-fe1c873c870a.png) (ref: AWS)
+
 **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ec2-ebs-efs
 
 # Table of Contents
@@ -447,3 +449,7 @@ terraform destroy
 - It is easy to manage 17 resources:
 
 ![image](https://user-images.githubusercontent.com/10358317/230901325-0a1cd3c1-2080-4749-a084-f370c17b95de.png)
+
+## References:
+- https://adamtheautomator.com/terraform-efs/
+- https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/ebs-using-volumes.html
