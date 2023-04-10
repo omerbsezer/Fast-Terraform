@@ -6,9 +6,9 @@ This sample shows:
   - EFS is not supported on Windows: https://docs.aws.amazon.com/AWSEC2/latest/WindowsGuide/AmazonEFS.html
 
 There are 3 main parts:
-- main.tf: It includes 2 EC2 (Ubuntu, Windows), VPC, subnet, IGW, route table, security group implementation.
-- efs.tf: It includes EFS configuration for Ubuntu EC2. 
-- ebs.tf: It includes EBS configuration for both Ubuntu and Windows EC2s.
+- **main.tf**: It includes 2 EC2 (Ubuntu, Windows), VPC, subnet, IGW, route table, security group implementation.
+- **efs.tf**: It includes EFS configuration for Ubuntu EC2. 
+- **ebs.tf**: It includes EBS configuration for both Ubuntu and Windows EC2s.
 
 ![image](https://user-images.githubusercontent.com/10358317/230903321-5bca3385-9564-44f1-bde8-fe1c873c870a.png)
 
