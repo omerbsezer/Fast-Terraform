@@ -26,7 +26,7 @@ These samples focus on how to create and use AWS components (EC2, EBS, EFS, Lamb
 
 - [SAMPLE-01: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE01-EC2-VPC-Ubuntu-Win-SSH-RDP.md)
 - [SAMPLE-02: Lambda Function, IAM Role, IAM Policy, Simple Python Code](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE02-Lambda-API-Gateway-Python.md)
-- [SAMPLE-03: EC2 with EBS and EFS using Terraform]()
+- [SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances)](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE03-EC2-EBS-EFS.md)
 - [SAMPLE: Pushing/Pulling Image ECR, Creating ECS Cluster and Task Definition, Running Service]()
 - [SAMPLE: Container running on Lambda]()
 - [SAMPLE: Creating EKS (Elastic Kubernetes Service)]()
