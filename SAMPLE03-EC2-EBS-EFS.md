@@ -426,4 +426,12 @@ e.g. sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=60
 
 ![image](https://user-images.githubusercontent.com/10358317/230898597-ca1d7ffe-80ba-45cb-9465-1463436392ae.png)
 
+- Destroy infrastructure:
 
+```
+terraform destroy 
+``` 
+
+- It is easy to manage 17 resources:
+
+![image](https://user-images.githubusercontent.com/10358317/230901325-0a1cd3c1-2080-4749-a084-f370c17b95de.png)
