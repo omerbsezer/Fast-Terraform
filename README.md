@@ -80,7 +80,16 @@ Why should we use / learn Terraform?
 
 ## What is Terraform? <a name="what_is_terraform"></a>
 
+- Terraform is cloud-independent provisioning tool to create Cloud infrastructure. 
+- Creating infrastructure code with HCL (Hashicorp Language) that is similar to YAML, JSON, Python
+
+
 ## How Terraform Works? <a name="how_terrafom_works"></a>
+
+- Terraform works with different providers (AWS, Google CLoud, Azure, Docker, K8s, etc.)
+- After creating Terraform Files (tf):
+ 
+![image](https://user-images.githubusercontent.com/10358317/231135348-ef6fa6bb-7685-4275-aefc-6b909dac0df2.png)
 
 ## Terraform File Components <a name="terrafom_file_components"></a>
 
