@@ -89,11 +89,11 @@ Why should we use / learn Terraform?
 ## How Terraform Works? <a name="how_terrafom_works"></a>
 - Terraform works with different providers (AWS, Google CLoud, Azure, Docker, K8s, etc.)
 - After creating Terraform Files (tf), terraform commands:
-  - init: downloads the required executable apps dependent on providers.
-  - validate: confirms the tf files.
-  - plan: dry-run for the infrastructure, not actually running/provisioning the infrastructure
-  - apply: runs/provisions the infrastructure
-  - destroy: deletes the infrastructure
+  - **init**: downloads the required executable apps dependent on providers.
+  - **validate**: confirms the tf files.
+  - **plan**: dry-run for the infrastructure, not actually running/provisioning the infrastructure
+  - **apply**: runs/provisions the infrastructure
+  - **destroy**: deletes the infrastructure
 
 - Main Commands:
 ```
@@ -111,6 +111,8 @@ terraform apply -auto-approve                               # no ask for confirm
 terraform apply --var-file="terraform-prod.tfvars"          # specific variable files
 terraform destroy --var-file="terraform-prod.tfvars"        # specific variable files
 ```
+
+  ![image](https://user-images.githubusercontent.com/10358317/231147788-ba40b795-4050-49df-b1ad-48b273257410.png)
 
 - TF state file stores the latest status of the infrastructure after running "apply" command.
 - TF state file deletes the status of the infrastructure after running "destroy" command.
