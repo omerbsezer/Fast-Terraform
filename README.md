@@ -132,6 +132,7 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 
 ### Resources <a name="resources"></a>
 
+![image](https://user-images.githubusercontent.com/10358317/231144727-aadaf83b-fbb4-422a-9ccd-b159d2689c47.png)
 
 - Go to LAB to learn:
   - [LAB-02: Resources => Provision Basic EC2 (Ubuntu 22.04)](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB02-Resources-Basic-EC2.md)
@@ -139,11 +140,17 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 ### Variables (tfvar) <a name="variables"></a>
 
 
+![image](https://user-images.githubusercontent.com/10358317/231144889-3edd38a4-1ff9-4c82-8155-50f0089757fa.png)
+
+![image](https://user-images.githubusercontent.com/10358317/231145166-f032ae1e-9bbb-436a-9c0e-3c0be8fb627c.png)
+
+
 - Go to LAB to learn:
   - [LAB-03: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB03-Variables-Locals-Output-EC2.md)
 
 ### Values (Locals, Outputs) <a name="values"></a>
 
+![image](https://user-images.githubusercontent.com/10358317/231145122-ad345a85-3666-4098-9f2a-3fab2dcba410.png)
 
 - Go to LAB to learn:
   - [LAB-03: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB03-Variables-Locals-Output-EC2.md)
@@ -156,11 +163,14 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 
 ### Dynamic Blocks <a name="dynamic_blocks"></a>
 
+![image](https://user-images.githubusercontent.com/10358317/231145371-c9322d06-326d-44f7-95e2-e9ec6f806bfe.png)
 
 - Go to LAB to learn:
   - [LAB-05: Dynamic Blocks => Provision Security Groups, EC2, VPC](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB05-Dynamic-Blocks-Security-Groups-EC2.md)
 
 ### Data Sources <a name="datasources"></a>
+
+![image](https://user-images.githubusercontent.com/10358317/231145418-c333d2df-706f-4325-8eb2-5d677fa30ce5.png)
 
 
 - Go to LAB to learn:
@@ -168,27 +178,35 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 
 ### Provisioners <a name="provisioners"></a>
 
+![image](https://user-images.githubusercontent.com/10358317/231145525-4f97c4a1-dc6f-4323-a8ca-7041c27d00d9.png)
+
 - Go to LAB to learn:
   - [LAB-07: Provisioners (file, remote-exec), Null Resources (local-exec) => Provision Key-Pair, SSH Connection](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB07-Provisioners-Null-Resources.md)
 
 ### Modules <a name="modules"></a>
+
+![image](https://user-images.githubusercontent.com/10358317/231145600-59034277-0781-4285-9fa8-987a1c7f6e27.png)
 
 - Go to LAB to learn:
   - [LAB-08: Modules => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB08-Modules-EC2.md)
 
 ### Workspaces <a name="workspaces"></a>
 
+![image](https://user-images.githubusercontent.com/10358317/231145703-c35b657c-7e39-4d53-980f-4561fda9489d.png)
+
 - Go to LAB to learn:
   - [LAB-09: Workspaces => Provision EC2 with Different tfvars Files](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB09-Workspaces-EC2.md)
 
 ### Templates <a name="templates"></a>
 
+![image](https://user-images.githubusercontent.com/10358317/231145808-06b895d6-a424-4c7c-858c-76b64e5574e6.png)
 
 - Go to LAB to learn:
   - [LAB-10: Templates => Provision IAM User, User Access Key, Policy](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB10-Templates-User-Policy.md)
 
 ### Backend and Remote States <a name="backends_remote_states"></a>
 
+![image](https://user-images.githubusercontent.com/10358317/231145912-908af9fe-56ef-479e-8ee4-9c5f7f92329e.png)
 
 - Go to LAB to learn:
   - [LAB-11: Backend - Remote States => Provision EC2 and Save State File on S3](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB11-Backend-Remote-State.md)
