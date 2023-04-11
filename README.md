@@ -64,6 +64,7 @@ These samples focus on how to create and use AWS components (EC2, EBS, EFS, Lamb
 
 Why should we use / learn Terraform?
 - Terraform is cloud-agnostic and popular tool to create/provision Cloud Infrastructure resources/objects (e.g. Virtual Private Cloud, Virtual Machines, Lambda, etc.)
+  - Manage any infrastructure
   - Similar to Native Infrastructure as Code (IaC): CloudFormation (AWS), Resource Manager (Azure), Google Cloud Deployment Manager (Google Cloud) 
 - It is free, open source (https://github.com/hashicorp/terraform) and has a large community with enterprise support options.
 - Commands, tasks, codes turn into the IaC.
@@ -73,7 +74,8 @@ Why should we use / learn Terraform?
 - It has well-designed documentation:
   - https://developer.hashicorp.com/terraform/language
   - https://registry.terraform.io/providers/hashicorp/aws/latest/docs
-- Terraform uses a modular structure  
+- Terraform uses a modular structure.
+- Terraform tracks your infrastructure with TF state file.
 
 ![image](https://user-images.githubusercontent.com/10358317/228594238-dddc325b-6297-4eec-a1b2-aa3652e3d818.png) (ref: Redis)
 
@@ -81,15 +83,45 @@ Why should we use / learn Terraform?
 ## What is Terraform? <a name="what_is_terraform"></a>
 
 - Terraform is cloud-independent provisioning tool to create Cloud infrastructure. 
-- Creating infrastructure code with HCL (Hashicorp Language) that is similar to YAML, JSON, Python
-
+- Creating infrastructure code with HCL (Hashicorp Language) that is similar to YAML, JSON, Python.
+- Terraform Basic Tutorial: https://developer.hashicorp.com/terraform/tutorials/aws-get-started
+- Reference and Details: https://developer.hashicorp.com/terraform/intro
+![image](https://user-images.githubusercontent.com/10358317/231142232-30af016b-b7cd-490f-9757-b2449c7660b1.png)
 
 ## How Terraform Works? <a name="how_terrafom_works"></a>
 
 - Terraform works with different providers (AWS, Google CLoud, Azure, Docker, K8s, etc.)
-- After creating Terraform Files (tf):
+- After creating Terraform Files (tf), terraform commands:
+  - init: downloads the required executable apps dependent on providers.
+  - validate: confirms the tf files.
+  - plan: dry-run for the infrastructure, not actually running/provisioning the infrastructure
+  - apply: runs/provisions the infrastructure
+  - destroy: deletes the infrastructure
+
+- Main Commands:
+```
+terraform init
+terraform validate
+terraform plan            # ask for confirmation (yes/no), after running command
+terraform apply           # ask for confirmation (yes/no), after running command
+terraform destroy         # ask for confirmation (yes/no), after running command
+```
+
+- Command Variants:
+```
+terraform plan --var-file="terraform-dev.tfvars"            # specific variable files
+terraform apply -auto-approve                               # no ask for confirmation
+terraform apply --var-file="terraform-prod.tfvars"          # specific variable files
+terraform destroy --var-file="terraform-prod.tfvars"        # specific variable files
+```
+
+- TF state file stores the latest status of the infrastructure after running "apply" command.
+- TF state file deletes the status of the infrastructure after running "destroy" command.
+- TF state files are stored:
+  - on local PC 
+  - on remote cloud (AWS S3, Terraform Cloud) 
  
-![image](https://user-images.githubusercontent.com/10358317/231135348-ef6fa6bb-7685-4275-aefc-6b909dac0df2.png)
+ 
 
 ## Terraform File Components <a name="terrafom_file_components"></a>
 
