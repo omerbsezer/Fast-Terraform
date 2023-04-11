@@ -86,7 +86,10 @@ Why should we use / learn Terraform?
 - Creating infrastructure code with HCL (Hashicorp Language) that is similar to YAML, JSON, Python.
 - Terraform Basic Tutorial: https://developer.hashicorp.com/terraform/tutorials/aws-get-started
 - Reference and Details: https://developer.hashicorp.com/terraform/intro
-![image](https://user-images.githubusercontent.com/10358317/231142232-30af016b-b7cd-490f-9757-b2449c7660b1.png)
+  ![image](https://user-images.githubusercontent.com/10358317/231143883-a2348511-dd12-4e0f-806d-3144ac88aa4d.png)
+
+
+
 
 ## How Terraform Works? <a name="how_terrafom_works"></a>
 
