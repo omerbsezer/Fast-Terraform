@@ -61,7 +61,6 @@ These samples focus on how to create and use AWS components (EC2, EBS, EFS, Lamb
 - [References](#references)
 
 ## Motivation <a name="motivation"></a>
-
 Why should we use / learn Terraform?
 - Terraform is cloud-agnostic and popular tool to create/provision Cloud Infrastructure resources/objects (e.g. Virtual Private Cloud, Virtual Machines, Lambda, etc.)
   - Manage any infrastructure
@@ -76,13 +75,9 @@ Why should we use / learn Terraform?
   - https://registry.terraform.io/providers/hashicorp/aws/latest/docs
 - Terraform uses a modular structure.
 - Terraform tracks your infrastructure with TF state file.
-
-![image](https://user-images.githubusercontent.com/10358317/231144158-63009879-4687-492e-8f6a-5e233dab3f28.png)
- (ref: Redis)
-
+  ![image](https://user-images.githubusercontent.com/10358317/231144158-63009879-4687-492e-8f6a-5e233dab3f28.png)(ref: Redis)
 
 ## What is Terraform? <a name="what_is_terraform"></a>
-
 - Terraform is cloud-independent provisioning tool to create Cloud infrastructure. 
 - Creating infrastructure code with HCL (Hashicorp Language) that is similar to YAML, JSON, Python.
 - Terraform Basic Tutorial for AWS: 
@@ -92,7 +87,6 @@ Why should we use / learn Terraform?
   ![image](https://user-images.githubusercontent.com/10358317/231143883-a2348511-dd12-4e0f-806d-3144ac88aa4d.png)
 
 ## How Terraform Works? <a name="how_terrafom_works"></a>
-
 - Terraform works with different providers (AWS, Google CLoud, Azure, Docker, K8s, etc.)
 - After creating Terraform Files (tf), terraform commands:
   - init: downloads the required executable apps dependent on providers.
@@ -123,6 +117,8 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 - TF state files are stored:
   - on local PC 
   - on remote cloud (AWS S3, Terraform Cloud) 
+
+- Please have a look LABs and SAMPLEs to learn how Terraform works in real scenarios.
  
 ## Terraform File Components <a name="terrafom_file_components"></a>
 
@@ -156,7 +152,6 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
   - [LAB-03: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB03-Variables-Locals-Output-EC2.md)
 
 ### Meta Arguments <a name="meta_arguments"></a>
-
 
 - Go to LAB to learn:
   - [LAB-04: Meta Arguments (Count, For_Each, Map) => Provision IAM Users, Groups, Policies, Attachment Policy-User](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB04-Meta-Arguments-IAM-User-Group-Policy.md)
