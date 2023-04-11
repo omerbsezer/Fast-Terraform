@@ -77,19 +77,19 @@ Why should we use / learn Terraform?
 - Terraform uses a modular structure.
 - Terraform tracks your infrastructure with TF state file.
 
-![image](https://user-images.githubusercontent.com/10358317/228594238-dddc325b-6297-4eec-a1b2-aa3652e3d818.png) (ref: Redis)
+![image](https://user-images.githubusercontent.com/10358317/231144158-63009879-4687-492e-8f6a-5e233dab3f28.png)
+ (ref: Redis)
 
 
 ## What is Terraform? <a name="what_is_terraform"></a>
 
 - Terraform is cloud-independent provisioning tool to create Cloud infrastructure. 
 - Creating infrastructure code with HCL (Hashicorp Language) that is similar to YAML, JSON, Python.
-- Terraform Basic Tutorial: https://developer.hashicorp.com/terraform/tutorials/aws-get-started
-- Reference and Details: https://developer.hashicorp.com/terraform/intro
+- Terraform Basic Tutorial for AWS: 
+  - https://developer.hashicorp.com/terraform/tutorials/aws-get-started
+- Reference and Details: 
+  - https://developer.hashicorp.com/terraform/intro
   ![image](https://user-images.githubusercontent.com/10358317/231143883-a2348511-dd12-4e0f-806d-3144ac88aa4d.png)
-
-
-
 
 ## How Terraform Works? <a name="how_terrafom_works"></a>
 
@@ -124,8 +124,6 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
   - on local PC 
   - on remote cloud (AWS S3, Terraform Cloud) 
  
- 
-
 ## Terraform File Components <a name="terrafom_file_components"></a>
 
 
