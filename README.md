@@ -357,6 +357,17 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
 
 ## Terraform Best Practices <a name="best_practice"></a>
 
+- Don't change/edit anything on state file manually. Manipulate state file only through TF commands (e.g. terraform apply, terraform state). 
+- Use remote state file to share the file with other users. Keep state file on the Cloud (S3, Terraform Cloud, etc.)
+- To prevent concurrent changes, state locking is important. Hence concurrent change from multiple user can be avoided. 
+  - S3 supports state locking and consistency via DynamoDB.
+- Backing up state file is also important to save the status. S3 enables versioning. Versioning state file can provide you backing up the state file.
+- If you use multiple environment (dev, test, staging, production), use 1 state file per environment. Terraform workspace provide multiple state files for different environments.
+- Use Git repositories (Github, Gitlab) to host TF codes to share other users.
+- Behave your Infrastructure code as like your application code. Create CI pipeline/process for your TF Code (review tf code, run automated tests). This will shift your infrastructure code high quality.
+- Execute Terraform only in an automated build, CD pipeline/process. This helps to run code automatically and run from one/single place. 
+- For naming conventions: https://www.terraform-best-practices.com/naming 
+
 ## AWS Terraform Samples <a name="samples"></a>
 
 ### Sample: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections <a name="ec2_vpc_key_pair_ssh_rdp"></a>
