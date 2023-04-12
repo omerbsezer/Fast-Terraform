@@ -126,9 +126,23 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 
 
 ### Providers <a name="providers"></a>
+- Terraform supposes for different providers (AWS, Google Cloud, Azure).
+- Terraform downloads required executable files from own cloud to run IaC (code) for the corresponding providers.
+- AWS (https://registry.terraform.io/providers/hashicorp/aws/latest/docs): 
 
+  ![image](https://user-images.githubusercontent.com/10358317/231405120-1d6907be-53f6-46e8-8e6f-a5dd73a0cfb5.png)
+
+- Google Cloud (GCP) (https://registry.terraform.io/providers/hashicorp/google/latest/docs):
+
+  ![image](https://user-images.githubusercontent.com/10358317/231405236-73faf1e4-3ea8-45df-982e-d56f64eba2a5.png)
+
+- Azure (https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs):
+
+  ![image](https://user-images.githubusercontent.com/10358317/231405457-7b90a689-96c6-434d-a319-162adc04f772.png)
 
 ### Resources <a name="resources"></a>
+- Resources are used to define for different cloud components and objects. 
+- To learn the details, features of the cloud components, you should know how the cloud works, which components cloud have, how to configure the cloud components.
 
 ![image](https://user-images.githubusercontent.com/10358317/231144727-aadaf83b-fbb4-422a-9ccd-b159d2689c47.png)
 
