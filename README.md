@@ -256,15 +256,19 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 - "Dynamic blocks" creates small code template that reduces the code repetition.
 - In the example below, it isn't needed to create parameters (description, from_port, to_port, protocol, cidr_blocks) for each ingress ports:
 
-![image](https://user-images.githubusercontent.com/10358317/231145371-c9322d06-326d-44f7-95e2-e9ec6f806bfe.png)
+  ![image](https://user-images.githubusercontent.com/10358317/231145371-c9322d06-326d-44f7-95e2-e9ec6f806bfe.png)
 
 - Go to LAB to learn:
   - [LAB-05: Dynamic Blocks => Provision Security Groups, EC2, VPC](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB05-Dynamic-Blocks-Security-Groups-EC2.md)
 
 ### Data Sources <a name="datasources"></a>
+- "Data Sources" helps to retrieve/fetch/get data/information from previously created/existed cloud objects/resources.
 
-![image](https://user-images.githubusercontent.com/10358317/231145418-c333d2df-706f-4325-8eb2-5d677fa30ce5.png)
-
+- In the example below:
+  - "filter" keyword is used to select/filter the existed objects (reources, instances, etc.)
+  - "depends_on" keyword provides to run the data block after resource created.
+  
+  ![image](https://user-images.githubusercontent.com/10358317/231145418-c333d2df-706f-4325-8eb2-5d677fa30ce5.png)
 
 - Go to LAB to learn:
   - [LAB-06: Data Sources with Depends_on => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB06-Data-Sources-EC2.md)
