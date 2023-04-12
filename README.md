@@ -123,7 +123,18 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 - Please have a look LABs and SAMPLEs to learn how Terraform works in real scenarios.
  
 ## Terraform File Components <a name="terrafom_file_components"></a>
-
+- Terraform file has different components to define infrastructure for different purposes. 
+  - Providers,
+  - Resources,
+  - Variables,
+  - Values (locals, outputs),
+  - Meta Argurments (for, for_each, map, depends_on, life_cycle),
+  - Dynamic Blocks,
+  - Data Sources,
+  - Provisioners,
+  - Workspaces,
+  - Modules,
+  - Templates.
 
 ### Providers <a name="providers"></a>
 - Terraform supposes for different providers (AWS, Google Cloud, Azure).
@@ -139,6 +150,10 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 - Azure (https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs):
 
   ![image](https://user-images.githubusercontent.com/10358317/231405457-7b90a689-96c6-434d-a319-162adc04f772.png)
+  
+ - Docker:
+
+  ![image](https://user-images.githubusercontent.com/10358317/231437580-0dc3ce8f-bbbe-4b4e-97b7-6598e85cb59e.png)
 
 ### Resources <a name="resources"></a>
 - Resources are used to define for different cloud components and objects (e.g. EC2 instances, VPC, VPC Compoenents: Router Tables, Subnets, IGW, .., Lambda, API Gateway, S3 Buckets, etc.). 
@@ -181,14 +196,23 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 
   ![image](https://user-images.githubusercontent.com/10358317/231145166-f032ae1e-9bbb-436a-9c0e-3c0be8fb627c.png)
 
-- Go to LAB to learn variables and tfvar file:
+- Go to LAB to learn variables and tfvar file, and provisioning EC2 for different environments:
   - [LAB-03: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB03-Variables-Locals-Output-EC2.md)
 
 ### Values (Locals, Outputs) <a name="values"></a>
+- "Locals" are also the variables that are mostly used as place-holder variables.
 
-![image](https://user-images.githubusercontent.com/10358317/231145122-ad345a85-3666-4098-9f2a-3fab2dcba410.png)
+  ![image](https://user-images.githubusercontent.com/10358317/231438120-8c6f0cb4-ea56-457f-8532-7bc2ee4bc39b.png)
 
-- Go to LAB to learn:
+- "Outputs" are used to put the cloud objects' information (e.g. public IP, DNS, detailed info) out as stdout.  
+
+  ![image](https://user-images.githubusercontent.com/10358317/231438718-880861bb-900d-49e2-b642-eafe0437a457.png)
+  
+- "Outputs" after running "terraform apply" command on the terminal stdout:
+
+  ![image](https://user-images.githubusercontent.com/10358317/231439218-d8f19bdb-ed5c-48b0-ad49-1f48fbb649f8.png)
+
+- Go to LAB to learn more about variables, locals, outputs and provisioning EC2:
   - [LAB-03: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB03-Variables-Locals-Output-EC2.md)
 
 ### Meta Arguments <a name="meta_arguments"></a>
