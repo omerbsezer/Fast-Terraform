@@ -152,8 +152,8 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
   ![image](https://user-images.githubusercontent.com/10358317/231405457-7b90a689-96c6-434d-a319-162adc04f772.png)
   
  - Docker (https://registry.terraform.io/providers/kreuzwerker/docker/latest/docs/resources/container):
-
-  ![image](https://user-images.githubusercontent.com/10358317/231437580-0dc3ce8f-bbbe-4b4e-97b7-6598e85cb59e.png)
+   
+   ![image](https://user-images.githubusercontent.com/10358317/231437580-0dc3ce8f-bbbe-4b4e-97b7-6598e85cb59e.png)
 
 ### Resources <a name="resources"></a>
 - Resources are used to define for different cloud components and objects (e.g. EC2 instances, VPC, VPC Compoenents: Router Tables, Subnets, IGW, .., Lambda, API Gateway, S3 Buckets, etc.). 
