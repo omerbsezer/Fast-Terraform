@@ -84,7 +84,7 @@ Why should we use / learn Terraform?
   - https://developer.hashicorp.com/terraform/tutorials/aws-get-started
 - Reference and Details: 
   - https://developer.hashicorp.com/terraform/intro
-  ![image](https://user-images.githubusercontent.com/10358317/231143883-a2348511-dd12-4e0f-806d-3144ac88aa4d.png)
+  ![image](https://user-images.githubusercontent.com/10358317/231143883-a2348511-dd12-4e0f-806d-3144ac88aa4d.png)(ref: Terraform)
 
 ## How Terraform Works? <a name="how_terrafom_works"></a>
 - Terraform works with different providers (AWS, Google CLoud, Azure, Docker, K8s, etc.)
@@ -144,7 +144,7 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 - Resources are used to define for different cloud components and objects (e.g. EC2 instances, VPC, VPC Compoenents: Router Tables, Subnets, IGW, .., Lambda, API Gateway, S3 Buckets, etc.). 
 - To learn the details, features of the cloud components, you should know how the cloud works, which components cloud have, how to configure the cloud components.
 - Syntax:
-  - resource <AWS_Object> <User_Defined_Variable_Name_With_Underscore> {}
+  - **resource <AWS_Object> <User_Defined_Variable_Name_With_Underscore> {}**
     - e.g. resource "aws_instance" "instance" {}
     - e.g. resource "aws_vpc" "my_vpc" {}
     - e.g. resource "aws_subnet" "public" {}
@@ -158,23 +158,30 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
   ![image](https://user-images.githubusercontent.com/10358317/231423197-71c23a76-a55e-4cf0-bb51-d81e45b30ff1.png)
 
 - There are different parts:
-  - Argument References (inputs) (some parts are optional, or required)
-  - Attributes References (outputs)
-  - Example code snippet to show how it uses
-  - Others (e.g. timeouts, imports)
+  - **Argument References (inputs)** (some parts are optional, or required)
+  - **Attributes References (outputs)**
+  - **Example code snippet** to show how it uses
+  - **Others** (e.g. timeouts, imports)
 
-- Go to LAB to learn:
+- Go to LAB to learn resources:
   - [LAB-02: Resources => Provision Basic EC2 (Ubuntu 22.04)](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB02-Resources-Basic-EC2.md)
 
 ### Variables (tfvar) <a name="variables"></a>
+- Variables help to avoid hard coding on the infrastructure code. 
+- Normally, if you define variables, after running "terraform apply" command, on the terminal, stdout requests from the user to enter variables.
+- But, if the "tfvar" file is defined, variables in the "tfvar" file are entered automatically in the corresponding variable fields.  
 
+  ![image](https://user-images.githubusercontent.com/10358317/231144889-3edd38a4-1ff9-4c82-8155-50f0089757fa.png)
 
-![image](https://user-images.githubusercontent.com/10358317/231144889-3edd38a4-1ff9-4c82-8155-50f0089757fa.png)
+- Tfvar files for development ("DEV") environment: 
+ 
+  ![image](https://user-images.githubusercontent.com/10358317/231437129-29191b28-368d-4fe5-8b99-abae9986e424.png)
 
-![image](https://user-images.githubusercontent.com/10358317/231145166-f032ae1e-9bbb-436a-9c0e-3c0be8fb627c.png)
+- Tfvar files for production ("PROD") environment: 
 
+  ![image](https://user-images.githubusercontent.com/10358317/231145166-f032ae1e-9bbb-436a-9c0e-3c0be8fb627c.png)
 
-- Go to LAB to learn:
+- Go to LAB to learn variables and tfvar file:
   - [LAB-03: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB03-Variables-Locals-Output-EC2.md)
 
 ### Values (Locals, Outputs) <a name="values"></a>
@@ -254,3 +261,5 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 
 ## References <a name="references"></a>
 - Redis: https://developer.redis.com/create/aws/terraform/
+- https://developer.hashicorp.com/terraform/intro
+- 
