@@ -287,7 +287,7 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 
   ![image](https://user-images.githubusercontent.com/10358317/231145525-4f97c4a1-dc6f-4323-a8ca-7041c27d00d9.png)
 
-- Go to LAB to learn about different pprovisioners:
+- Go to LAB to learn about different provisioners:
   - [LAB-07: Provisioners (file, remote-exec), Null Resources (local-exec) => Provision Key-Pair, SSH Connection](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB07-Provisioners-Null-Resources.md)
 
 ### Modules <a name="modules"></a>
