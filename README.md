@@ -141,10 +141,27 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
   ![image](https://user-images.githubusercontent.com/10358317/231405457-7b90a689-96c6-434d-a319-162adc04f772.png)
 
 ### Resources <a name="resources"></a>
-- Resources are used to define for different cloud components and objects. 
+- Resources are used to define for different cloud components and objects (e.g. EC2 instances, VPC, VPC Compoenents: Router Tables, Subnets, IGW, .., Lambda, API Gateway, S3 Buckets, etc.). 
 - To learn the details, features of the cloud components, you should know how the cloud works, which components cloud have, how to configure the cloud components.
+- Syntax:
+  - resource <AWS Object> <User_Defined_Variable_Name_With_Underscore> {}
+    - e.g. resource "aws_instance" "instance" {}
+    - e.g. resource "aws_vpc" "my_vpc" {}
+    - e.g. resource "aws_subnet" "public" {}
+    - e.g. resource "aws_security_group" "allow_ssh" {}
+  
+    ![image](https://user-images.githubusercontent.com/10358317/231420818-d0c3e679-787b-4d85-a784-6f4acdb7fa01.png)
+  
+- Important part is to check the usage of the resources (shows which arguments are optional, or required) from Terraform Registry page by searching the "Object" terms like "instance", "vpc", "security groups"
+  - https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/instance
+  
+  ![image](https://user-images.githubusercontent.com/10358317/231423197-71c23a76-a55e-4cf0-bb51-d81e45b30ff1.png)
 
-![image](https://user-images.githubusercontent.com/10358317/231144727-aadaf83b-fbb4-422a-9ccd-b159d2689c47.png)
+- There are different parts:
+  - Argument References (inputs) (some parts are optional, or required)
+  - Attributes References (outputs)
+  - Example code snippet to show how it uses
+  - Others (e.g. timeouts, imports)
 
 - Go to LAB to learn:
   - [LAB-02: Resources => Provision Basic EC2 (Ubuntu 22.04)](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB02-Resources-Basic-EC2.md)
