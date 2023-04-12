@@ -229,12 +229,26 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 
 ### Meta Arguments <a name="meta_arguments"></a>
 - Different meta arguments are used for different purposes:
-  - **count:**
-  - **for:**
-  - **for_each:**
-  - **depends_on:**
-  - **life_cycle:**
-  
+  - **count:** the number of objects (e.g. variables, resources, etc.)
+    - https://developer.hashicorp.com/terraform/language/meta-arguments/count 
+  - **for:** iteration over the list of objects (e.g. variables, resources, etc.)
+  - **for_each:** iteration over the set of objects (e.g. variables, resources, etc.)  
+    - https://developer.hashicorp.com/terraform/language/meta-arguments/for_each
+  - **depends_on:** shows the priority order of creation of the resource. If "A" should be created before "B", user should write "depends_on= A" as an argument under "B". 
+    - https://developer.hashicorp.com/terraform/language/meta-arguments/depends_on 
+  - **life_cycle:** uses to make life cycle relationship between objects (e.g. variables, resources, etc.)
+    - https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle 
+  - **providers:** specifies which provider configuration to use for a resource, overriding Terraform's default behavior.
+    - https://developer.hashicorp.com/terraform/language/meta-arguments/resource-provider
+
+- Count:  
+
+  ![image](https://user-images.githubusercontent.com/10358317/231446996-da7cfb44-3c6a-43a2-ab89-8dd93a8318a5.png)
+
+- For_each, For:
+
+  ![image](https://user-images.githubusercontent.com/10358317/231447409-b09e98e5-4ce8-4d7d-83e0-60edc6c9b88e.png)
+
 - Go to LAB to learn:
   - [LAB-04: Meta Arguments (Count, For_Each, Map) => Provision IAM Users, Groups, Policies, Attachment Policy-User](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB04-Meta-Arguments-IAM-User-Group-Policy.md)
 
