@@ -274,10 +274,20 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
   - [LAB-06: Data Sources with Depends_on => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB06-Data-Sources-EC2.md)
 
 ### Provisioners <a name="provisioners"></a>
+- "Provisioners" provides to run any commands on the remote instance/virtual machine, or on the local machine.
+- "Provisioners" in the resource block runs only once while creating the resource on remote instance. If the resource is created/provisioned before, "provisioner" block in the resource block doesn't run again.
+- With "null_resource":
+  - Without creating any resource, 
+  - Without depending any resource, 
+  - Any commands can be run.
+- Provisioners in the "null_resource" run multiple times and it doesn't depend on the resource.  
+- With provisioner "file", on the remote instance, new file can be created
+- With provisioner "remote-exec", on the remote instance, any command can be run
+- With provisioner "local-exec", on the local PC, any command can be run on any shell (bash, powershell)
 
-![image](https://user-images.githubusercontent.com/10358317/231145525-4f97c4a1-dc6f-4323-a8ca-7041c27d00d9.png)
+  ![image](https://user-images.githubusercontent.com/10358317/231145525-4f97c4a1-dc6f-4323-a8ca-7041c27d00d9.png)
 
-- Go to LAB to learn:
+- Go to LAB to learn about different pprovisioners:
   - [LAB-07: Provisioners (file, remote-exec), Null Resources (local-exec) => Provision Key-Pair, SSH Connection](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB07-Provisioners-Null-Resources.md)
 
 ### Modules <a name="modules"></a>
