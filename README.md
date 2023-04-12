@@ -291,8 +291,14 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
   - [LAB-07: Provisioners (file, remote-exec), Null Resources (local-exec) => Provision Key-Pair, SSH Connection](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB07-Provisioners-Null-Resources.md)
 
 ### Modules <a name="modules"></a>
+- "Modules" helps organize configuration, encapsulation, re-usability and consistency.
+- "Modules" is the structure/container for multiple resources that are used together.  
+- Each modules usually have variables.tf that is configured from the parent tf file.
+- Details: https://developer.hashicorp.com/terraform/language/modules
+- AWS modules for different components (VPC, IAM, SG, EKS, S3, Lambda, RDS, etc.) 
+  - https://registry.terraform.io/browse/modules?provider=aws
 
-![image](https://user-images.githubusercontent.com/10358317/231145600-59034277-0781-4285-9fa8-987a1c7f6e27.png)
+    ![image](https://user-images.githubusercontent.com/10358317/231145600-59034277-0781-4285-9fa8-987a1c7f6e27.png)
 
 - Go to LAB to learn:
   - [LAB-08: Modules => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB08-Modules-EC2.md)
