@@ -144,7 +144,7 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 - Resources are used to define for different cloud components and objects (e.g. EC2 instances, VPC, VPC Compoenents: Router Tables, Subnets, IGW, .., Lambda, API Gateway, S3 Buckets, etc.). 
 - To learn the details, features of the cloud components, you should know how the cloud works, which components cloud have, how to configure the cloud components.
 - Syntax:
-  - resource <AWS Object> <User_Defined_Variable_Name_With_Underscore> {}
+  - resource <AWS_Object> <User_Defined_Variable_Name_With_Underscore> {}
     - e.g. resource "aws_instance" "instance" {}
     - e.g. resource "aws_vpc" "my_vpc" {}
     - e.g. resource "aws_subnet" "public" {}
