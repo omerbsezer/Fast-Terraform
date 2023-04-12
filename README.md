@@ -304,17 +304,39 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
   - [LAB-08: Modules => Provision EC2](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB08-Modules-EC2.md)
 
 ### Workspaces <a name="workspaces"></a>
+- With "Workspaces":
+  - a parallel, distinct copy of your infrastructure which you can test and verify in the development, test, and staging, 
+  - like git, you are working on different workspaces (like branch),
+  - single code but different workspaces,
+  - it creates multiple state files on different workspace directories.
+  
+- Workspace commands:
 
-![image](https://user-images.githubusercontent.com/10358317/231145703-c35b657c-7e39-4d53-980f-4561fda9489d.png)
+``` 
+terraform workspace help                       # help for workspace commands
+terraform workspace new [WorkspaceName]        # create new workspace
+terraform workspace select [WorkspaceName]     # change/select another workspace
+terraform workspace show                       # show current workspace
+terraform workspace list                       # list all workspaces
+terraform workspace delete [WorkspaceName]     # delete existed workspace
+``` 
+- "dev" and "prod" workspaces are created:
+  
+  ![image](https://user-images.githubusercontent.com/10358317/231145703-c35b657c-7e39-4d53-980f-4561fda9489d.png)
 
 - Go to LAB to learn:
   - [LAB-09: Workspaces => Provision EC2 with Different tfvars Files](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB09-Workspaces-EC2.md)
 
 ### Templates <a name="templates"></a>
+- With "Templates" (.tftpl files):
+  - avoid to write same code snippets multiple times,
+  - provide to shorten the code
 
-![image](https://user-images.githubusercontent.com/10358317/231145808-06b895d6-a424-4c7c-858c-76b64e5574e6.png)
+- In the example below, templates fields are filled with list in the resource code block:
 
-- Go to LAB to learn:
+  ![image](https://user-images.githubusercontent.com/10358317/231479114-e7cf013a-4b83-4288-b581-c180bbee7eee.png)
+
+- Go to LAB to learn "Templates":
   - [LAB-10: Templates => Provision IAM User, User Access Key, Policy](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB10-Templates-User-Policy.md)
 
 ### Backend and Remote States <a name="backends_remote_states"></a>
