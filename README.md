@@ -1,7 +1,11 @@
 # Fast-Terraform (with AWS)
 This repo covers Terraform with LABs using AWS: 
 - Resources, Data Sources, Variables, Meta Arguments, Provisioners, Dynamic Blocks, Modules, Workspaces, 
-- Provisioning AWS Resources (EC2, VPC, IAM Users, User Groups, Policies, Roles, ECS, EKS, Lambda) and details. 
+- Provisioning AWS Resources (EC2, VPC, IAM Users, User Groups, Policies, Roles, ECS, EKS, Lambda) and details.
+
+Why was this repo created?
+- **Shows Terraform details in short with simple, clean demos and examples**
+- **Shows Terraform AWS Samples**
 
 **Keywords:** Terraform, Infrastructure as Code, AWS, Cloud Provisioning
 
@@ -223,7 +227,13 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
   - [LAB-03: Variables, Locals, Output => Provision EC2s](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB03-Variables-Locals-Output-EC2.md)
 
 ### Meta Arguments <a name="meta_arguments"></a>
-
+- Different meta arguments are used for different purposes:
+  - **count:**
+  - **for:**
+  - **for_each:**
+  - **depends_on:**
+  - **life_cycle:**
+  
 - Go to LAB to learn:
   - [LAB-04: Meta Arguments (Count, For_Each, Map) => Provision IAM Users, Groups, Policies, Attachment Policy-User](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB04-Meta-Arguments-IAM-User-Group-Policy.md)
 
