@@ -340,8 +340,15 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
   - [LAB-10: Templates => Provision IAM User, User Access Key, Policy](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB10-Templates-User-Policy.md)
 
 ### Backend and Remote States <a name="backends_remote_states"></a>
+- With enabling remote state file using backend:
+  - multiple user can work on the same state file
+  - saving common state file on S3 is possible
 
-![image](https://user-images.githubusercontent.com/10358317/231145912-908af9fe-56ef-479e-8ee4-9c5f7f92329e.png)
+- With backend part ("s3"), state file is stored on S3:
+  ![image](https://user-images.githubusercontent.com/10358317/231481348-2b0a35aa-f2a6-4335-87fb-fe6df31f9e73.png)
+
+- On AWS S3 Bucket, terraform.tfstate file is saved:
+  ![image](https://user-images.githubusercontent.com/10358317/231145912-908af9fe-56ef-479e-8ee4-9c5f7f92329e.png)
 
 - Go to LAB to learn:
   - [LAB-11: Backend - Remote States => Provision EC2 and Save State File on S3](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB11-Backend-Remote-State.md)
