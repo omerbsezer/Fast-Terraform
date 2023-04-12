@@ -253,6 +253,8 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
   - [LAB-04: Meta Arguments (Count, For_Each, Map) => Provision IAM Users, Groups, Policies, Attachment Policy-User](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB04-Meta-Arguments-IAM-User-Group-Policy.md)
 
 ### Dynamic Blocks <a name="dynamic_blocks"></a>
+- "Dynamic blocks" creates small code template that reduces the code repetition.
+- In the example below, it isn't needed to create parameters (description, from_port, to_port, protocol, cidr_blocks) for each ingress ports:
 
 ![image](https://user-images.githubusercontent.com/10358317/231145371-c9322d06-326d-44f7-95e2-e9ec6f806bfe.png)
 
