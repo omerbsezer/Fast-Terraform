@@ -345,9 +345,11 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
   - saving common state file on S3 is possible
 
 - With backend part ("s3"), state file is stored on S3:
+
   ![image](https://user-images.githubusercontent.com/10358317/231481348-2b0a35aa-f2a6-4335-87fb-fe6df31f9e73.png)
 
 - On AWS S3 Bucket, terraform.tfstate file is saved:
+
   ![image](https://user-images.githubusercontent.com/10358317/231145912-908af9fe-56ef-479e-8ee4-9c5f7f92329e.png)
 
 - Go to LAB to learn:
