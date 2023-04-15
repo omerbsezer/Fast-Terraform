@@ -365,3 +365,37 @@ terraform validate
 terraform plan
 terraform apply
 ```
+
+![image](https://user-images.githubusercontent.com/10358317/232227578-21f28564-d960-45ea-af0d-3c4b3bddbc91.png)
+
+![image](https://user-images.githubusercontent.com/10358317/232227661-5ea1a161-03f0-4a76-b5c1-c9d3c1610333.png)
+
+- On AWS ECS:
+
+  ![image](https://user-images.githubusercontent.com/10358317/232227690-14ca0e5d-43bf-443e-b228-338081f17eb8.png)
+
+  ![image](https://user-images.githubusercontent.com/10358317/232227740-b0216d39-d141-4174-a506-61fc46245f02.png)
+  
+  ![image](https://user-images.githubusercontent.com/10358317/232227792-8f3bcd80-edcb-4893-bb5e-25432d87f38f.png)
+  
+  ![image](https://user-images.githubusercontent.com/10358317/232227895-07a3475a-c62a-4966-a35b-807fb4e136a6.png)
+
+- On AWS EC2 > LoadBalancer:
+
+  ![image](https://user-images.githubusercontent.com/10358317/232228088-74870060-9cbb-46e6-9f28-6162ff310e2e.png)
+
+- Target Groups:
+
+  ![image](https://user-images.githubusercontent.com/10358317/232228412-d53c99d9-ec75-44ab-a5dc-c5b9e77cd638.png)
+
+- When go to the output of the ELB DNS: http://test-lb-tf-634023821.eu-central-1.elb.amazonaws.com/
+
+  ![image](https://user-images.githubusercontent.com/10358317/232228546-8c9beb79-2133-438e-a05c-a36beef7b3f5.png)
+  
+- LB redirects 3 different containers. Each container has own SQLlite. So, each refresh to LB page, it shows 3 different page:
+
+  ![image](https://user-images.githubusercontent.com/10358317/232228846-a442f536-e127-448e-a699-350be155c5bb.png)
+  
+  ![image](https://user-images.githubusercontent.com/10358317/232228879-fc9ca3fb-6d0c-4be6-a484-b6ac76375dd2.png)
+
+ 
