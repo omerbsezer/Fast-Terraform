@@ -393,9 +393,16 @@ terraform apply
   ![image](https://user-images.githubusercontent.com/10358317/232228546-8c9beb79-2133-438e-a05c-a36beef7b3f5.png)
   
 - LB redirects 3 different containers. Each container has own SQLlite. So, each refresh to LB page, it shows 3 different page:
+- Container 0:
 
   ![image](https://user-images.githubusercontent.com/10358317/232228846-a442f536-e127-448e-a699-350be155c5bb.png)
   
+- Container 1: 
+
+  ![image](https://user-images.githubusercontent.com/10358317/232228931-3370f751-fe9a-43e9-b75b-ec98b0a3693b.png)
+   
+- Container 2: 
+
   ![image](https://user-images.githubusercontent.com/10358317/232228879-fc9ca3fb-6d0c-4be6-a484-b6ac76375dd2.png)
 
  
