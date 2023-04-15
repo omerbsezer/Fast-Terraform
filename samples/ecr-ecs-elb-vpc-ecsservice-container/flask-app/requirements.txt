@@ -1,0 +1,3 @@
+flask
+db-sqlite3
+Werkzeug
