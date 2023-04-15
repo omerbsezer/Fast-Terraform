@@ -1,4 +1,4 @@
-## SAMPLE-01: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections
+## SAMPLE-01: Provisioning EC2s (Windows 2019 Server, Ubuntu 20.04) on VPC (Subnets), Creating Key-Pairs, Connecting Ubuntu using SSH, and Connecting Windows Using RDP
 
 This sample shows:
 - how to create Key-pairs (public and private keys) on AWS.
