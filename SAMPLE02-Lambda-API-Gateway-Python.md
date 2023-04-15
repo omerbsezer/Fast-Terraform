@@ -1,4 +1,4 @@
-## SAMPLE-02: Lambda, API Gateway, Basic Python Code
+## SAMPLE-02: Provisioning Lambda Function, API Gateway and Reaching HTML Page in Python Code From Browser
 
 This sample shows:
 - how to create Lambda function with Python code
