@@ -410,3 +410,20 @@ terraform apply
   ![image](https://user-images.githubusercontent.com/10358317/232228879-fc9ca3fb-6d0c-4be6-a484-b6ac76375dd2.png)
 
  
+- Destroy the infra:
+
+```
+terraform destroy
+```
+
+![image](https://user-images.githubusercontent.com/10358317/232229470-6fd4dc95-bb63-4bda-860a-1fecc14a4fa5.png)
+
+- Delete the ECR Repo:
+
+```
+cd ecr
+terraform destroy
+```
+
+![image](https://user-images.githubusercontent.com/10358317/232229541-913de839-4df6-4d5b-881b-56be12801334.png)
+
