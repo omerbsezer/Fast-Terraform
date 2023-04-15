@@ -1,14 +1,18 @@
-## SAMPLE-04: ECR-ECS-ELB-VPC-ECS-Service
+## SAMPLE-04: Provisioning ECR (Elastic Container Repository), Pushing Image to ECR, Provisioning ECS (Elastic Container Service), VPC (Virtual Private Cloud), ELB (Elastic Load Balancer), ECS Tasks and Service on Fargate Cluster
 
 This sample shows:
-- how to create 
+- how to create Flask-app Docker image,
+- how to provision ECR and push to image to this ECR,
+- how to provision VPC, Internet Gateway, Route Table, 3 Public Subnets,
+- how to provision ALB (Application Load Balancer), Listener, Target Group,  
+- how to provision ECS Fargate Cluster, Task and Service (running container as Service)
 
 There are 5 main parts:
-- **0_ecr.tf**: includes 
-- **1_vpc.tf**: includes
-- **2_ecs.tf**: includes 
-- **3_elb.tf**: includes 
-- **4_ecs_service.tf**: includes 
+- **0_ecr.tf**: includes private ECR code
+- **1_vpc.tf**: includes VPC, IGW, Route Table, Subnets code
+- **2_ecs.tf**: includes ECS Cluster, Task Definition, Role and Policy code
+- **3_elb.tf**: includes to ALB, Listener, Target Group, Security Group code 
+- **4_ecs_service.tf**: includes ECS Fargate Service code with linking to loadbalancer, subnets, task definition.
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ecr-ecs-elb-vpc-ecsservice-container
 
@@ -370,14 +374,20 @@ terraform apply
 
 ![image](https://user-images.githubusercontent.com/10358317/232227661-5ea1a161-03f0-4a76-b5c1-c9d3c1610333.png)
 
-- On AWS ECS:
+- On AWS ECS Cluster:
 
   ![image](https://user-images.githubusercontent.com/10358317/232227690-14ca0e5d-43bf-443e-b228-338081f17eb8.png)
 
+- On AWS ECS Service (service runs on the cluster):
+
   ![image](https://user-images.githubusercontent.com/10358317/232227740-b0216d39-d141-4174-a506-61fc46245f02.png)
-  
+
+- ECS Service Tasks (task includes running 3 containers):
+
   ![image](https://user-images.githubusercontent.com/10358317/232227792-8f3bcd80-edcb-4893-bb5e-25432d87f38f.png)
-  
+
+- Running Container Details (CPU, Memory Usage, Network, Environment Variable, Volume Configuration, Logs):
+
   ![image](https://user-images.githubusercontent.com/10358317/232227895-07a3475a-c62a-4966-a35b-807fb4e136a6.png)
 
 - On AWS EC2 > LoadBalancer:
