@@ -387,7 +387,11 @@ terraform apply
 - Target Groups:
 
   ![image](https://user-images.githubusercontent.com/10358317/232228412-d53c99d9-ec75-44ab-a5dc-c5b9e77cd638.png)
+  
+- On AWS VPC:
 
+  ![image](https://user-images.githubusercontent.com/10358317/232229182-87c75449-0bd5-4048-833c-d0e9c3dc41c0.png)
+ 
 - When go to the output of the ELB DNS: http://test-lb-tf-634023821.eu-central-1.elb.amazonaws.com/
 
   ![image](https://user-images.githubusercontent.com/10358317/232228546-8c9beb79-2133-438e-a05c-a36beef7b3f5.png)
