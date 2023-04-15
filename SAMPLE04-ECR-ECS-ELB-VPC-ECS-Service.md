@@ -13,12 +13,12 @@ There are 5 main parts:
 **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ecr-ecs-elb-vpc-ecsservice-container
 
 # Table of Contents
-- [Flask App Docker Image Creation](#image)
-- [ECR, Pushing Image](#ecr)
-- [VPC](#vpc)
-- [ECS](#ecs)
-- [ELB](#elb)
-- [ECS Service](#ecsservice)
+- [Flask App Docker Image Creation](#app)
+- [Creating ECR (Elastic Container Repository), Pushing Image into ECR](#ecr)
+- [Creating VPC (Virtual Private Cloud)](#vpc)
+- [Creating ECS (Elastic Container Service)](#ecs)
+- [Creating ELB (Elastic Load Balancer)](#elb)
+- [Creating ECS Service](#ecsservice)
 - [Demo: Terraform Run](#run)
 
 ### Prerequisite
@@ -28,10 +28,340 @@ There are 5 main parts:
 
 ## Steps
 
+### Flask App Docker Image Creation <a name="app"></a>
+- We have Flask-App to run on AWS ECS. To build image, please have a look:
+  - https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ecr-ecs-elb-vpc-ecsservice-container/flask-app
 
-### VPC <a name="vpc"></a>
+### Creating ECR (Elastic Container Repository), Pushing Image into ECR <a name="ecr"></a>
 
-- Create main.tf:
+- Create 0_ecr.tf:
  
 ```
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.16"
+    }
+  }
+  required_version = ">= 1.2.0"
+}
+
+# Creating Elastic Container Repository for application
+resource "aws_ecr_repository" "flask_app" {
+  name = "flask-app"
+}
+```
+
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/ecr-ecs-elb-vpc-ecsservice-container/ecr/0_ecr.tf
+
+```
+cd /ecr
+terraform init
+terraform plan
+terraform apply
+```
+
+- On AWS ECR:
+
+  ![image](https://user-images.githubusercontent.com/10358317/232226427-e8a9883e-298d-4268-b553-960f31994933.png)
+
+- To see the pushing docker commands, click "View Push Commands"
+
+```
+aws ecr get-login-password --region eu-central-1 | docker login --username AWS --password-stdin <UserID>.dkr.ecr.eu-central-1.amazonaws.com
+docker tag flask-app:latest <UserID>.ecr.eu-central-1.amazonaws.com/flask-app:latest
+docker push <UserID>.dkr.ecr.eu-central-1.amazonaws.com/flask-app:latest
+```
+
+- Image was pushed:
+
+  ![image](https://user-images.githubusercontent.com/10358317/232226726-bffcca9f-4654-44bc-86dc-02a8d2d17c38.png)
+
+- On AWS ECR:
+
+  ![image](https://user-images.githubusercontent.com/10358317/232226806-aa709e35-25de-4110-ad5c-92949cc1ebe8.png) 
+
+### Creating VPC (Virtual Private Cloud) <a name="vpc"></a>
+
+- Create 1_vpc.tf:
+ 
+```
+# Internet Access -> IGW ->  Route Table -> Subnets
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.16"
+    }
+  }
+  required_version = ">= 1.2.0"
+}
+
+provider "aws" {
+	region = "eu-central-1"
+}
+
+resource "aws_vpc" "my_vpc" {
+  cidr_block           = "10.0.0.0/16"
+  enable_dns_hostnames = true
+  tags = {
+    Name = "My VPC"
+  }
+}
+
+resource "aws_subnet" "public_subnet_a" {
+  availability_zone = "eu-central-1a"
+  vpc_id            = aws_vpc.my_vpc.id
+  cidr_block        = "10.0.0.0/24"
+  tags = {
+    Name = "Public Subnet A"
+  }
+}
+
+resource "aws_subnet" "public_subnet_b" {
+  availability_zone = "eu-central-1b"
+  vpc_id            = aws_vpc.my_vpc.id
+  cidr_block        = "10.0.1.0/24"
+  tags = {
+    Name = "Public Subnet B"
+  }
+}
+
+resource "aws_subnet" "public_subnet_c" {
+  availability_zone = "eu-central-1c"
+  vpc_id            = aws_vpc.my_vpc.id
+  cidr_block        = "10.0.2.0/24"
+  tags = {
+    Name = "Public Subnet C"
+  }
+}
+
+resource "aws_internet_gateway" "igw" {
+  vpc_id = aws_vpc.my_vpc.id
+  tags = {
+    Name = "My VPC - Internet Gateway"
+  }
+}
+
+resource "aws_route_table" "route_table" {
+    vpc_id = aws_vpc.my_vpc.id
+    route {
+        cidr_block = "0.0.0.0/0"
+        gateway_id = aws_internet_gateway.igw.id
+    }
+    tags = {
+        Name = "Public Subnet Route Table"
+    }
+}
+
+resource "aws_route_table_association" "route_table_association1" {
+    subnet_id      = aws_subnet.public_subnet_a.id
+    route_table_id = aws_route_table.route_table.id
+}
+
+resource "aws_route_table_association" "route_table_association2" {
+    subnet_id      = aws_subnet.public_subnet_b.id
+    route_table_id = aws_route_table.route_table.id
+}
+
+resource "aws_route_table_association" "route_table_association3" {
+    subnet_id      = aws_subnet.public_subnet_c.id
+    route_table_id = aws_route_table.route_table.id
+}
+```
+
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/ecr-ecs-elb-vpc-ecsservice-container/1_vpc.tf
+
+### Creating ECS (Elastic Container Service) <a name="ecs"></a>
+
+- Create 2_ecs.tf:
+ 
+```
+# Getting data existed ECR
+data "aws_ecr_repository" "flask_app" {
+  name = "flask-app"
+}
+
+# Creating ECS Cluster
+resource "aws_ecs_cluster" "my_cluster" {
+  name = "my-cluster" # Naming the cluster
+}
+
+# Creating ECS Task
+resource "aws_ecs_task_definition" "flask_app_task" {
+  family                   = "flask-app-task" 
+  container_definitions    = <<DEFINITION
+  [
+    {
+      "name": "flask-app-task",
+      "image": "${data.aws_ecr_repository.flask_app.repository_url}",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 5000,
+          "hostPort": 5000
+        }
+      ],
+      "memory": 512,
+      "cpu": 256
+    }
+  ]
+  DEFINITION
+  requires_compatibilities = ["FARGATE"] # Stating that we are using ECS Fargate
+  network_mode             = "awsvpc"    # Using awsvpc as our network mode as this is required for Fargate
+  memory                   = 512         # Specifying the memory our container requires
+  cpu                      = 256         # Specifying the CPU our container requires
+  execution_role_arn       = "${aws_iam_role.ecsTaskExecutionRole.arn}"
+}
+
+# Creating Role for ECS
+resource "aws_iam_role" "ecsTaskExecutionRole" {
+  name               = "ecsTaskExecutionRole"
+  assume_role_policy = "${data.aws_iam_policy_document.assume_role_policy.json}"
+}
+
+data "aws_iam_policy_document" "assume_role_policy" {
+  statement {
+    actions = ["sts:AssumeRole"]
+
+    principals {
+      type        = "Service"
+      identifiers = ["ecs-tasks.amazonaws.com"]
+    }
+  }
+}
+
+# Role - Policy Attachment for ECS
+resource "aws_iam_role_policy_attachment" "ecsTaskExecutionRole_policy" {
+  role       = "${aws_iam_role.ecsTaskExecutionRole.name}"
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AmazonECSTaskExecutionRolePolicy"
+}
+```
+
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/ecr-ecs-elb-vpc-ecsservice-container/2_ecs.tf
+
+### Creating ELB (Elastic Load Balancer) <a name="elb"></a>
+
+- Create 3_elb.tf:
+ 
+```
+# Internet Access -> IGW -> LB Security Groups -> Application Load Balancer  (Listener 80) -> Target Groups  -> ECS Service -> ECS SG -> Tasks on each subnets 
+
+# Creating Load Balancer (LB)
+resource "aws_alb" "application_load_balancer" {
+  name               = "test-lb-tf" # Naming our load balancer
+  load_balancer_type = "application"
+  subnets = [ 
+    "${aws_subnet.public_subnet_a.id}",
+    "${aws_subnet.public_subnet_b.id}",
+    "${aws_subnet.public_subnet_c.id}"
+  ]
+  # Referencing the security group
+  security_groups = ["${aws_security_group.load_balancer_security_group.id}"]
+}
+
+# Creating a security group for LB
+resource "aws_security_group" "load_balancer_security_group" {
+  vpc_id      = aws_vpc.my_vpc.id
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"] # Allowing traffic in from all sources
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
+# Creating LB Target Group
+resource "aws_lb_target_group" "target_group" {
+  name        = "target-group"
+  port        = 80
+  protocol    = "HTTP"
+  target_type = "ip"
+  vpc_id      = "${aws_vpc.my_vpc.id}" 
+}
+
+# Creating LB Listener
+resource "aws_lb_listener" "listener" {
+  load_balancer_arn = "${aws_alb.application_load_balancer.arn}" # Referencing our load balancer
+  port              = "80"
+  protocol          = "HTTP"
+  default_action {
+    type             = "forward"
+    target_group_arn = "${aws_lb_target_group.target_group.arn}" # Referencing our target group
+  }
+}
+```
+
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/ecr-ecs-elb-vpc-ecsservice-container/3_elb.tf
+
+### Creating ECS Service <a name="ecsservice"></a>
+
+- Create 4_ecs_service.tf:
+ 
+```
+# Creating ECS Service
+resource "aws_ecs_service" "my_first_service" {
+  name            = "my-first-service"                             # Naming our first service
+  cluster         = "${aws_ecs_cluster.my_cluster.id}"             # Referencing our created Cluster
+  task_definition = "${aws_ecs_task_definition.flask_app_task.arn}" # Referencing the task our service will spin up
+  launch_type     = "FARGATE"
+  desired_count   = 3 # Setting the number of containers to 3
+
+  load_balancer {
+    target_group_arn = "${aws_lb_target_group.target_group.arn}" # Referencing our target group
+    container_name   = "${aws_ecs_task_definition.flask_app_task.family}"
+    container_port   = 5000 # Specifying the container port
+  }
+
+  network_configuration {
+    subnets          = ["${aws_subnet.public_subnet_a.id}", "${aws_subnet.public_subnet_b.id}", "${aws_subnet.public_subnet_c.id}"]
+    assign_public_ip = true                                                # Providing our containers with public IPs
+    security_groups  = ["${aws_security_group.service_security_group.id}"] # Setting the security group
+  }
+}
+
+# Creating SG for ECS Container Service, referencing the load balancer security group
+resource "aws_security_group" "service_security_group" {
+  vpc_id      = aws_vpc.my_vpc.id
+  ingress {
+    from_port = 0
+    to_port   = 0
+    protocol  = "-1"
+    # Only allowing traffic in from the load balancer security group
+    security_groups = ["${aws_security_group.load_balancer_security_group.id}"]
+  }
+
+  egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
+#Log the load balancer app URL
+output "app_url" {
+  value = aws_alb.application_load_balancer.dns_name
+}
+```
+
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/ecr-ecs-elb-vpc-ecsservice-container/4_ecs_service.tf
+
+### Demo: Terraform Run <a name="run"></a>
+
+- Run:
+ 
+```
+terraform init
+terraform validate
+terraform plan
+terraform apply
 ```
