@@ -59,6 +59,8 @@ resource "aws_ecr_repository" "flask_app" {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/ecr-ecs-elb-vpc-ecsservice-container/ecr/0_ecr.tf
 
+![image](https://user-images.githubusercontent.com/10358317/232241506-8abd69f6-8802-434e-976f-0420a226fa3f.png)
+
 ```
 cd /ecr
 terraform init
@@ -177,6 +179,8 @@ resource "aws_route_table_association" "route_table_association3" {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/ecr-ecs-elb-vpc-ecsservice-container/1_vpc.tf
 
+![image](https://user-images.githubusercontent.com/10358317/232241321-50a2fe1f-4fb2-4c82-b785-02bf1b326c63.png)
+
 ### Creating ECS (Elastic Container Service) <a name="ecs"></a>
 
 - Create 2_ecs.tf:
@@ -245,6 +249,8 @@ resource "aws_iam_role_policy_attachment" "ecsTaskExecutionRole_policy" {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/ecr-ecs-elb-vpc-ecsservice-container/2_ecs.tf
 
+![image](https://user-images.githubusercontent.com/10358317/232241736-14bbd3db-0c7d-4892-8f76-d762ed971c7e.png)
+
 ### Creating ELB (Elastic Load Balancer) <a name="elb"></a>
 
 - Create 3_elb.tf:
@@ -306,6 +312,8 @@ resource "aws_lb_listener" "listener" {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/ecr-ecs-elb-vpc-ecsservice-container/3_elb.tf
 
+![image](https://user-images.githubusercontent.com/10358317/232241821-b859d54f-69ae-40ba-8034-b35fc5309fe1.png)
+
 ### Creating ECS Service <a name="ecsservice"></a>
 
 - Create 4_ecs_service.tf:
@@ -358,6 +366,8 @@ output "app_url" {
 ```
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/ecr-ecs-elb-vpc-ecsservice-container/4_ecs_service.tf
+
+![image](https://user-images.githubusercontent.com/10358317/232241887-e71759c4-6a09-4cb3-9f18-f0dc36e08eda.png)
 
 ### Demo: Terraform Run <a name="run"></a>
 
