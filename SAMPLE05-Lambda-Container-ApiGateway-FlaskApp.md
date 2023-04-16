@@ -275,7 +275,11 @@ terraform apply
   ![image](https://user-images.githubusercontent.com/10358317/232347487-b61b8383-93e0-4a92-a56c-035b7ed1d0c7.png)
 
   ![image](https://user-images.githubusercontent.com/10358317/232347570-82dc83e3-a869-488f-ba51-2446e555b6d2.png)
+  
+- CloudWatch automatically logs the Lambda. If there is a debug issue, view the log groups under the Cloud Watch.
 
+  ![image](https://user-images.githubusercontent.com/10358317/232348787-fda0e125-c6ed-4504-9e37-138501412838.png)
+ 
 - Destroy the infra:
 
 ```
