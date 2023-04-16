@@ -1,0 +1,5 @@
+flask
+db-sqlite3
+Werkzeug
+serverless-wsgi>=2.0.2
+ushlex
