@@ -1,13 +1,15 @@
-## SAMPLE-05: Lambda-Container-ApiGateway-FlaskApp
+## SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda
 
 This sample shows:
-- how to create Flask-app Docker image,
+- how to create Flask-app-serverless image to run on Lambda,
+- how to create ECR and to push image to ECR,
+- how to create Lambda function, Lambda role, policy, policy-role attachment, Lambda API Gateway permission
+- how to create API Gateway resource and method definition, Lambda - API Gateway connection, deploying API Gateway
 
-
-There are 5 main parts:
-- **0_ecr.tf**: includes private ECR code
-- **1_lambda.tf**: includes 
-- **2_api_gateway.tf**: includes 
+There are 3 main parts:
+- **0_ecr.tf**: includes private ECR code.
+- **1_lambda.tf**: includes lambda function, lambda role, policy, policy-role attachment, lambda api gateway permission code.
+- **2_api_gateway.tf**: includes api-gateway resource and method definition, lambda - api gateway connection, deploying api gateway code.
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/lambda-container-apigateway-flaskapp
 
