@@ -35,9 +35,7 @@ These samples focus on how to create and use AWS components (EC2, EBS, EFS, Lamb
 - [SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE05-Lambda-Container-ApiGateway-FlaskApp.md)
 - [SAMPLE: Container Running Using CodeBuild]()
 - [SAMPLE: Creating EKS (Elastic Kubernetes Service)]()
-- [SAMPLE: ELB, EC2, Lambda Auto Scaling Group]()
 - [SAMPLE: S3, Lambda]()
-- [SAMPLE: Create Thumbnail Application using Python, Lambda]()
 
 # Table of Contents
 - [Motivation](#motivation)
