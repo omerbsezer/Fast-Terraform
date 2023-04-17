@@ -373,17 +373,33 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
 ## AWS Terraform Samples <a name="samples"></a>
 
 ### SAMPLE-01: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections <a name="ec2_vpc_key_pair_ssh_rdp"></a>
+- This sample shows:
+  - how to create Key-pairs (public and private keys) on AWS.
+  - how to create EC2s (Ubuntu 20.04, Windows 2019 Server).
+  - how to create Virtual Private Cloud (VPC), VPC Components (Public Subnet, Internet Gateway, Route Table) and link to each others.
+  - how to create Security Groups (for SSH and Remote Desktop).
+- **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ec2-vpc-ubuntu-win-ssh-rdp
 
 - Go to Sample:
   - [SAMPLE-01: Provisioning EC2s (Windows 2019 Server, Ubuntu 20.04) on VPC (Subnet), Creating Key-Pair, Connecting Ubuntu using SSH, and Connecting Windows Using RDP](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE01-EC2-VPC-Ubuntu-Win-SSH-RDP.md)
   
   
 ### SAMPLE-02:  Provisioning Lambda Function, API Gateway and Reaching HTML Page in Python Code From Browsers <a name="lambda_apigateway_python"></a>
+- This sample shows:
+  - how to create Lambda function with Python code
+  - how to create lambda role, policy, policy-role attachment, lambda api gateway permission, zipping code
+  - how to create api-gateway resource and method definition, lambda - api gateway connection, deploying api gateway, api-gateway deployment URL as output
+  - details on AWS Lambda, API-Gateway, IAM
+- **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/lambda-role-policy-apigateway-python
 
 - Go to Sample:
   - [SAMPLE-02: Provisioning Lambda Function, API Gateway and Reaching HTML Page in Python Code From Browser](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE02-Lambda-API-Gateway-Python.md)
 
 ### SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances) <a name="ebs_efs_ec2"></a>
+- This sample shows:
+  - how to create EBS, mount on Ubuntu and Windows Instances.
+  - how to create EFS, mount on Ubuntu Instance.
+- **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ec2-ebs-efs
 
 - Go to Sample:
   - [SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances)](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE03-EC2-EBS-EFS.md)
