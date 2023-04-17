@@ -57,8 +57,12 @@ These samples focus on how to create and use AWS components (EC2, EBS, EFS, Lamb
   - [Backends and Remote States](#backends_remote_states)
 - [Terraform Debugging and Validation](#debugging_validation)
 - [Terraform Best Practices](#best_practice)
-- [Terraform AWS Applications](#applications)
-  - [Application: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](#ec2_vpc_key_pair_ssh_rdp)
+- [AWS Terraform Samples](#samples)
+  - [SAMPLE-01: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](#ec2_vpc_key_pair_ssh_rdp)
+  - [SAMPLE-02:  Provisioning Lambda Function, API Gateway and Reaching HTML Page in Python Code From Browsers](#lambda_apigateway_python)
+  - [SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances)](#ebs_efs_ec2)
+  - [SAMPLE-04: Provisioning ECR (Elastic Container Repository), Pushing Image to ECR, Provisioning ECS (Elastic Container Service), VPC (Virtual Private Cloud), ELB (Elastic Load Balancer), ECS Tasks and Service on Fargate Cluster](#ecr_ecs_elb_vpc_ecs_service_fargate)
+  - [SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda](#ecr_lambda_apigateway_container)
 - [Details](#details)
 - [Other Useful Resources Related Terraform](#resource)
 - [References](#references)
@@ -368,14 +372,36 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
 
 ## AWS Terraform Samples <a name="samples"></a>
 
-### Sample: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections <a name="ec2_vpc_key_pair_ssh_rdp"></a>
+### SAMPLE-01: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections <a name="ec2_vpc_key_pair_ssh_rdp"></a>
 
 - Go to Sample:
-  - [Sample: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](https://github.com/omerbsezer/Fast-Terraform/blob/main/EC2-VPC-Ubuntu-Win-SSH-RDP.md)
+  - [SAMPLE-01: Provisioning EC2s (Windows 2019 Server, Ubuntu 20.04) on VPC (Subnet), Creating Key-Pair, Connecting Ubuntu using SSH, and Connecting Windows Using RDP](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE01-EC2-VPC-Ubuntu-Win-SSH-RDP.md)
+  
+  
+### SAMPLE-02:  Provisioning Lambda Function, API Gateway and Reaching HTML Page in Python Code From Browsers <a name="lambda_apigateway_python"></a>
+
+- Go to Sample:
+  - [SAMPLE-02: Provisioning Lambda Function, API Gateway and Reaching HTML Page in Python Code From Browser](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE02-Lambda-API-Gateway-Python.md)
+
+### SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances) <a name="ebs_efs_ec2"></a>
+
+- Go to Sample:
+  - [SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances)](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE03-EC2-EBS-EFS.md)
+  
+### SAMPLE-04: Provisioning ECR (Elastic Container Repository), Pushing Image to ECR, Provisioning ECS (Elastic Container Service), VPC (Virtual Private Cloud), ELB (Elastic Load Balancer), ECS Tasks and Service on Fargate Cluster <a name="ecr_ecs_elb_vpc_ecs_service_fargate"></a>  
+
+- Go to Sample:
+  - [SAMPLE-04: Provisioning ECR (Elastic Container Repository), Pushing Image to ECR, Provisioning ECS (Elastic Container Service), VPC (Virtual Private Cloud), ELB (Elastic Load Balancer), ECS Tasks and Service on Fargate Cluster](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE04-ECR-ECS-ELB-VPC-ECS-Service.md)
+  
+ ### SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda <a name="ecr_lambda_apigateway_container"></a>  
+
+- Go to Sample: 
+  - [SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE05-Lambda-Container-ApiGateway-FlaskApp.md)  
 
 ## Details <a name="details"></a>
 
 ## Other Useful Resources Related Terraform <a name="resource"></a>
+- AWS Samples: https://github.com/orgs/aws-samples/repositories?q=Terraform&type=all&language=&sort= 
 
 ## References <a name="references"></a>
 - Redis: https://developer.redis.com/create/aws/terraform/
