@@ -79,6 +79,27 @@ docker push <UserID>.dkr.ecr.eu-central-1.amazonaws.com/flask-app-serverless:lat
 
 ### Creating Lambda <a name="lambda"></a>
 
+- What is difference between Lambda function code and Lambda container?
+
+```
+# Getting data existed ECR
+data "aws_ecr_repository" "flask_app_serverless" {
+  name = "flask-app-serverless" 
+}
+
+# Lambda Function, in terraform ${path.module} is the current directory.
+resource "aws_lambda_function" "lambda_function" {
+ function_name = "Lambda-Function"
+ role          = aws_iam_role.lambda_role.arn
+ # tag is required, "source image ... is not valid" error will pop up
+ image_uri     = "${data.aws_ecr_repository.flask_app_serverless.repository_url}:latest"    # lambda image on ECR
+ package_type  = "Image"
+ depends_on    = [aws_iam_role_policy_attachment.attach_iam_policy_to_iam_role]
+}
+```
+
+![image](https://user-images.githubusercontent.com/10358317/232440083-86117379-a961-49bd-b1a6-55a4dea4685f.png)
+
 - Create 1_lambda.tf:
  
 ```
@@ -170,6 +191,8 @@ resource "aws_lambda_permission" "apigw" {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/lambda-container-apigateway-flaskapp/1_lambda.tf
 
+![image](https://user-images.githubusercontent.com/10358317/232438855-8cf0d0f9-31fd-43b7-a2c2-0ec29970c59b.png)
+
 ### Creating API Gateway <a name="apigateway"></a>
 
 - Create 2_api_gateway.tf:
@@ -239,6 +262,8 @@ output "base_url" {
 ```
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/lambda-container-apigateway-flaskapp/2_api_gateway.tf
+
+![image](https://user-images.githubusercontent.com/10358317/232439028-4659f2ab-27aa-4f7a-843e-355bcd53037b.png)
 
 ### Demo: Terraform Run <a name="run"></a>
 
