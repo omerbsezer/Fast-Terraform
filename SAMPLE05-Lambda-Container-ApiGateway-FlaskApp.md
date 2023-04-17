@@ -79,7 +79,7 @@ docker push <UserID>.dkr.ecr.eu-central-1.amazonaws.com/flask-app-serverless:lat
 
 ### Creating Lambda <a name="lambda"></a>
 
-- What is difference between Lambda function code and Lambda container?
+- Difference between Lambda function code and Lambda container: Defining the image on the Lambda Function.
 
 ```
 # Getting data existed ECR
