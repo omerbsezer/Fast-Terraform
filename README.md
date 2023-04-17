@@ -374,9 +374,9 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
 
 ### SAMPLE-01: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections <a name="ec2_vpc_key_pair_ssh_rdp"></a>
 - This sample shows:
-  - how to create Key-pairs (public and private keys) on AWS.
-  - how to create EC2s (Ubuntu 20.04, Windows 2019 Server).
-  - how to create Virtual Private Cloud (VPC), VPC Components (Public Subnet, Internet Gateway, Route Table) and link to each others.
+  - how to create Key-pairs (public and private keys) on AWS,
+  - how to create EC2s (Ubuntu 20.04, Windows 2019 Server),
+  - how to create Virtual Private Cloud (VPC), VPC Components (Public Subnet, Internet Gateway, Route Table) and link to each others,
   - how to create Security Groups (for SSH and Remote Desktop).
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ec2-vpc-ubuntu-win-ssh-rdp
 
@@ -386,10 +386,10 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
   
 ### SAMPLE-02:  Provisioning Lambda Function, API Gateway and Reaching HTML Page in Python Code From Browsers <a name="lambda_apigateway_python"></a>
 - This sample shows:
-  - how to create Lambda function with Python code
-  - how to create lambda role, policy, policy-role attachment, lambda api gateway permission, zipping code
+  - how to create Lambda function with Python code,
+  - how to create lambda role, policy, policy-role attachment, lambda api gateway permission, zipping code,
   - how to create api-gateway resource and method definition, lambda - api gateway connection, deploying api gateway, api-gateway deployment URL as output
-  - details on AWS Lambda, API-Gateway, IAM
+  - details on AWS Lambda, API-Gateway, IAM.
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/lambda-role-policy-apigateway-python
 
 - Go to Sample:
@@ -397,7 +397,7 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
 
 ### SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances) <a name="ebs_efs_ec2"></a>
 - This sample shows:
-  - how to create EBS, mount on Ubuntu and Windows Instances.
+  - how to create EBS, mount on Ubuntu and Windows Instances,
   - how to create EFS, mount on Ubuntu Instance.
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ec2-ebs-efs
 
@@ -405,11 +405,24 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
   - [SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances)](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE03-EC2-EBS-EFS.md)
   
 ### SAMPLE-04: Provisioning ECR (Elastic Container Repository), Pushing Image to ECR, Provisioning ECS (Elastic Container Service), VPC (Virtual Private Cloud), ELB (Elastic Load Balancer), ECS Tasks and Service on Fargate Cluster <a name="ecr_ecs_elb_vpc_ecs_service_fargate"></a>  
+- This sample shows:
+  - how to create Flask-app Docker image,
+  - how to provision ECR and push to image to this ECR,
+  - how to provision VPC, Internet Gateway, Route Table, 3 Public Subnets,
+  - how to provision ALB (Application Load Balancer), Listener, Target Group,
+  - how to provision ECS Fargate Cluster, Task and Service (running container as Service).
+- **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ecr-ecs-elb-vpc-ecsservice-container 
 
 - Go to Sample:
   - [SAMPLE-04: Provisioning ECR (Elastic Container Repository), Pushing Image to ECR, Provisioning ECS (Elastic Container Service), VPC (Virtual Private Cloud), ELB (Elastic Load Balancer), ECS Tasks and Service on Fargate Cluster](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE04-ECR-ECS-ELB-VPC-ECS-Service.md)
   
  ### SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda <a name="ecr_lambda_apigateway_container"></a>  
+- This sample shows:
+  - how to create Flask-app-serverless image to run on Lambda,
+  - how to create ECR and to push image to ECR,
+  - how to create Lambda function, Lambda role, policy, policy-role attachment, Lambda API Gateway permission,
+  - how to create API Gateway resource and method definition, Lambda - API Gateway connection, deploying API Gateway.
+- **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/lambda-container-apigateway-flaskapp
 
 - Go to Sample: 
   - [SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE05-Lambda-Container-ApiGateway-FlaskApp.md)  
