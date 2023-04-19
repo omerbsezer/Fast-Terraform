@@ -4,9 +4,8 @@ This sample shows:
 - how to create EKS cluster with managed nodes using BluePrints and Modules.
 
 **Notes:**
-- We are using EKS Blueprints to provision EKS cluster with managed nodes easily. 
-- Tf file creates 65 Resources 
-- It takes ~30 mins to provision cluster.
+- EKS Blueprint is used to provision EKS cluster with managed nodes easily. 
+- TF file creates 65 Resources, it takes ~30 mins to provision cluster.
 - EKS Blueprint is used from: 
   - https://github.com/aws-ia/terraform-aws-eks-blueprints
 - Gameserver example is updated and run: 
