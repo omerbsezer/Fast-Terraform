@@ -31,11 +31,11 @@ There are 1 main part:
   - Please have look for instance pricing: https://aws.amazon.com/ec2/pricing/on-demand/ 
 - For the Fargate: 
   - AWS Fargate pricing is calculated based on the **vCPU and memory** resources used from the time you start to download your container image until the EKS Pod terminate.
-    - e.g. 2 x (1vCPU,4GB RAM) on Linux: 
+    - e.g. 2 x (1vCPU, 4GB RAM) on Linux: 
       - Per Hour: 2 x ($0,0665) = $0.133
       - Per Day: $3,18
       - Per 30 Days: $95.67
-    - e.g. 2 x (1vCPU,4GB RAM) on Win: 
+    - e.g. 2 x (1vCPU, 4GB RAM) on Win: 
       - Per Hour: 2 x ($0,199) = $0.398
       - Per Day: $9.55
       - Per 30 Days: $286.56
