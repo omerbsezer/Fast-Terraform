@@ -11,6 +11,8 @@ There are 3 main parts:
 - **1_lambda.tf**: includes lambda function, lambda role, policy, policy-role attachment, lambda api gateway permission code.
 - **2_api_gateway.tf**: includes api-gateway resource and method definition, lambda - api gateway connection, deploying api gateway code.
 
+![image](https://user-images.githubusercontent.com/10358317/233119705-ba6544e0-dbfc-49f5-9a65-c20b82f7bae1.png)
+
 **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/lambda-container-apigateway-flaskapp
 
 # Table of Contents
