@@ -402,6 +402,8 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
   - how to create EFS, mount on Ubuntu Instance.
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ec2-ebs-efs
 
+  ![image](https://user-images.githubusercontent.com/10358317/230903321-5bca3385-9564-44f1-bde8-fe1c873c870a.png)
+
 - Go to Sample:
   - [SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances)](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE03-EC2-EBS-EFS.md)
   
@@ -414,6 +416,8 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
   - how to provision ECS Fargate Cluster, Task and Service (running container as Service).
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ecr-ecs-elb-vpc-ecsservice-container 
 
+  ![ecr-ecs](https://user-images.githubusercontent.com/10358317/232244927-7d819c66-328a-4dd5-b3e1-18b2c7fd92aa.png)
+
 - Go to Sample:
   - [SAMPLE-04: Provisioning ECR (Elastic Container Repository), Pushing Image to ECR, Provisioning ECS (Elastic Container Service), VPC (Virtual Private Cloud), ELB (Elastic Load Balancer), ECS Tasks and Service on Fargate Cluster](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE04-ECR-ECS-ELB-VPC-ECS-Service.md)
   
@@ -425,6 +429,8 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
   - how to create API Gateway resource and method definition, Lambda - API Gateway connection, deploying API Gateway.
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/lambda-container-apigateway-flaskapp
 
+  ![image](https://user-images.githubusercontent.com/10358317/233119966-9800d18c-8d0c-40de-9c1d-d14726743e5a.png)
+
 - Go to Sample: 
   - [SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE05-Lambda-Container-ApiGateway-FlaskApp.md)  
   
@@ -433,12 +439,10 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
 
 This sample shows:
 - how to create EKS cluster with managed nodes using BluePrints and Modules.
-
-**Notes:**
 - EKS Blueprint is used to provision EKS cluster with managed nodes easily. 
 - EKS Blueprint is used from: 
   - https://github.com/aws-ia/terraform-aws-eks-blueprints
-
+-  **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/eks-managed-node-blueprint
 
 - Go to Sample: 
   - [SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules](#eks_managednodes_blueprint)
