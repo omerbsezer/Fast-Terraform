@@ -19,6 +19,16 @@ There are 1 main part:
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/eks-managed-node-blueprint
 
+**EKS Pricing:**
+- For the Cluster (Managed Control Plane):
+  - Per Hour: $0.10 per for each Amazon EKS cluster
+  - Per Day:  $2.4
+  - For 30 days: $72
+- For the 1 Worker Node (e.g. m5.large => 2 vCPU, 8 GB RAM):
+  - Per Hour: $0.096  
+  - Per Day:  $2.304
+  - For 30 days: $69.12
+
 # Table of Contents
 
 ### Prerequisite
