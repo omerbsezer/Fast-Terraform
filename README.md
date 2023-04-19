@@ -33,9 +33,9 @@ These samples focus on how to create and use AWS components (EC2, EBS, EFS, Lamb
 - [SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances)](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE03-EC2-EBS-EFS.md)
 - [SAMPLE-04: Provisioning ECR (Elastic Container Repository), Pushing Image to ECR, Provisioning ECS (Elastic Container Service), VPC (Virtual Private Cloud), ELB (Elastic Load Balancer), ECS Tasks and Service on Fargate Cluster](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE04-ECR-ECS-ELB-VPC-ECS-Service.md)
 - [SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE05-Lambda-Container-ApiGateway-FlaskApp.md)
+- [SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE06-EKS-ManagedNodes-Blueprint.md)
 - [SAMPLE: Container Running Using CodeBuild]()
-- [SAMPLE: Creating EKS (Elastic Kubernetes Service)]()
-- [SAMPLE: S3, Lambda]()
+
 
 # Table of Contents
 - [Motivation](#motivation)
@@ -63,6 +63,7 @@ These samples focus on how to create and use AWS components (EC2, EBS, EFS, Lamb
   - [SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances)](#ebs_efs_ec2)
   - [SAMPLE-04: Provisioning ECR (Elastic Container Repository), Pushing Image to ECR, Provisioning ECS (Elastic Container Service), VPC (Virtual Private Cloud), ELB (Elastic Load Balancer), ECS Tasks and Service on Fargate Cluster](#ecr_ecs_elb_vpc_ecs_service_fargate)
   - [SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda](#ecr_lambda_apigateway_container)
+  - [SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules](#eks_managednodes_blueprint)
 - [Details](#details)
 - [Other Useful Resources Related Terraform](#resource)
 - [References](#references)
@@ -426,6 +427,23 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
 
 - Go to Sample: 
   - [SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE05-Lambda-Container-ApiGateway-FlaskApp.md)  
+  
+
+### SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules <a name="eks_managednodes_blueprint"></a>  
+
+This sample shows:
+- how to create EKS cluster with managed nodes using BluePrints and Modules.
+
+**Notes:**
+- EKS Blueprint is used to provision EKS cluster with managed nodes easily. 
+- TF file creates 65 Resources, it takes ~30 mins to provision cluster.
+- EKS Blueprint is used from: 
+  - https://github.com/aws-ia/terraform-aws-eks-blueprints
+- Gameserver example is updated and run: 
+  - https://github.com/aws-ia/terraform-aws-eks-blueprints/tree/main/examples/agones-game-controller 
+
+- Go to Sample: 
+  - [SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules](#eks_managednodes_blueprint)
 
 ## Details <a name="details"></a>
 
