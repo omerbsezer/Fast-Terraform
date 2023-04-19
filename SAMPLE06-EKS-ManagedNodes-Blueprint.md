@@ -7,6 +7,8 @@ This sample shows:
 - We are using EKS Blueprints to provision EKS cluster with managed nodes easily. 
 - Tf file creates 65 Resources 
 - It takes ~30 mins to provision cluster.
+- EKS Blueprint is used from: https://github.com/aws-ia/terraform-aws-eks-blueprints
+- Gameserver example is updated and run: https://github.com/aws-ia/terraform-aws-eks-blueprints/tree/main/examples/agones-game-controller 
 
 There are 1 main part:
 - **main.tf**: includes:
@@ -14,7 +16,7 @@ There are 1 main part:
   - EKS addon module: metrics_server, cluster_autoscaler
   - VPC module: 1 VPC, 6 Subnets (3 Public, 3 Private), 3 Route Tables, 1 IGW, 1 NAT, 1 NACL 
 
-**Code:** 
+**Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/eks-managed-node-blueprint
 
 # Table of Contents
 
@@ -176,7 +178,7 @@ output "configure_kubectl" {
 }
 ```
 
-**Code:** 
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/eks-managed-node-blueprint/main.tf
 
 ![image](https://user-images.githubusercontent.com/10358317/233113882-6b81b0ca-d35a-42da-b1c0-4b5236375ddf.png)
 
