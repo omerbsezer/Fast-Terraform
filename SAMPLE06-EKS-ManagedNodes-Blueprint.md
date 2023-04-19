@@ -43,8 +43,6 @@ There are 1 main part:
 - https://cloudonaut.io/versus/docker-containers/eks-fargate-vs-eks-managed-node-group/
 - https://cloudonaut.io/versus/docker-containers/ecs-fargate-vs-eks-managed-node-group/ 
 
-# Table of Contents
-
 ### Prerequisite
 
 - You should have a look following lab: 
