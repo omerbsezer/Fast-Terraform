@@ -1,12 +1,18 @@
-## SAMPLE-06: EKS-ManagedNodes-Blueprint
+## SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules 
 
 This sample shows:
-- how to create 
+- how to create EKS cluster with managed nodes using BluePrints and Modules.
 
+**Notes:**
+- We are using EKS Blueprints to provision EKS cluster with managed nodes easily. 
+- Tf file creates 65 Resources 
 - It takes ~30 mins to provision cluster.
 
 There are 1 main part:
-- **main.tf**: includes 
+- **main.tf**: includes:
+  - EKS module: 2 managed nodes, 1 ASG for managed nodes, 1 Elastic IP, 3 SGs
+  - EKS addon module: metrics_server, cluster_autoscaler
+  - VPC module: 1 VPC, 6 Subnets (3 Public, 3 Private), 3 Route Tables, 1 IGW, 1 NAT, 1 NACL 
 
 **Code:** 
 
@@ -169,8 +175,10 @@ output "configure_kubectl" {
   value       = "aws eks --region ${local.region} update-kubeconfig --name ${module.eks.cluster_name}"
 }
 ```
+
 **Code:** 
 
+![image](https://user-images.githubusercontent.com/10358317/233113882-6b81b0ca-d35a-42da-b1c0-4b5236375ddf.png)
 
 ### Demo: Terraform Run <a name="run"></a>
 
@@ -291,17 +299,22 @@ terraform destroy -target="module.eks_blueprints_kubernetes_addons" -auto-approv
 
   ![image](https://user-images.githubusercontent.com/10358317/233106155-b4e43456-2852-4476-bb05-8e734abb3ba4.png)
 
-- Destroy EKS (managed node):
+- Destroy EKS (managed node) (takes ~12-15 mins):
 
 ```
 terraform destroy -target="module.eks" -auto-approve
 ```
+
+![image](https://user-images.githubusercontent.com/10358317/233111468-092cff32-9555-4814-8a80-10678b590d12.png)
 
 - Destroy VPC:
 
 ```
 terraform destroy -target="module.vpc" -auto-approve
 ```
+
+![image](https://user-images.githubusercontent.com/10358317/233110739-72c833a1-6347-4e9a-be33-5f4d93f7990f.png)
+
 
 - Finally, destroy any additional resources that are not in the above modules
 
@@ -310,5 +323,5 @@ terraform destroy -auto-approve
 ```
 
 ## References
-- https://github.com/aws-ia/terraform-aws-eks-blueprints/tree/main/examples/fargate-serverless
 - https://github.com/aws-ia/terraform-aws-eks-blueprints
+- https://github.com/aws-ia/terraform-aws-eks-blueprints/tree/main/examples/agones-game-controller
