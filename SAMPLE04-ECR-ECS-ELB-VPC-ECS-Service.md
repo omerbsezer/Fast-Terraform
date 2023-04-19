@@ -18,6 +18,17 @@ There are 5 main parts:
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ecr-ecs-elb-vpc-ecsservice-container
 
+**ECS Pricing:**
+- For the Cluster:
+  - Free
+- For the ECS on 1 EC2 Instance (e.g. m5.large => 2 vCPU, 8 GB RAM):
+  - Per Hour: $0.096  
+  - Per Day:  $2.304
+  - For 30 days: $69.12
+- For the Fargate: 
+  - AWS Fargate pricing is calculated based on the **vCPU and memory** resources used from the time you start to download your container image until the ECS Task (Container) terminate.
+  - Please have look for fargate pricing: https://aws.amazon.com/fargate/pricing/
+
 # Table of Contents
 - [Flask App Docker Image Creation](#app)
 - [Creating ECR (Elastic Container Repository), Pushing Image into ECR](#ecr)
