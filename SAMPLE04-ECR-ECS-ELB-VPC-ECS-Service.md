@@ -19,7 +19,7 @@ There are 5 main parts:
 **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ecr-ecs-elb-vpc-ecsservice-container
 
 **ECS Pricing:**
-- For the Cluster:
+- For the ECS Cluster:
   - Free
 - For the ECS on 1 EC2 Instance (e.g. m5.large => 2 vCPU, 8 GB RAM):
   - Per Hour: $0.096  
