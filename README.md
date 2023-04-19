@@ -436,11 +436,9 @@ This sample shows:
 
 **Notes:**
 - EKS Blueprint is used to provision EKS cluster with managed nodes easily. 
-- TF file creates 65 Resources, it takes ~30 mins to provision cluster.
 - EKS Blueprint is used from: 
   - https://github.com/aws-ia/terraform-aws-eks-blueprints
-- Gameserver example is updated and run: 
-  - https://github.com/aws-ia/terraform-aws-eks-blueprints/tree/main/examples/agones-game-controller 
+
 
 - Go to Sample: 
   - [SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules](#eks_managednodes_blueprint)
