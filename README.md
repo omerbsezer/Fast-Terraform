@@ -452,10 +452,15 @@ This sample shows:
 ## Details <a name="details"></a>
 
 ## Other Useful Resources Related Terraform <a name="resource"></a>
-- **AWS Samples (Advanced):** https://github.com/aws-samples
-- **AWS Samples with Terraform (Advanced):** https://github.com/orgs/aws-samples/repositories?q=Terraform&type=all&language=&sort= 
+- **AWS Samples (Advanced):** 
+  - https://github.com/aws-samples
+- **AWS Samples with Terraform (Advanced):** 
+  - https://github.com/orgs/aws-samples/repositories?q=Terraform&type=all&language=&sort= 
 
 ## References <a name="references"></a>
 - Redis: https://developer.redis.com/create/aws/terraform/
 - https://developer.hashicorp.com/terraform/intro
-- 
+- https://github.com/aws-samples
+- https://github.com/orgs/aws-samples/repositories?q=Terraform&type=all&language=&sort= 
+- https://github.com/aws-ia/terraform-aws-eks-blueprints
+
