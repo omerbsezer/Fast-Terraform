@@ -40,6 +40,7 @@ There are 1 main part:
       - **Per Day:** $9.55
       - **Per 30 Days:** $286.56
   - Please have look for fargate pricing: https://aws.amazon.com/fargate/pricing/ 
+- https://cloudonaut.io/versus/docker-containers/eks-fargate-vs-eks-managed-node-group/
 - https://cloudonaut.io/versus/docker-containers/ecs-fargate-vs-eks-managed-node-group/ 
 
 # Table of Contents
