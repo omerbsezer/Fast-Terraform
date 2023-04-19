@@ -28,6 +28,7 @@ There are 1 main part:
   - Per Hour: $0.096  
   - Per Day:  $2.304
   - For 30 days: $69.12
+- Please have look for instance pricing: https://aws.amazon.com/ec2/pricing/on-demand/ 
 
 # Table of Contents
 
