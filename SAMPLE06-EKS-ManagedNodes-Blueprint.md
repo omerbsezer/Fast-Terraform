@@ -28,7 +28,10 @@ There are 1 main part:
   - Per Hour: $0.096  
   - Per Day:  $2.304
   - For 30 days: $69.12
-- Please have look for instance pricing: https://aws.amazon.com/ec2/pricing/on-demand/ 
+  - Please have look for instance pricing: https://aws.amazon.com/ec2/pricing/on-demand/ 
+- For the Fargate: 
+  - AWS Fargate pricing is calculated based on the **vCPU and memory** resources used from the time you start to download your container image until the EKS Pod terminate.
+  - Please have look for fargate pricing: https://aws.amazon.com/fargate/pricing/ 
 
 # Table of Contents
 
