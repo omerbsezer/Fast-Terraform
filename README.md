@@ -430,6 +430,8 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/lambda-container-apigateway-flaskapp
 
   ![image](https://user-images.githubusercontent.com/10358317/233119966-9800d18c-8d0c-40de-9c1d-d14726743e5a.png)
+  
+  ![image](https://user-images.githubusercontent.com/10358317/233121075-ab2ac298-71b2-467d-8068-834f16b0f3c7.png)
 
 - Go to Sample: 
   - [SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE05-Lambda-Container-ApiGateway-FlaskApp.md)  
