@@ -9,10 +9,9 @@ This sample shows:
 - Some of the fields are updated. 
 - It works with 'hashicorp/aws ~> 4.15.1', 'terraform >= 0.15'
 
-There are 1 main part:
-- **main.tf**:
-
 **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container
+
+![image](https://user-images.githubusercontent.com/10358317/233652299-66b39788-66ee-4a5e-b8e0-ece418fe98e3.png)
 
 # Table of Contents
 - [Main Part](#main_part)
@@ -28,6 +27,10 @@ There are 1 main part:
   - [LAB-00: Terraform Install, AWS Configuration with Terraform](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB00-Terraform-Install-AWS-Configuration.md)
 
 ## Steps
+
+- Code:
+
+![image](https://user-images.githubusercontent.com/10358317/233652134-e5c732c0-1c88-4244-b321-b8f777476c85.png)
 
 ### Main Part <a name="main_part"></a>
 
