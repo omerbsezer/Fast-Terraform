@@ -4,8 +4,8 @@ This repo covers Terraform with Hands-on LABs and Samples using AWS (comprehensi
 - Provisioning AWS Resources (EC2, VPC, IAM Users, User Groups, Policies, Roles, EBS, EFS, ECS, ECR, Fargate, ELB, EKS, Lambda, Lambda Container, API Gateway), use cases and details.
 
 Why was this repo created?
-- **Shows Terraform details in short with simple, clean demos and examples**
-- **Shows Terraform AWS Samples, Usecases**
+- **Shows Terraform details in short with simple, clean demos and Hands-on LABs**
+- **Shows Terraform AWS Hands-on Samples, Use Cases**
 
 **Keywords:** Terraform, Infrastructure as Code, AWS, Cloud Provisioning
 
