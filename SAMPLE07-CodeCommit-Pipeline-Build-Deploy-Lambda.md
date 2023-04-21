@@ -825,6 +825,25 @@ terraform plan
 terraform apply
 ```
 
+- Create IAM CodeCommit HTTPS Key on AWS IAM.
+- Pull the repo from AWS CodeCommit, Copy the "lambda_bootstrap" into the code:
+
+```
+copy lambda_bootstrap 
+git clone
+git add . && git commit -m "Initial Commit" && git push
+```
+- On AWS CodeCommit, code is pushed:
+
+- After pushing the code, it triggers CodePipeline:
+
+- On AWS CodeBuild:
+
+- On AWS CodeDeploy:
+
+- On AWS Lambda:
+
+- Testing interface with Lambda Test:
 
 - Finally, destroy infrastructure:
 
