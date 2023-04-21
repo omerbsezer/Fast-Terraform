@@ -1,0 +1,28 @@
+
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+    commands:
+      - tf_version=$TERRAFORM_VERSION
+      - wget https://releases.hashicorp.com/terraform/"$TERRAFORM_VERSION"/terraform_"$TERRAFORM_VERSION"_linux_amd64.zip
+      - unzip terraform_"$TERRAFORM_VERSION"_linux_amd64.zip
+      - mv terraform /usr/local/bin/
+      - curl -sSLo install.sh https://install.hclq.sh
+      - sh install.sh
+  pre_build:
+    commands:
+      - echo Logging into Amazon ECR...
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+  build:
+    commands:
+      - echo Build started on `date`
+      - terraform --version
+      - cd lambda_bootstrap/
+      - echo Updating ENV_namespace in terraform.tfvars
+      - cat terraform.tfvars | hclq set 'env_namespace' $ENV_NAMESPACE | hclq set 'ecr_repo_url' $REPO_URI | hclq set 'ecr_repo_arn' $REPO_ARN | tee terraform.tfvars
+      - terraform init -input=false
+      - terraform validate
+      - terraform apply -auto-approve
