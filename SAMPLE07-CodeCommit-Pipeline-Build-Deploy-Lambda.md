@@ -684,7 +684,7 @@ variable "env_namespace" {
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/modules/ecr/variables.tf
 
 ### Lambda Part <a name="lambda"></a>
-
+- Create main.tf:
 
 ```
 data "aws_ecr_image" "lambda_image_latest" {
@@ -809,7 +809,7 @@ variable "ecr_repo_arn" {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/lambda_bootstrap/variables.tf
 
-- **Lambda Details, Dockerfile:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/lambda_bootstrap/lambda
+**Lambda Details, Dockerfile:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/lambda_bootstrap/lambda
 
 ### Demo: Terraform Run <a name="run"></a>
 
