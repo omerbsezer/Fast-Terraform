@@ -1,4 +1,4 @@
-## SAMPLE-07: Provisioning CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy on Lambda Container
+## SAMPLE-07: CI/CD on AWS => Provisioning CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy on Lambda Container
 
 This sample shows:
 - how to create 
