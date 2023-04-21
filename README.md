@@ -34,7 +34,7 @@ These samples focus on how to create and use AWS components (EC2, EBS, EFS, Lamb
 - [SAMPLE-04: Provisioning ECR (Elastic Container Repository), Pushing Image to ECR, Provisioning ECS (Elastic Container Service), VPC (Virtual Private Cloud), ELB (Elastic Load Balancer), ECS Tasks and Service on Fargate Cluster](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE04-ECR-ECS-ELB-VPC-ECS-Service.md)
 - [SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE05-Lambda-Container-ApiGateway-FlaskApp.md)
 - [SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE06-EKS-ManagedNodes-Blueprint.md)
-- [SAMPLE: Container Running Using CodeBuild]()
+- [SAMPLE-07: Provisioning CI/CD: CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy on Lambda Container](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE07-CodeCommit-Pipeline-Build-Deploy-Lambda.md)
 - [SAMPLE: S3 CloudFront Static Web Pages]()
 
 
@@ -449,6 +449,11 @@ This sample shows:
 
 - Go to Sample: 
   - [SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE06-EKS-ManagedNodes-Blueprint.md)
+  
+ ### SAMPLE-07: Provisioning CI/CD: CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy on Lambda Container <a name="ci_cd"></a>  
+ 
+- Go to Sample:   
+  - [SAMPLE-07: Provisioning CI/CD: CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy on Lambda Container](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE07-CodeCommit-Pipeline-Build-Deploy-Lambda.md)
 
 ## Details <a name="details"></a>
 
