@@ -1,7 +1,11 @@
 ## SAMPLE-07: CI/CD on AWS => Provisioning CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy on Lambda Container
 
 This sample shows:
-- how to create 
+- how to create code repository using CodeCommit
+- how to create pipeline with CodePipeline, 
+- how to create builder with CodeBuild ('buildspec_build.yaml'), build the source code, create a Docker image
+- how to create ECR (Elastic Container Repository) and push the build image into the ECR.
+- how to create Lambda Function and run/deploy container on Lambda ('buildspec_deploy.yaml')
 
 **Notes:**
 - Source code is pulled from:
