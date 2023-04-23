@@ -5,7 +5,15 @@ resource "aws_s3_bucket" "codepipeline_bucket" {
   bucket = "${var.s3_bucket_namespace}-codepipeline-bucket"
 }
 
+resource "aws_s3_bucket_ownership_controls" "codepipeline_bucket_ownership" {
+  bucket = aws_s3_bucket.codepipeline_bucket.id
+  rule {
+    object_ownership = "BucketOwnerPreferred"
+  }
+}
+
 resource "aws_s3_bucket_acl" "codepipeline_bucket_acl" {
+  depends_on = [aws_s3_bucket_ownership_controls.codepipeline_bucket_ownership]
   bucket = aws_s3_bucket.codepipeline_bucket.id
   acl    = "private"
 }
