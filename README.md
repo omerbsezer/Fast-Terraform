@@ -452,7 +452,21 @@ This sample shows:
   - [SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE06-EKS-ManagedNodes-Blueprint.md)
   
  ### SAMPLE-07: CI/CD on AWS => Provisioning CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy, Running on Lambda Container <a name="ci_cd"></a>  
- 
+
+This sample shows:
+- how to create code repository using CodeCommit,
+- how to create pipeline with CodePipeline, create S3 bucket to store Artifacts for codepipeline stages' connection (source, build, deploy),
+- how to create builder with CodeBuild ('buildspec_build.yaml'), build the source code, create a Docker image,
+- how to create ECR (Elastic Container Repository) and push the build image into the ECR,
+- how to create Lambda Function (by CodeBuild automatically) and run/deploy container on Lambda ('buildspec_deploy.yaml').
+- Source code is pulled from:
+  - https://github.com/aws-samples/codepipeline-for-lambda-using-terraform
+- Some of the fields are updated. 
+- It works with 'hashicorp/aws ~> 4.15.1', 'terraform >= 0.15'
+- **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container
+
+  ![image](https://user-images.githubusercontent.com/10358317/233652299-66b39788-66ee-4a5e-b8e0-ece418fe98e3.png)
+
 - Go to Sample:   
   - [SAMPLE-07: CI/CD on AWS => Provisioning CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy, Running on Lambda Container](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE07-CodeCommit-Pipeline-Build-Deploy-Lambda.md)
 
