@@ -483,6 +483,8 @@ This sample shows:
   - https://github.com/aws-samples
 - **AWS Samples with Terraform (Advanced):** 
   - https://github.com/orgs/aws-samples/repositories?q=Terraform&type=all&language=&sort= 
+- **AWS Integration and Automation (Advanced):**  
+  - https://github.com/aws-ia
 
 ## References <a name="references"></a>
 - Redis: https://developer.redis.com/create/aws/terraform/
