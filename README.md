@@ -42,7 +42,6 @@ These samples focus on how to create and use AWS components (EC2, EBS, EFS, Lamb
 - [Motivation](#motivation)
 - [What is Terraform?](#what_is_terraform)
 - [How Terraform Works?](#how_terrafom_works)
-- [Terraform Commands](#terrafom_commands)
 - [Terraform File Components](#terrafom_file_components)
   - [Providers](#providers)
   - [Resources](#resources)
@@ -56,7 +55,6 @@ These samples focus on how to create and use AWS components (EC2, EBS, EFS, Lamb
   - [Workspaces](#workspaces)
   - [Templates](#templates)
   - [Backends and Remote States](#backends_remote_states)
-- [Terraform Debugging and Validation](#debugging_validation)
 - [Terraform Best Practices](#best_practice)
 - [AWS Terraform Samples](#samples)
   - [SAMPLE-01: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](#ec2_vpc_key_pair_ssh_rdp)
@@ -383,6 +381,8 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
   - how to create Security Groups (for SSH and Remote Desktop).
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ec2-vpc-ubuntu-win-ssh-rdp
 
+  ![image](https://user-images.githubusercontent.com/10358317/233837033-01c37232-75f8-4815-a5d6-e3f73139963e.png)
+
 - Go to Sample:
   - [SAMPLE-01: Provisioning EC2s (Windows 2019 Server, Ubuntu 20.04) on VPC (Subnet), Creating Key-Pair, Connecting Ubuntu using SSH, and Connecting Windows Using RDP](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE01-EC2-VPC-Ubuntu-Win-SSH-RDP.md)
   
@@ -394,6 +394,8 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
   - how to create api-gateway resource and method definition, lambda - api gateway connection, deploying api gateway, api-gateway deployment URL as output
   - details on AWS Lambda, API-Gateway, IAM.
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/lambda-role-policy-apigateway-python
+
+  ![image](https://user-images.githubusercontent.com/10358317/233837058-7909658d-b06d-49e3-8f81-d56ccf295609.png)
 
 - Go to Sample:
   - [SAMPLE-02: Provisioning Lambda Function, API Gateway and Reaching HTML Page in Python Code From Browser](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE02-Lambda-API-Gateway-Python.md)
@@ -447,6 +449,10 @@ This sample shows:
 - EKS Blueprint is used from: 
   - https://github.com/aws-ia/terraform-aws-eks-blueprints
 -  **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/eks-managed-node-blueprint
+
+  ![image](https://user-images.githubusercontent.com/10358317/233836920-20d2b13b-7cb2-42c0-bb3f-70780f5f107d.png)
+
+  ![image](https://user-images.githubusercontent.com/10358317/233836945-dfb85038-f5be-40a8-abe7-15b1334b854d.png)
 
 - Go to Sample: 
   - [SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE06-EKS-ManagedNodes-Blueprint.md)
