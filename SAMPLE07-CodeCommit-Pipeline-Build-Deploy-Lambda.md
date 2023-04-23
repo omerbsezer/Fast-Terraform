@@ -1,11 +1,11 @@
 ## SAMPLE-07: CI/CD on AWS => Provisioning CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy on Lambda Container
 
 This sample shows:
-- how to create code repository using CodeCommit
-- how to create pipeline with CodePipeline, 
-- how to create builder with CodeBuild ('buildspec_build.yaml'), build the source code, create a Docker image
-- how to create ECR (Elastic Container Repository) and push the build image into the ECR.
-- how to create Lambda Function and run/deploy container on Lambda ('buildspec_deploy.yaml')
+- how to create code repository using CodeCommit,
+- how to create pipeline with CodePipeline, create S3 bucket to store Artifacts,
+- how to create builder with CodeBuild ('buildspec_build.yaml'), build the source code, create a Docker image,
+- how to create ECR (Elastic Container Repository) and push the build image into the ECR,
+- how to create Lambda Function (by CodeBuild automatically) and run/deploy container on Lambda ('buildspec_deploy.yaml').
 
 **Notes:**
 - Source code is pulled from:
@@ -99,6 +99,8 @@ module "ecr" {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/main.tf
 
+![image](https://user-images.githubusercontent.com/10358317/233831575-895408b8-0929-4125-9716-96675f3878f0.png)
+
 - Create output.tf:
 
 ```
@@ -114,6 +116,8 @@ output "ecrrepo" {
 ```
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/outputs.tf
+
+![image](https://user-images.githubusercontent.com/10358317/233831613-28d0dc5d-2299-4862-84e2-ce5a4d220c13.png)
 
 - Create providers.tf:
 
@@ -137,6 +141,8 @@ terraform {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/providers.tf
 
+![image](https://user-images.githubusercontent.com/10358317/233831633-549163df-5e40-4f6d-a025-f6c70e726a41.png)
+
 - Create terraform.tfvars:
 
 ```
@@ -155,6 +161,8 @@ codecommit_branch      = "master"
 ```
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/terraform.tfvars
+
+![image](https://user-images.githubusercontent.com/10358317/233831672-ad9901a6-3706-4527-a301-f8d0659c1805.png)
 
 - Create variables.tf:
 
@@ -207,6 +215,8 @@ variable "terraform_ver" {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/variables.tf
 
+![image](https://user-images.githubusercontent.com/10358317/233831701-4d1d1357-ea2e-400d-b53d-da08acf9cd12.png)
+
 ### CodeCommit Module <a name="codecommit"></a>
 
 - Create main.tf:
@@ -222,6 +232,8 @@ resource "aws_codecommit_repository" "codecommit_repo" {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/modules/codecommit/main.tf
 
+![image](https://user-images.githubusercontent.com/10358317/233831728-26ce5e78-3738-4be6-bf1b-8d67bd605817.png)
+
 - Create outputs.tf:
 
 ```
@@ -235,6 +247,8 @@ output "codecommit_configs" {
 ```
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/modules/codecommit/outputs.tf
+
+![image](https://user-images.githubusercontent.com/10358317/233831757-a363b671-be88-4ac3-a5a8-13cd2e870491.png)
 
 - Create variables.tf:
 
@@ -252,6 +266,8 @@ variable "env_namespace" {
 ```
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/modules/codecommit/variables.tf
+
+![image](https://user-images.githubusercontent.com/10358317/233831783-fdec8f23-5d03-44a4-8b1a-824581a21af0.png)
 
 ### CodePipeline Module <a name="codepipeline"></a>
 
@@ -380,6 +396,10 @@ resource "aws_codepipeline" "codepipeline" {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/modules/codepipeline/main.tf
 
+![image](https://user-images.githubusercontent.com/10358317/233831984-3bcab992-17a0-413b-bf1e-f38289a959a2.png)
+
+![image](https://user-images.githubusercontent.com/10358317/233832006-949a9c52-d266-4150-97c7-0305cceddc08.png)
+
 - Create outputs.tf
 
 ```
@@ -395,6 +415,7 @@ output "deployment_role_arn" {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/modules/codepipeline/outputs.tf
 
+![image](https://user-images.githubusercontent.com/10358317/233832055-65f1b99b-4a16-47b7-9c01-b88d3ec256d8.png)
 
 - Create roles.tf
 
@@ -542,6 +563,8 @@ POLICY
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/modules/codepipeline/roles.tf
 
+![image](https://user-images.githubusercontent.com/10358317/233832109-cd0c7938-3522-4c5e-a6d1-75bc06a11da7.png)
+
 - Create variables.tf
 
 ```
@@ -582,6 +605,8 @@ variable "build_args" {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/modules/codepipeline/variables.tf
 
+![image](https://user-images.githubusercontent.com/10358317/233832129-c41dee01-6194-496d-8b14-d8a3fc79f158.png)
+
 - Create buildspec_build.yml under templates:
 
 ```
@@ -609,6 +634,8 @@ phases:
 ```
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/modules/codepipeline/templates/buildspec_build.yml
+
+![image](https://user-images.githubusercontent.com/10358317/233832160-42cf2a4a-cba5-4254-a613-f91b37f27a5c.png)
 
 - Create buildspec_deploy.yml under templates:
 
@@ -644,6 +671,8 @@ phases:
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/modules/codepipeline/templates/buildspec_deploy.yml
 
+![image](https://user-images.githubusercontent.com/10358317/233832212-dc3ca548-6390-4ea3-9c18-b890e81648a6.png)
+
 ### ECR Module <a name="ecr"></a>
 - Create main.tf:
 
@@ -663,6 +692,7 @@ resource "aws_ecr_repository" "ecr_repo" {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/modules/ecr/main.tf
 
+![image](https://user-images.githubusercontent.com/10358317/233832299-e05ba389-3a04-47aa-b91a-478f75b72493.png)
 
 - Create outputs.tf:
 
@@ -677,6 +707,8 @@ output "ecr_configs" {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/modules/ecr/outputs.tf
 
+![image](https://user-images.githubusercontent.com/10358317/233832327-78081e78-7477-4f98-909f-f2c03450a8a2.png)
+
 - Create variables.tf:
 
 ```
@@ -689,6 +721,8 @@ variable "env_namespace" {
 ```
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/modules/ecr/variables.tf
+
+![image](https://user-images.githubusercontent.com/10358317/233832341-f9cd9510-ce6d-40fb-8562-4b6d56a46b98.png)
 
 ### Lambda Part <a name="lambda"></a>
 - Create main.tf:
@@ -756,6 +790,8 @@ resource "aws_lambda_function" "main" {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/lambda_bootstrap/main.tf
 
+![image](https://user-images.githubusercontent.com/10358317/233832538-24fe7678-9f67-4799-be4b-610576678c95.png)
+
 - Create outputs.tf:
 ```
 output "lambda_arn" {
@@ -764,6 +800,8 @@ output "lambda_arn" {
 ```
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/lambda_bootstrap/outputs.tf
+
+![image](https://user-images.githubusercontent.com/10358317/233832555-7b19b218-998d-41f4-93a0-48b69ac1d74f.png)
 
 - Create providers.tf:
 
@@ -786,6 +824,8 @@ terraform {
 ```
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/lambda_bootstrap/providers.tf
+
+![image](https://user-images.githubusercontent.com/10358317/233832580-46078909-5327-4e8f-bcf1-f387c119bc96.png)
 
 - Create terraform.tfvars:
 
@@ -816,7 +856,13 @@ variable "ecr_repo_arn" {
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/lambda_bootstrap/variables.tf
 
+![image](https://user-images.githubusercontent.com/10358317/233832595-207be71a-a552-4a1e-9c5b-936c14878533.png)
+
 **Lambda Details, Dockerfile:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container/lambda_bootstrap/lambda
+
+![image](https://user-images.githubusercontent.com/10358317/233832640-11e81033-96de-4f54-b7de-1dec2be2e24a.png)
+
+![image](https://user-images.githubusercontent.com/10358317/233832656-dc4be9d6-fb45-4c62-9790-16a242305b13.png)
 
 ### Demo: Terraform Run <a name="run"></a>
 
