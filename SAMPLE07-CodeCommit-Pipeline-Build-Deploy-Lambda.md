@@ -2,7 +2,7 @@
 
 This sample shows:
 - how to create code repository using CodeCommit,
-- how to create pipeline with CodePipeline, create S3 bucket to store Artifacts,
+- how to create pipeline with CodePipeline, create S3 bucket to store Artifacts for codepipeline stages' connection (source, build, deploy),
 - how to create builder with CodeBuild ('buildspec_build.yaml'), build the source code, create a Docker image,
 - how to create ECR (Elastic Container Repository) and push the build image into the ECR,
 - how to create Lambda Function (by CodeBuild automatically) and run/deploy container on Lambda ('buildspec_deploy.yaml').
@@ -875,31 +875,95 @@ terraform plan
 terraform apply
 ```
 
-- Create IAM CodeCommit HTTPS Key on AWS IAM.
-- Pull the repo from AWS CodeCommit, Copy the "lambda_bootstrap" into the code:
+![image](https://user-images.githubusercontent.com/10358317/233833654-1382237d-7052-483c-806d-9c3ecc1f6229.png)
+
+- Create IAM CodeCommit HTTPS Key on AWS IAM. Go to IAM User > User > Security Credentials > HTTPS Git credentials for AWS CodeCommit
+- Generate credentials (username and password) to push the code to the CodeCommit
+
+![image](https://user-images.githubusercontent.com/10358317/233833803-93025986-640a-43ca-afd2-4a1c8494f197.png)
+
+- Pull the repo from AWS CodeCommit:
 
 ```
-copy lambda_bootstrap 
-git clone
+git clone https://git-codecommit.eu-central-1.amazonaws.com/v1/repos/org_awsteam_lambda_code_repo
+```
+
+![image](https://user-images.githubusercontent.com/10358317/233833969-fc1aed7f-67cc-4a4d-b932-2acca8bc6527.png)
+
+- Enter Credential on Git Bash Emulator to download empty project:
+
+```
+git config --global credential.helper '!aws codecommit credential-helper --profile CodeCommitProfile $@'
+git config --global credential.UseHttpPath true
+git clone https://git-codecommit.eu-central-1.amazonaws.com/v1/repos/org_awsteam_lambda_code_repo
+```
+
+![image](https://user-images.githubusercontent.com/10358317/233834809-13d3cd70-ee69-46dc-907e-214a3e8d9375.png)
+
+- Copy the "lambda_bootstrap" into the downloaded project 'org_awsteam_lambda_code_repo':
+
+```
+cp lambda_bootstrap /org_awsteam_lambda_code_repo/ 
 git add . && git commit -m "Initial Commit" && git push
 ```
+
+- Push the code into the CodeCommit Repo:
+
+![image](https://user-images.githubusercontent.com/10358317/233834664-85a51381-f938-46e8-afb0-23064c4dbd09.png)
+
 - On AWS CodeCommit, code is pushed:
+
+![image](https://user-images.githubusercontent.com/10358317/233834726-fa1228d9-772a-4931-bf3f-4dcc6f4bb523.png)
 
 - After pushing the code, it triggers CodePipeline:
 
+![image](https://user-images.githubusercontent.com/10358317/233835282-b53e5022-eac6-4212-9245-309db4c68678.png)
+
 - On AWS CodeBuild:
 
-- On AWS CodeDeploy:
+![image](https://user-images.githubusercontent.com/10358317/233835172-f6afe81a-f6d3-4065-935c-f086ae6dbd0f.png)
+
+- On AWS CodeBuild, Dev Code Build Logs:
+
+![image](https://user-images.githubusercontent.com/10358317/233835613-f26c8658-7ea9-4deb-92f0-3b7607112e80.png)
+
+- On AWS CodeBuild, Deploy Image Build Logs on Lambda:
+
+![image](https://user-images.githubusercontent.com/10358317/233835429-d0c6a136-9580-4ef1-b343-9bce48972822.png)
+
+- On AWS ECR, Docker image was pushed by CodeBuild:
+
+![image](https://user-images.githubusercontent.com/10358317/233835727-821e1456-2799-4e67-9994-7f3382d327ab.png)
 
 - On AWS Lambda:
 
+![image](https://user-images.githubusercontent.com/10358317/233835833-3ec1c5cb-0235-44f3-84a9-9491ffc996b5.png)
+
 - Testing interface with Lambda Test:
+
+![image](https://user-images.githubusercontent.com/10358317/233835876-a6b87862-730b-4bb4-ae6a-66389b0cd744.png)
+
+- Lambda Code returns (it returns house prices and addresses):
+
+![image](https://user-images.githubusercontent.com/10358317/233835933-129e6368-5d65-45a5-8b3e-204cd496f1d5.png)
+
+- On AWS S3, S3 bucket stores Artifacts for codepipeline stages' connection (source, build, deploy):
+
+![image](https://user-images.githubusercontent.com/10358317/233836246-8474c407-367b-4795-9d39-ddbe2d952a6e.png)
+
+- Before destroy, delete the bucket file using GUI:
+
+![image](https://user-images.githubusercontent.com/10358317/233836359-2bef706c-348e-4b5d-9b45-d41fd7804394.png)
 
 - Finally, destroy infrastructure:
 
 ```
 terraform destroy -auto-approve
 ```
+
+![image](https://user-images.githubusercontent.com/10358317/233836460-b773ccfb-8a35-4f5d-9002-61a0ce2dbad0.png)
+
+- After destroying; control Lambda, ECR, S3, CodeCommit, CodeBuild, CodePipeline to be sure that everything is deleted.
 
 ## References
 - https://github.com/aws-samples/codepipeline-for-lambda-using-terraform
