@@ -1,6 +1,6 @@
 # Fast-Terraform (with AWS)
 This repo covers Terraform with Hands-on LABs and Samples using AWS (comprehensive, but simple): 
-- Resources, Data Sources, Variables, Meta Arguments, Provisioners, Dynamic Blocks, Modules, Workspaces, Templates, Backend and Remote State.
+- Resources, Data Sources, Variables, Meta Arguments, Provisioners, Dynamic Blocks, Modules, Workspaces, Templates, Remote State.
 - Provisioning AWS Component (EC2, EBS, EFS, IAM Roles, IAM Policies, Key-Pairs, VPC with Network Components, Lambda, ECR, ECS with Fargate, EKS with Managed Nodes, ASG, ELB, API Gateway, S3, CodeCommit, CodePipeline, CodeBuild, CodeDeploy), use cases and details.
 
 Why was this repo created?
