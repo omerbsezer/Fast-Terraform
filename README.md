@@ -56,9 +56,9 @@ These samples focus on how to create and use AWS components (EC2, EBS, EFS, Lamb
   - [Templates](#templates)
   - [Backends and Remote States](#backends_remote_states)
 - [Terraform Best Practices](#best_practice)
-- [AWS Terraform Samples](#samples)
+- [AWS Terraform Hands-on Samples](#samples)
   - [SAMPLE-01: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections](#ec2_vpc_key_pair_ssh_rdp)
-  - [SAMPLE-02:  Provisioning Lambda Function, API Gateway and Reaching HTML Page in Python Code From Browsers](#lambda_apigateway_python)
+  - [SAMPLE-02: Provisioning Lambda Function, API Gateway and Reaching HTML Page in Python Code From Browsers](#lambda_apigateway_python)
   - [SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances)](#ebs_efs_ec2)
   - [SAMPLE-04: Provisioning ECR (Elastic Container Repository), Pushing Image to ECR, Provisioning ECS (Elastic Container Service), VPC (Virtual Private Cloud), ELB (Elastic Load Balancer), ECS Tasks and Service on Fargate Cluster](#ecr_ecs_elb_vpc_ecs_service_fargate)
   - [SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda](#ecr_lambda_apigateway_container)
@@ -371,7 +371,7 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
 - Execute Terraform only in an automated build, CD pipeline/process. This helps to run code automatically and run from one/single place. 
 - For naming conventions: https://www.terraform-best-practices.com/naming 
 
-## AWS Terraform Samples <a name="samples"></a>
+## AWS Terraform Hands-on Samples <a name="samples"></a>
 
 ### SAMPLE-01: EC2s (Windows 2019 Server, Ubuntu 20.04), VPC, Key-Pairs for SSH, RDP connections <a name="ec2_vpc_key_pair_ssh_rdp"></a>
 - This sample shows:
