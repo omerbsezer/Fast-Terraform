@@ -438,11 +438,11 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
 
 ### SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules <a name="eks_managednodes_blueprint"></a>  
 
-This sample shows:
-- how to create EKS cluster with managed nodes using BluePrints and Modules.
-- EKS Blueprint is used to provision EKS cluster with managed nodes easily. 
-- EKS Blueprint is used from: 
-  - https://github.com/aws-ia/terraform-aws-eks-blueprints
+- This sample shows:
+  - how to create EKS cluster with managed nodes using BluePrints and Modules.
+  - EKS Blueprint is used to provision EKS cluster with managed nodes easily. 
+  - EKS Blueprint is used from: 
+    - https://github.com/aws-ia/terraform-aws-eks-blueprints
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/eks-managed-node-blueprint
 - **Go to the Hands-On Sample:** 
   - [SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE06-EKS-ManagedNodes-Blueprint.md)
@@ -453,12 +453,12 @@ This sample shows:
 
  ### SAMPLE-07: CI/CD on AWS => Provisioning CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy, Running on Lambda Container <a name="ci_cd"></a>  
 
-This sample shows:
-- how to create code repository using CodeCommit,
-- how to create pipeline with CodePipeline, create S3 bucket to store Artifacts for codepipeline stages' connection (source, build, deploy),
-- how to create builder with CodeBuild ('buildspec_build.yaml'), build the source code, create a Docker image,
-- how to create ECR (Elastic Container Repository) and push the build image into the ECR,
-- how to create Lambda Function (by CodeBuild automatically) and run/deploy container on Lambda ('buildspec_deploy.yaml').
+- This sample shows:
+  - how to create code repository using CodeCommit,
+  - how to create pipeline with CodePipeline, create S3 bucket to store Artifacts for codepipeline stages' connection (source, build, deploy),
+  - how to create builder with CodeBuild ('buildspec_build.yaml'), build the source code, create a Docker image,
+  - how to create ECR (Elastic Container Repository) and push the build image into the ECR,
+  - how to create Lambda Function (by CodeBuild automatically) and run/deploy container on Lambda ('buildspec_deploy.yaml').
 - Source code is pulled from:
   - https://github.com/aws-samples/codepipeline-for-lambda-using-terraform
 - Some of the fields are updated. 
@@ -471,8 +471,17 @@ This sample shows:
 
  ### SAMPLE-08: Provisioning S3 and CloudFront to serve Static Web Site <a name="s3_cloudfront"></a>
 
+- This sample shows:
+  - how to create S3 Bucket, 
+  - how to to copy the website to S3 Bucket, 
+  - how to configure S3 bucket policy,
+  - how to create CloudFront distribution to refer S3 Static Web Site,
+  - how to configure CloudFront (default_cache_behavior, ordered_cache_behavior, ttl, price_class, restrictions, viewer_certificate).
+- **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/s3-cloudfront-static-website/
 - **Go to the Hands-On Sample:**    
   - [SAMPLE-08: Provisioning S3 and CloudFront to serve Static Web Site](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE08-S3-CloudFront-Static-WebSite.md)
+
+  ![image](https://user-images.githubusercontent.com/10358317/234044290-e14650ed-93b4-4c49-8891-edeb959ffacb.png)
 
 ## Details <a name="details"></a>
 
