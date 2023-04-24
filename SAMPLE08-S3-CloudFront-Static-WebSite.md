@@ -1,8 +1,11 @@
 ## SAMPLE-08: Provisioning S3 and CloudFront to serve Static Web Site
 
 This sample shows:
-- how to create S3 Bucket, copy the website to S3 Bucket, S3 bucket policy
-- how to create CloudFront distribution to refer S3 Static Web Site
+- how to create S3 Bucket, 
+- how to to copy the website to S3 Bucket, 
+- how to configure S3 bucket policy,
+- how to create CloudFront distribution to refer S3 Static Web Site,
+- how to configure CloudFront (default_cache_behavior, ordered_cache_behavior, ttl, price_class, restrictions, viewer_certificate).
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/s3-cloudfront-static-website/
 
