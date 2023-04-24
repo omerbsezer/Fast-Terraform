@@ -1,7 +1,7 @@
 # Fast-Terraform (with AWS)
 This repo covers Terraform with Hands-on LABs and Samples using AWS (comprehensive, but simple): 
 - Resources, Data Sources, Variables, Meta Arguments, Provisioners, Dynamic Blocks, Modules, Workspaces, Templates, Remote State.
-- Provisioning AWS Components (EC2, EBS, EFS, IAM Roles, IAM Policies, Key-Pairs, VPC with Network Components, Lambda, ECR, ECS with Fargate, EKS with Managed Nodes, ASG, ELB, API Gateway, S3, CodeCommit, CodePipeline, CodeBuild, CodeDeploy), use cases and details.
+- Provisioning AWS Components (EC2, EBS, EFS, IAM Roles, IAM Policies, Key-Pairs, VPC with Network Components, Lambda, ECR, ECS with Fargate, EKS with Managed Nodes, ASG, ELB, API Gateway, S3, CloudFront CodeCommit, CodePipeline, CodeBuild, CodeDeploy), use cases and details.
 
 Why was this repo created?
 - **Shows Terraform details in short with simple, clean demos and Hands-on LABs**
@@ -26,7 +26,7 @@ These LABs focus on Terraform features, help to learn Terraform:
 - [LAB-11: Backend - Remote States => Provision EC2 and Save State File on S3](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB11-Backend-Remote-State.md)
 
 # Quick Look (How-To): AWS Terraform Hands-on Samples
-These samples focus on how to create and use AWS components (EC2, EBS, EFS, IAM Roles, IAM Policies, Key-Pairs, VPC with Network Components, Lambda, ECR, ECS with Fargate, EKS with Managed Nodes, ASG, ELB, API Gateway, S3, CodeCommit, CodePipeline, CodeBuild, CodeDeploy) with Terraform:
+These samples focus on how to create and use AWS components (EC2, EBS, EFS, IAM Roles, IAM Policies, Key-Pairs, VPC with Network Components, Lambda, ECR, ECS with Fargate, EKS with Managed Nodes, ASG, ELB, API Gateway, S3, CloudFront, CodeCommit, CodePipeline, CodeBuild, CodeDeploy) with Terraform:
 
 - [SAMPLE-01: Provisioning EC2s (Windows 2019 Server, Ubuntu 20.04) on VPC (Subnet), Creating Key-Pair, Connecting Ubuntu using SSH, and Connecting Windows Using RDP](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE01-EC2-VPC-Ubuntu-Win-SSH-RDP.md)
 - [SAMPLE-02: Provisioning Lambda Function, API Gateway and Reaching HTML Page in Python Code From Browser](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE02-Lambda-API-Gateway-Python.md)
