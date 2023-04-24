@@ -1,7 +1,8 @@
 ## SAMPLE-08: Provisioning S3 and CloudFront to serve Static Web Site
 
 This sample shows:
-- how to create 
+- how to create S3 Bucket, copy the website to S3 Bucket, S3 bucket policy
+- how to create CloudFront distribution to refer S3 Static Web Site
 
 **Code:** 
 
@@ -62,6 +63,11 @@ terraform apply
 terraform destroy -auto-approve
 ```
 
+- Destroying takes time:
+
+  ![image](https://user-images.githubusercontent.com/10358317/234040293-3e4f285d-4ef3-483f-bd4d-3ffb41d94b73.png)
+
+  ![image](https://user-images.githubusercontent.com/10358317/234040667-e9b5c723-15fa-4d05-a628-eb15e4714e10.png)
 
 ## Reference
 - Website Source Code: https://github.com/StartBootstrap/startbootstrap-freelancer
