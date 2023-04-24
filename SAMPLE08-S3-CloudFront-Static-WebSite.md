@@ -4,7 +4,7 @@ This sample shows:
 - how to create S3 Bucket, copy the website to S3 Bucket, S3 bucket policy
 - how to create CloudFront distribution to refer S3 Static Web Site
 
-**Code:** 
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/s3-cloudfront-static-website/
 
 ### Prerequisite
 
@@ -13,11 +13,286 @@ This sample shows:
 
 ## Steps
 
-- Create main.tf:
+- Create s3.tf:
  
 ```
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 4.16"
+    }
+  }
+  required_version = ">= 1.2.0"
+}
 
+provider "aws" {
+  region  = "eu-central-1"
+}
+
+resource "aws_s3_bucket" "mybucket" {
+  bucket = "s3-mybucket-website2023"
+  acl    = "private"
+  # Add specefic S3 policy in the s3-policy.json on the same directory
+  # policy = file("s3-policy.json")
+
+  versioning {
+    enabled = false
+  }
+
+  website {
+    index_document = "index.html"
+    error_document = "error.html"
+	
+	# Add routing rules if required
+    # routing_rules = <<EOF
+    #                [{
+    #                    "Condition": {
+    #                        "KeyPrefixEquals": "docs/"
+    #                    },
+    #                    "Redirect": {
+    #                        "ReplaceKeyPrefixWith": "documents/"
+    #                    }
+    #                }]
+    #                EOF
+  }
+
+  tags = {
+    Environment = "development"
+    Name        = "my-tag"
+  }
+
+}
+
+#Upload files of your static website
+resource "aws_s3_bucket_object" "html" {
+  for_each = fileset("${path.module}/website/", "*.html")
+
+  bucket = aws_s3_bucket.mybucket.bucket
+  key    = each.value
+  source = "${path.module}/website/${each.value}"
+  etag   = filemd5("${path.module}/website/${each.value}")
+  content_type = "text/html"
+}
+
+resource "aws_s3_bucket_object" "svg" {
+  for_each = fileset("${path.module}/website/", "**/*.svg")
+
+  bucket = aws_s3_bucket.mybucket.bucket
+  key    = each.value
+  source = "${path.module}/website/${each.value}"
+  etag   = filemd5("${path.module}/website/${each.value}")
+  content_type = "image/svg+xml"
+}
+
+resource "aws_s3_bucket_object" "css" {
+  for_each = fileset("${path.module}/website/", "**/*.css")
+
+  bucket = aws_s3_bucket.mybucket.bucket
+  key    = each.value
+  source = "${path.module}/website/${each.value}"
+  etag   = filemd5("${path.module}/website/${each.value}")
+  content_type = "text/css"
+}
+
+resource "aws_s3_bucket_object" "js" {
+  for_each = fileset("${path.module}/website/", "**/*.js")
+
+  bucket = aws_s3_bucket.mybucket.bucket
+  key    = each.value
+  source = "${path.module}/website/${each.value}"
+  etag   = filemd5("${path.module}/website/${each.value}")
+  content_type = "application/javascript"
+}
+
+
+resource "aws_s3_bucket_object" "images" {
+  for_each = fileset("${path.module}/website/", "**/*.png")
+
+  bucket = aws_s3_bucket.mybucket.bucket
+  key    = each.value
+  source = "${path.module}/website/${each.value}"
+  etag   = filemd5("${path.module}/website/${each.value}")
+  content_type = "image/png"
+}
+
+resource "aws_s3_bucket_object" "json" {
+  for_each = fileset("${path.module}/website/", "**/*.json")
+
+  bucket = aws_s3_bucket.mybucket.bucket
+  key    = each.value
+  source = "${path.module}/website/${each.value}"
+  etag   = filemd5("${path.module}/website/${each.value}")
+  content_type = "application/json"
+}
+# Add more aws_s3_bucket_object for the type of files you want to upload
+# The reason for having multiple aws_s3_bucket_object with file type is to make sure
+# we add the correct content_type for the file in S3. Otherwise website load may have issues
+
+# Print the files processed so far
+output "fileset-results" {
+  value = fileset("${path.module}/website/", "**/*")
+}
+
+data "aws_iam_policy_document" "s3_policy" {
+  statement {
+    actions   = ["s3:GetObject"]
+    resources = ["${aws_s3_bucket.mybucket.arn}/*"]
+
+    principals {
+      type        = "AWS"
+      identifiers = [aws_cloudfront_origin_access_identity.origin_access_identity.iam_arn]
+    }
+  }
+}
+
+resource "aws_s3_bucket_policy" "mybucket" {
+  bucket = aws_s3_bucket.mybucket.id
+  policy = data.aws_iam_policy_document.s3_policy.json
+}
+
+resource "aws_s3_bucket_public_access_block" "mybucket" {
+  bucket = aws_s3_bucket.mybucket.id
+
+  block_public_acls       = true
+  block_public_policy     = true
+  //ignore_public_acls      = true
+  //restrict_public_buckets = true
+}
 ```
+
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/s3-cloudfront-static-website/s3.tf
+
+![image](https://user-images.githubusercontent.com/10358317/234043000-4dbbf5bd-8c87-4c3b-872e-6b9958217cc3.png)
+
+- Create cloudfront.tf:
+ 
+```
+locals {
+  s3_origin_id = "s3-my-website2023"
+}
+
+resource "aws_cloudfront_origin_access_identity" "origin_access_identity" {
+  comment = "s3-my-website2023"
+}
+
+resource "aws_cloudfront_distribution" "s3_distribution" {
+  origin {
+    domain_name = aws_s3_bucket.mybucket.bucket_regional_domain_name
+    origin_id   = local.s3_origin_id
+
+    s3_origin_config {
+      origin_access_identity = aws_cloudfront_origin_access_identity.origin_access_identity.cloudfront_access_identity_path
+    }
+  }
+
+  enabled             = true
+  is_ipv6_enabled     = true
+  comment             = "my-cloudfront"
+  default_root_object = "index.html"
+
+  # Configure logging here if required 	
+  #logging_config {
+  #  include_cookies = false
+  #  bucket          = "mylogs.s3.amazonaws.com"
+  #  prefix          = "myprefix"
+  #}
+
+  # If you have domain configured use it here 
+  #aliases = ["mywebsite.example.com", "s3-static-web-dev.example.com"]
+
+  default_cache_behavior {
+    allowed_methods  = ["DELETE", "GET", "HEAD", "OPTIONS", "PATCH", "POST", "PUT"]
+    cached_methods   = ["GET", "HEAD"]
+    target_origin_id = local.s3_origin_id
+
+    forwarded_values {
+      query_string = false
+
+      cookies {
+        forward = "none"
+      }
+    }
+
+    viewer_protocol_policy = "allow-all"
+    min_ttl                = 0
+    default_ttl            = 3600
+    max_ttl                = 86400
+  }
+
+  # Cache behavior with precedence 0
+  ordered_cache_behavior {
+    path_pattern     = "/content/immutable/*"
+    allowed_methods  = ["GET", "HEAD", "OPTIONS"]
+    cached_methods   = ["GET", "HEAD", "OPTIONS"]
+    target_origin_id = local.s3_origin_id
+
+    forwarded_values {
+      query_string = false
+      headers      = ["Origin"]
+
+      cookies {
+        forward = "none"
+      }
+    }
+
+    min_ttl                = 0
+    default_ttl            = 86400
+    max_ttl                = 31536000
+    compress               = true
+    viewer_protocol_policy = "redirect-to-https"
+  }
+
+  # Cache behavior with precedence 1
+  ordered_cache_behavior {
+    path_pattern     = "/content/*"
+    allowed_methods  = ["GET", "HEAD", "OPTIONS"]
+    cached_methods   = ["GET", "HEAD"]
+    target_origin_id = local.s3_origin_id
+
+    forwarded_values {
+      query_string = false
+
+      cookies {
+        forward = "none"
+      }
+    }
+
+    min_ttl                = 0
+    default_ttl            = 3600
+    max_ttl                = 86400
+    compress               = true
+    viewer_protocol_policy = "redirect-to-https"
+  }
+
+  price_class = "PriceClass_200"
+
+  restrictions {
+    geo_restriction {
+      restriction_type = "whitelist"
+      locations        = ["US", "CA", "GB", "DE", "IN", "IR"]
+    }
+  }
+
+  tags = {
+    Environment = "development"
+    Name        = "my-tag"
+  }
+
+  viewer_certificate {
+    cloudfront_default_certificate = true
+  }
+}
+
+# to get the Cloud front URL if doamin/alias is not configured
+output "cloudfront_domain_name" {
+  value = aws_cloudfront_distribution.s3_distribution.domain_name
+}
+```
+
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/s3-cloudfront-static-website/cloudfront.tf
+
+![image](https://user-images.githubusercontent.com/10358317/234043230-49318380-a869-430f-a209-60c5cf367cdd.png)
 
 - Run:
  
