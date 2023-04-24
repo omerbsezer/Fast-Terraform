@@ -380,11 +380,10 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
   - how to create Virtual Private Cloud (VPC), VPC Components (Public Subnet, Internet Gateway, Route Table) and link to each others,
   - how to create Security Groups (for SSH and Remote Desktop).
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ec2-vpc-ubuntu-win-ssh-rdp
-
-  ![image](https://user-images.githubusercontent.com/10358317/233837033-01c37232-75f8-4815-a5d6-e3f73139963e.png)
-
-- Go to Sample:
+- **Go to the Hands-On Sample:**
   - [SAMPLE-01: Provisioning EC2s (Windows 2019 Server, Ubuntu 20.04) on VPC (Subnet), Creating Key-Pair, Connecting Ubuntu using SSH, and Connecting Windows Using RDP](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE01-EC2-VPC-Ubuntu-Win-SSH-RDP.md)
+  
+  ![image](https://user-images.githubusercontent.com/10358317/233837033-01c37232-75f8-4815-a5d6-e3f73139963e.png)
   
   
 ### SAMPLE-02:  Provisioning Lambda Function, API Gateway and Reaching HTML Page in Python Code From Browsers <a name="lambda_apigateway_python"></a>
@@ -394,22 +393,20 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
   - how to create api-gateway resource and method definition, lambda - api gateway connection, deploying api gateway, api-gateway deployment URL as output
   - details on AWS Lambda, API-Gateway, IAM.
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/lambda-role-policy-apigateway-python
-
-  ![image](https://user-images.githubusercontent.com/10358317/233837058-7909658d-b06d-49e3-8f81-d56ccf295609.png)
-
-- Go to Sample:
+- **Go to the Hands-On Sample:**
   - [SAMPLE-02: Provisioning Lambda Function, API Gateway and Reaching HTML Page in Python Code From Browser](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE02-Lambda-API-Gateway-Python.md)
+  
+  ![image](https://user-images.githubusercontent.com/10358317/233837058-7909658d-b06d-49e3-8f81-d56ccf295609.png)
 
 ### SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances) <a name="ebs_efs_ec2"></a>
 - This sample shows:
   - how to create EBS, mount on Ubuntu and Windows Instances,
   - how to create EFS, mount on Ubuntu Instance.
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ec2-ebs-efs
-
-  ![image](https://user-images.githubusercontent.com/10358317/230903321-5bca3385-9564-44f1-bde8-fe1c873c870a.png)
-
-- Go to Sample:
+- **Go to the Hands-On Sample:**
   - [SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances)](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE03-EC2-EBS-EFS.md)
+  
+  ![image](https://user-images.githubusercontent.com/10358317/230903321-5bca3385-9564-44f1-bde8-fe1c873c870a.png)
   
 ### SAMPLE-04: Provisioning ECR (Elastic Container Repository), Pushing Image to ECR, Provisioning ECS (Elastic Container Service), VPC (Virtual Private Cloud), ELB (Elastic Load Balancer), ECS Tasks and Service on Fargate Cluster <a name="ecr_ecs_elb_vpc_ecs_service_fargate"></a>  
 - This sample shows:
@@ -419,11 +416,10 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
   - how to provision ALB (Application Load Balancer), Listener, Target Group,
   - how to provision ECS Fargate Cluster, Task and Service (running container as Service).
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ecr-ecs-elb-vpc-ecsservice-container 
-
-  ![ecr-ecs](https://user-images.githubusercontent.com/10358317/232244927-7d819c66-328a-4dd5-b3e1-18b2c7fd92aa.png)
-
-- Go to Sample:
+- **Go to the Hands-On Sample:**
   - [SAMPLE-04: Provisioning ECR (Elastic Container Repository), Pushing Image to ECR, Provisioning ECS (Elastic Container Service), VPC (Virtual Private Cloud), ELB (Elastic Load Balancer), ECS Tasks and Service on Fargate Cluster](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE04-ECR-ECS-ELB-VPC-ECS-Service.md)
+  
+  ![ecr-ecs](https://user-images.githubusercontent.com/10358317/232244927-7d819c66-328a-4dd5-b3e1-18b2c7fd92aa.png)
   
  ### SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda <a name="ecr_lambda_apigateway_container"></a>  
 - This sample shows:
@@ -432,14 +428,12 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
   - how to create Lambda function, Lambda role, policy, policy-role attachment, Lambda API Gateway permission,
   - how to create API Gateway resource and method definition, Lambda - API Gateway connection, deploying API Gateway.
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/lambda-container-apigateway-flaskapp
+- **Go to the Hands-On Sample:**
+  - [SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE05-Lambda-Container-ApiGateway-FlaskApp.md)  
 
   ![image](https://user-images.githubusercontent.com/10358317/233119966-9800d18c-8d0c-40de-9c1d-d14726743e5a.png)
   
   ![image](https://user-images.githubusercontent.com/10358317/233121075-ab2ac298-71b2-467d-8068-834f16b0f3c7.png)
-
-- Go to Sample: 
-  - [SAMPLE-05: Provisioning ECR, Lambda Function and API Gateway to run Flask App Container on Lambda](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE05-Lambda-Container-ApiGateway-FlaskApp.md)  
-  
 
 ### SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules <a name="eks_managednodes_blueprint"></a>  
 
@@ -448,15 +442,14 @@ This sample shows:
 - EKS Blueprint is used to provision EKS cluster with managed nodes easily. 
 - EKS Blueprint is used from: 
   - https://github.com/aws-ia/terraform-aws-eks-blueprints
--  **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/eks-managed-node-blueprint
+- **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/eks-managed-node-blueprint
+- **Go to the Hands-On Sample:** 
+  - [SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE06-EKS-ManagedNodes-Blueprint.md)
 
   ![image](https://user-images.githubusercontent.com/10358317/233836920-20d2b13b-7cb2-42c0-bb3f-70780f5f107d.png)
 
   ![image](https://user-images.githubusercontent.com/10358317/233836945-dfb85038-f5be-40a8-abe7-15b1334b854d.png)
 
-- Go to Sample: 
-  - [SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE06-EKS-ManagedNodes-Blueprint.md)
-  
  ### SAMPLE-07: CI/CD on AWS => Provisioning CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy, Running on Lambda Container <a name="ci_cd"></a>  
 
 This sample shows:
@@ -470,11 +463,10 @@ This sample shows:
 - Some of the fields are updated. 
 - It works with 'hashicorp/aws ~> 4.15.1', 'terraform >= 0.15'
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/codecommit-codepipeline-codebuild-codedeploy-lambda-container
+- **Go to the Hands-On Sample:**    
+  - [SAMPLE-07: CI/CD on AWS => Provisioning CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy, Running on Lambda Container](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE07-CodeCommit-Pipeline-Build-Deploy-Lambda.md)
 
   ![image](https://user-images.githubusercontent.com/10358317/233652299-66b39788-66ee-4a5e-b8e0-ece418fe98e3.png)
-
-- Go to Sample:   
-  - [SAMPLE-07: CI/CD on AWS => Provisioning CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy, Running on Lambda Container](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE07-CodeCommit-Pipeline-Build-Deploy-Lambda.md)
 
 ## Details <a name="details"></a>
 
