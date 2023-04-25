@@ -122,7 +122,7 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 ```
 - Terraform Command Structure:
 
-  ![image](https://user-images.githubusercontent.com/10358317/234229500-8aa69574-d59f-4a78-8615-25f1a78c971f.png)
+  ![image](https://user-images.githubusercontent.com/10358317/234230001-67475a51-d894-4234-8917-07d14355b205.png)
 
 - Terraform Workflow:
 
