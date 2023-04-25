@@ -498,6 +498,8 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
   - https://github.com/orgs/aws-samples/repositories?q=Terraform&type=all&language=&sort= 
 - **AWS Integration and Automation (Advanced):**  
   - https://github.com/aws-ia
+- **Reference Guide: Terraform Registry Documents** 
+  - https://registry.terraform.io/providers/hashicorp/aws/latest/docs  
 
 ## References <a name="references"></a>
 - Redis: https://developer.redis.com/create/aws/terraform/
@@ -505,4 +507,5 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
 - https://github.com/aws-samples
 - https://github.com/orgs/aws-samples/repositories?q=Terraform&type=all&language=&sort= 
 - https://github.com/aws-ia/terraform-aws-eks-blueprints
+- https://github.com/aws-ia
 
