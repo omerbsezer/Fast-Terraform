@@ -1,6 +1,6 @@
-# Terraform Cheatsheet
+## Terraform Cheatsheet
 
-## Table of Contents
+### Table of Contents
 - [Help, Version](#help)
 - [Formatting](#formatting)
 - [Initialization](#init)
