@@ -24,6 +24,7 @@ These LABs focus on Terraform features, help to learn Terraform:
 - [LAB-09: Workspaces => Provision EC2 with Different tfvars Files](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB09-Workspaces-EC2.md)
 - [LAB-10: Templates => Provision IAM User, User Access Key, Policy](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB10-Templates-User-Policy.md)
 - [LAB-11: Backend - Remote States => Provision EC2 and Save State File on S3](https://github.com/omerbsezer/Fast-Terraform/blob/main/LAB11-Backend-Remote-State.md)
+- [Terraform Cheatsheet](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Cheatsheet.md)
 
 # Quick Look (How-To): AWS Terraform Hands-on Samples
 These samples focus on how to create and use AWS components (EC2, EBS, EFS, IAM Roles, IAM Policies, Key-Pairs, VPC with Network Components, Lambda, ECR, ECS with Fargate, EKS with Managed Nodes, ASG, ELB, API Gateway, S3, CloudFront, CodeCommit, CodePipeline, CodeBuild, CodeDeploy) with Terraform:
@@ -66,6 +67,7 @@ These samples focus on how to create and use AWS components (EC2, EBS, EFS, IAM 
   - [SAMPLE-07: CI/CD on AWS => Provisioning CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy, Running on Lambda Container](#ci_cd)
   - [SAMPLE-08: Provisioning S3 and CloudFront to serve Static Web Site](#s3_cloudfront)
 - [Details](#details)
+- [Terraform Cheatsheet](#cheatsheet)
 - [Other Useful Resources Related Terraform](#resource)
 - [References](#references)
 
@@ -495,6 +497,10 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
 - For debug logging:  
   - Bash: export TF_LOG_PATH="tmp/terraform.log"
   - PowerShell: $env:TF_LOG_PATH="C:\tmp\terraform.log"
+
+## Terraform Cheatsheet <a name="cheatsheet"></a>
+
+- [Terraform Cheatsheet](https://github.com/omerbsezer/Fast-Terraform/blob/main/Terraform-Cheatsheet.md)
 
 ## Other Useful Resources Related Terraform <a name="resource"></a>
 - **AWS Samples (Advanced):** 
