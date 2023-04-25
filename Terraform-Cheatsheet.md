@@ -1,6 +1,28 @@
 ## Terraform Cheatsheet
 
-### 1. Help, Version
+# Table of Contents
+- [Help, Version](#help)
+- [Formatting](#formatting)
+- [Initialization](#init)
+- [Download and Install Modules](#download)
+- [Validation](#validation)
+- [Plan Your Infrastructure](#plan)
+- [Deploy Your Infrastructure](#deploy)
+- [Destroy Your Infrastructure](#destroy)
+- ['Taint' or 'Untaint' Your Resources](#taint)
+- [Refresh the State File](#refresh)
+- [Show Your State File](#show)
+- [Manipulate Your State File](#state)
+- [Import Existing Infrastructure](#import)
+- [Get Provider Information](#provider)
+- [Manage Your Workspaces](#workspace)
+- [View Your Outputs](#output)
+- [Release a Lock on Your Workspace](#release)
+- [Log In and Out to a Remote Host (Terraform Cloud)](#login)
+- [Produce a Dependency Diagram](#graph)
+- [Test Your Expressions](#test)
+
+### 1. Help, Version <a name="help"></a>
 
 #### Get the general help for Terraform
 
@@ -20,7 +42,7 @@ terraform fmt -help
 terraform version
 ```
 
-### 2. Formatting
+### 2. Formatting <a name="formatting"></a>
 
 #### Format your Terraform configuration files using the HCL language standard
 
@@ -46,7 +68,7 @@ terraform fmt --diff
 terraform fmt --check
 ```
  
-### 3. Initialization
+### 3. Initialization <a name="init"></a>
 
 #### Terraform Init Command (performs Backend Initialization, Child Module Installation, and Plugin Installation)
 
@@ -83,7 +105,9 @@ terraform init -migrate-state
 ```
 terraform init -verify-plugins=false
 ```
-### 4. Download and Install Modules
+
+### 4. Download and Install Modules <a name="download"></a>
+
 Note this is usually not required as this is part of the terraform init command.
 
 #### Download and installs modules needed for the configuration
@@ -98,7 +122,7 @@ terraform get
 terraform get -update
 ```
 
-### 5. Validation
+### 5. Validation <a name="validation"></a>
 
 #### Validate the configuration files in your directory and does not access any remote state or services
 - Terraform init should be run before 'validate' command.
@@ -113,7 +137,7 @@ terraform validate
 terraform validate -json
 ```
 
-### 6. Plan Your Infrastructure
+### 6. Plan Your Infrastructure <a name="plan"></a>
 
 #### Plan will generate an execution plan
 
@@ -134,7 +158,7 @@ terraform plan -out=<path>
 terraform plan -destroy
 ```
 
-### 7. Deploy Your Infrastructure
+### 7. Deploy Your Infrastructure <a name="deploy"></a>
 
 #### Create or update infrastructure depending on the configuration files
 - By default, a plan will be generated first and will need to be approved (yes/no) before it is applied.
@@ -188,7 +212,7 @@ terraform apply -var-file="varfile.tfvars"
 terraform apply -target="module.appgw.0"
 ```
 
-### 8. Destroy Your Infrastructure
+### 8. Destroy Your Infrastructure <a name="destroy"></a>
 
 #### Destroy the infrastructure managed by Terraform
 
@@ -215,7 +239,7 @@ terraform destroy --auto-approve
 terraform destroy -target="module.appgw.resource[\"key\"]"
 ```
 
-### 9. 'Taint' or 'Untaint' Your Resources
+### 9. 'Taint' or 'Untaint' Your Resources  <a name="taint"></a>
 - Use the taint command to mark a resource as not fully functional. It will be deleted and re-created.
 
 #### Taint a specified resource instance
@@ -230,7 +254,7 @@ terraform taint vm1.name
 terraform untaint vm1.name
 ```
 
-### 10. Refresh the State File
+### 10. Refresh the State File <a name="refresh"></a>
 
 #### Modify the state file with updated metadata containing information on the resources being managed in Terraform
 - Will not modify your infrastructure.
@@ -239,7 +263,7 @@ terraform untaint vm1.name
 terraform refresh
 ```
 
-### 11. View Your State File
+### 11. Show Your State File <a name="show"></a>
 
 #### Show the state file in a human-readable format
 
@@ -254,7 +278,7 @@ terraform show
 terraform show <path to statefile>
 ```
 
-### 12. Manipulate Your State File
+### 12. Manipulate Your State File <a name="state"></a>
 
 #### Lists out all the resources that are tracked in the current state file
 
@@ -300,7 +324,7 @@ terraform state rm
 terraform state show <resourcename>
 ```
 
-### 13. Import Existing Infrastructure
+### 13. Import Existing Infrastructure <a name="import"></a>
 
 #### Import Existing Infrastructure into Your Terraform State
 
@@ -310,18 +334,7 @@ terraform state show <resourcename>
 terraform import vm1.name -i id123
 ```
 
-
-### 13. Import Existing Infrastructure
-
-#### Import Existing Infrastructure into Your Terraform State
-
-- Import a VM with id123 into the configuration defined in the configuration files under vm1.name
-
-```
-terraform import vm1.name -i id123
-```
-
-### 14. Get Provider Information
+### 14. Get Provider Information <a name="provider"></a>
 
 #### Display a tree of providers used in the configuration files and their requirements
 
@@ -329,7 +342,7 @@ terraform import vm1.name -i id123
 terraform providers
 ```
 
-### 15. Manage Your Workspaces
+### 15. Manage Your Workspaces <a name="workspace"></a>
 
 #### Show the name of the current workspace
 
@@ -361,7 +374,7 @@ terraform workspace new <workspace name>
 terraform workspace delete <workspace name>
 ```
 
-### 16. View Your Outputs
+### 16. View Your Outputs <a name="output"></a>
 
 #### List all the outputs currently held in your state file
 - These are displayed by default at the end of a terraform apply, this command can be useful if you want to view them independently.
@@ -389,7 +402,7 @@ terraform output -json
 terraform output vm1_public_ip
 ```
 
-### 17. Release a Lock on Your Workspace
+### 17. Release a Lock on Your Workspace <a name="release"></a>
 
 #### Remove the lock with the specified lock ID from your workspace
 - Useful when a lock has become ‘stuck’, usually after an incomplete Terraform run.
@@ -398,7 +411,7 @@ terraform output vm1_public_ip
 terraform force-unlock <lock_id>
 ```
 
-### 18. Log In and Out to a Remote Host (Terraform Cloud)
+### 18. Log In and Out to a Remote Host (Terraform Cloud) <a name="login"></a>
 
 #### Grab an API token for Terraform cloud (app.terraform.io) using your browser
 
@@ -424,7 +437,7 @@ terraform logout
 terraform logout <hostname>
 ```
  
-### 19. Produce a Dependency Diagram
+### 19. Produce a Dependency Diagram <a name="graph"></a>
 
 #### Produce a graph in DOT language showing the dependencies between objects in the state file
 - This can then be rendered by a program called Graphwiz (amongst others).
@@ -451,7 +464,7 @@ terraform graph -type=plan
 terraform graph -draw-cycles
 ```
 
-### 20. Test Your Expressions
+### 20. Test Your Expressions <a name="test"></a>
 
 #### Allow testing and exploration of expressions on the interactive console using the command line
 
