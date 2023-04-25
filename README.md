@@ -124,6 +124,8 @@ terraform destroy --var-file="terraform-prod.tfvars"        # specific variable 
 
   ![image](https://user-images.githubusercontent.com/10358317/234229500-8aa69574-d59f-4a78-8615-25f1a78c971f.png)
 
+- Terraform Workflow:
+
   ![image](https://user-images.githubusercontent.com/10358317/231147788-ba40b795-4050-49df-b1ad-48b273257410.png)
 
 - TF state file stores the latest status of the infrastructure after running "apply" command.
