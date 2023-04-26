@@ -491,12 +491,18 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
   ![image](https://user-images.githubusercontent.com/10358317/234044290-e14650ed-93b4-4c49-8891-edeb959ffacb.png)
 
 ## Details <a name="details"></a>
+- To validate the Terraform files:
+  - "terraform validate"
+- For dry-run:
+  - "terraform plan"
+- For formatting:
+  - "terraform fmt"
 - For debugging:
-  - Bash: export TF_LOG="DEBUG"
-  - PowerShell: $env:TF_LOG="DEBUG"
+  - **Bash:** export TF_LOG="DEBUG"
+  - **PowerShell:** $env:TF_LOG="DEBUG"
 - For debug logging:  
-  - Bash: export TF_LOG_PATH="tmp/terraform.log"
-  - PowerShell: $env:TF_LOG_PATH="C:\tmp\terraform.log"
+  - **Bash:** export TF_LOG_PATH="tmp/terraform.log"
+  - **PowerShell:** $env:TF_LOG_PATH="C:\tmp\terraform.log"
 
 ## Terraform Cheatsheet <a name="cheatsheet"></a>
 
