@@ -409,7 +409,8 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
 ### SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances) <a name="ebs_efs_ec2"></a>
 - This sample shows:
   - how to create EBS, mount on Ubuntu and Windows Instances,
-  - how to create EFS, mount on Ubuntu Instance.
+  - how to create EFS, mount on Ubuntu Instance,
+  - how to provision VPC, subnet, IGW, route table, security group.
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ec2-ebs-efs
 - **Go to the Hands-On Sample:**
   - [SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances)](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE03-EC2-EBS-EFS.md)
