@@ -3,7 +3,7 @@
 This sample shows:
 - 
 
-**Code:** 
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/gitlabserver-on-premise-runner-on-EC2/
 
 ### Prerequisite
 
@@ -38,6 +38,8 @@ services:
     shm_size: '256m'
 ```
 
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/gitlabserver-on-premise-runner-on-EC2/docker-compose.yml
+
 - This runs on 127.0.0.1:150 when you run "netstat -an" on windows, but we want to run it on the host machine IP "192.168.178.28:150"
 - Use PORT Proxy from 127.0.0.1:150 to 192.168.178.28:150
 
@@ -67,6 +69,8 @@ netsh interface portproxy add v4tov4 listenport=150 connectaddress=127.0.0.1 con
   ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/1a692453-4b6e-4bc6-9898-bfe31f28ee1d)
 
 - Create EC2 on AWS with:
+
+**Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/gitlabserver-on-premise-runner-on-EC2/main.tf
 
 ```
 terraform init
