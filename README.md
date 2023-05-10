@@ -37,7 +37,7 @@ These samples focus on how to create and use AWS components (EC2, EBS, EFS, IAM 
 - [SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE06-EKS-ManagedNodes-Blueprint.md)
 - [SAMPLE-07: CI/CD on AWS => Provisioning CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy, Running on Lambda Container](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE07-CodeCommit-Pipeline-Build-Deploy-Lambda.md)
 - [SAMPLE-08: Provisioning S3 and CloudFront to serve Static Web Site](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE08-S3-CloudFront-Static-WebSite.md)
-- [SAMPLE-09: Running Gitlab Server using Docker on Local Machine and Making Connection to Provisioned Gitlab Runner on EC2 in Home Internet without Using VPN]()
+- [SAMPLE-09: Running Gitlab Server using Docker on Local Machine and Making Connection to Provisioned Gitlab Runner on EC2 in Home Internet without Using VPN](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE09-GitlabServer-on-Premise-GitlabRunner-on-EC2.md)
 
 
 # Table of Contents
@@ -67,6 +67,7 @@ These samples focus on how to create and use AWS components (EC2, EBS, EFS, IAM 
   - [SAMPLE-06: Provisioning EKS (Elastic Kubernetes Service) with Managed Nodes using Blueprint and Modules](#eks_managednodes_blueprint)
   - [SAMPLE-07: CI/CD on AWS => Provisioning CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy, Running on Lambda Container](#ci_cd)
   - [SAMPLE-08: Provisioning S3 and CloudFront to serve Static Web Site](#s3_cloudfront)
+  - [SAMPLE-09: Running Gitlab Server using Docker on Local Machine and Making Connection to Provisioned Gitlab Runner on EC2 in Home Internet without Using VPN](#gitlabrunner)
 - [Details](#details)
 - [Terraform Cheatsheet](#cheatsheet)
 - [Other Useful Resources Related Terraform](#resource)
@@ -492,6 +493,19 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
 
   ![image](https://user-images.githubusercontent.com/10358317/234044290-e14650ed-93b4-4c49-8891-edeb959ffacb.png)
 
+ ### SAMPLE-09: Running Gitlab Server using Docker on Local Machine and Making Connection to Provisioned Gitlab Runner on EC2 in Home Internet without Using VPN <a name="gitlabrunner"></a>
+ 
+- This sample shows:
+  - how to run Gitlab Server using Docker on WSL2 on-premise,
+  - how to redirect external traffic to docker container port (Gitlab server),
+  - how to configure on-premise PC network configuration,
+  - how to run EC2 and install docker, gitlab-runner on EC2,
+  - how to register Gitlab runner on EC2 to Gitlab Server on-premise (in Home),
+  - how to run job on EC2 and returns artifacts to Gitlab Server on-premise (in Home).
+- **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/gitlabserver-on-premise-runner-on-EC2/
+- **Go to the Hands-On Sample:**
+  - [SAMPLE-09: Running Gitlab Server using Docker on Local Machine and Making Connection to Provisioned Gitlab Runner on EC2 in Home Internet without Using VPN](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE09-GitlabServer-on-Premise-GitlabRunner-on-EC2.md)
+  
 ## Details <a name="details"></a>
 - To validate the Terraform files:
   - "terraform validate"
