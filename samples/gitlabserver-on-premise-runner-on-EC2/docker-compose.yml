@@ -1,0 +1,20 @@
+# Gitlab Server on WSL2 (Linux)
+version: '3.6'
+services:
+  web:
+    image: 'gitlab/gitlab-ee:latest'
+    restart: always
+    hostname: 'gitlab.example.com'
+    environment:
+      GITLAB_OMNIBUS_CONFIG: |
+        external_url 'http://gitlab.example.com'
+        #external_url 'https://gitlab.example.com'
+    ports:
+      - '150:80'
+      - '443:443'
+      - '22:22'
+    volumes:
+      - '/home/omer/gitlab-tmp/config:/etc/gitlab'
+      - '/home/omer/gitlab-tmp/logs:/var/log/gitlab'
+      - '/home/omer/gitlab-tmp/data:/var/opt/gitlab'
+    shm_size: '256m'
