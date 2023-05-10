@@ -1,0 +1,73 @@
+.image-linux: &image-linux
+  image: 'python:3.7'
+
+.image-windows: &image-windows
+  image: 'omerbsezer/python:3.7-windowsservercore-1809'
+
+stages:
+  - build_debug
+  - run_test
+
+workflow:
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+
+.build_linux: &build_linux
+  <<: *image-linux
+  script:
+    - python --version
+    - pip install -r requirements.txt
+    - pwd
+    - pylint --version
+    - pylint -d C0301 src/*.py
+  tags:
+    - ec2-shared
+
+.build_windows: &build_windows
+  <<: *image-windows
+  script:
+    - whoami
+    - python --version
+    - pip install -r requirements.txt
+    - pwd
+    - pylint --version
+    - cd src/; pylint -d C0301 main.py
+  tags:
+    - ec2-shared-windows
+
+build_linux_debug:
+  <<: *build_linux
+  stage: build_debug
+
+build_windows_debug:
+  extends: .build_windows
+  stage: build_debug
+
+run_linux_test:
+  <<: *image-linux
+  stage: run_test
+  needs:
+    - build_linux_debug
+  script:
+    - python --version
+    - pip install -r requirements.txt
+    - cd test/;pytest -v
+  coverage: '/lines: \d+\.\d+/'
+  tags:
+    - ec2-shared
+
+run_windows_test:
+  <<: *image-windows
+  stage: run_test
+  needs:
+    - build_windows_debug
+  script:
+    - python --version
+    - pip install -r requirements.txt
+    - cd test/;pytest -v
+  tags:
+    - ec2-shared-windows
+
+      
+
+
