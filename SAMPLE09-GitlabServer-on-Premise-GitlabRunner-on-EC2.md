@@ -1,7 +1,12 @@
 ## SAMPLE-09: Running Gitlab Server using Docker on Local Machine and Making Connection to Provisioned Gitlab Runner on EC2 in Home Internet without Using VPN
 
 This sample shows:
-- 
+- how to run Gitlab Server using Docker on WSL2 on-premise,
+- how to redirect external traffic to docker container port (Gitlab server),
+- how to configure on-premise PC network configuration,
+- how to run EC2 and install docker, gitlab-runner on EC2,
+- how to register Gitlab runner on EC2 to Gitlab Server on-premise (in Home),
+- how to run job on EC2 and returns artifacts to Gitlab Server on-premise (in Home).
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/gitlabserver-on-premise-runner-on-EC2/
 
