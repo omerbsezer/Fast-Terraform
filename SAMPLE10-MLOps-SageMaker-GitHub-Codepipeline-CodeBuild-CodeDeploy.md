@@ -86,3 +86,53 @@ terraform apply
 
   ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/5b6da22e-7ec8-4a61-821b-3ebc8d272593)
 
+- ModelBuild was done successfully:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/9e4bad11-883e-463a-928e-d87834439e6f)
+  
+- ModelDeploy:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/a77c0467-3453-41dc-8f8c-c3995973bf82)
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/6fb4beb5-3d17-459f-8b31-a487b07d39f1)
+
+- CloudFormation, stack: deploy-staging
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/205f6a3e-1e68-4fc6-895b-d30810c4e50c)
+
+- SageMaker Dashboard, staging endpoint in service:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/4121d5c4-c2db-4a2d-8a83-c5b2183e334b)
+
+- Model:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/ab3e3090-5f5b-42aa-84ff-53cc17a9a380)
+
+- Try Staging Endpoint with notebook (end2end.ipynb, last cell, enter the endpointname):
+
+```
+import pandas as pd
+import numpy as np
+import sagemaker
+import boto3
+from sagemaker import get_execution_role
+
+test_data=pd.read_csv('test.csv',header=None)
+testdata1=test_data.iloc[0:1,1:]
+
+runtime = boto3.client("sagemaker-runtime")
+Endpoint_name='aws-ml-11052023-staging-0306' #<your endpoint name> # update to your own endpoint name
+
+prediction = runtime.invoke_endpoint(
+    EndpointName=Endpoint_name,
+    Body=testdata1.to_csv(header=False, index=False).encode("utf-8"),
+    ContentType="text/csv",
+    Accept= "text/csv",
+)
+
+print(prediction["Body"].read())
+```
+- Endpoint returned the result:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/58d56412-b3a2-42bc-978c-4c828d3d1af8)
+
