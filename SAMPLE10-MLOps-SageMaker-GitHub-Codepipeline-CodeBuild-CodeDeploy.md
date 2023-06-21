@@ -188,3 +188,6 @@ aws s3 sync s3://artifact-ml-11052023 C:\Users\oesezer\Desktop\aws-artifacts
   ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/cfcf5bc8-a3bc-4ef5-a661-ab6873aa5f65)
 
 - Check whether all created artifacts are deleted on CodePipeline, S3, CloudFormation, SageMaker, and CloudWatch (LogGroups) or not. If still some of the artifacts are in the AWS, please delete them all. 
+
+## References
+- https://github.com/aws-samples/aws-mlops-pipelines-terraform
