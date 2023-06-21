@@ -20,7 +20,7 @@ This sample shows:
 **Architecture:**
 - **Model Build Pipeline Source Code, modelbuild_pipeline:**  https://github.com/omerbsezer/modelbuild_pipeline 
 - **Model Deploy Pipeline Source Code, modeldeploy_pipeline:** https://github.com/omerbsezer/modeldeploy_pipeline
-- AWS Code Pipeline for **Model Build** (CI)
+- AWS Code Pipeline for **Model Build** (CI):
   - AWS Code Pipeline (**modelbuild_ci_pipeline.tf**)
     - Stage: Source (Hook from GitHub: **modelbuild_hooks.tf**)
     - Stage: Build (**modelbuild_codebuild.tf: artifacts, environment, source (modelbuild_buildspec.yml: run build pipeline)**)
@@ -29,7 +29,7 @@ This sample shows:
     - Model Training Step (**modelbuild_pipeline project: pipeline.py => XGB BuiltIn Container**)
     - Evaluation Step (**modelbuild_pipeline project: pipeline.py => evaluate.py, ConditionStep to evaluate model quality**)
     - Registering Model Step (**modelbuild_pipeline project: pipeline.py => RegisterModel**)
-- AWS Code Pipeline for **Model Deploy** (CD)
+- AWS Code Pipeline for **Model Deploy** (CD):
   - AWS Code Pipeline (**modeldeploy_cd_pipeline.tf**)
     - Stage: Source (Hook from GitHub: **modeldeploy_hooks.tf**)
     - Stage: Build (**modeldeploy_codebuild.tf: artifacts, environment, source (modeldeploy_buildspec.yml: run deploy pipeline => modeldeploy_pipeline project: build.py,  cloud formation to create endpoint)**)  
