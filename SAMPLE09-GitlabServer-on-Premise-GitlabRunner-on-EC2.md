@@ -63,6 +63,8 @@ docker exec -it git-server_web_1 bash
 
 - If you run docker in the WSL, call browser in the WSL: "sensible-browser http://gitlab.example.com:150/"
 
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/f3e6d11a-6b6e-4ab6-a8c6-01c718090243)
+
 - This runs on 127.0.0.1:150 when you run "netstat -an" on windows, but we want to run it on the host machine IP "192.168.178.28:150"
 - Use PORT Proxy from 127.0.0.1:150 to 192.168.178.28:150
 
