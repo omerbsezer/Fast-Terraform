@@ -8,11 +8,14 @@ This sample shows:
 - how to create and test models using Notebooks
 
 **Notes:**
-- Source code was pulled from and updated:
+- Original Source code was pulled, updated, and adapted:
   - https://github.com/aws-samples/aws-mlops-pipelines-terraform
+- "Modelbuild_Pipeline" and "Modeldeploy_Pipeline" are uploaded before. After applying terraform, Webhook in the CodePipeline pulls it from GitHub to inject it into AWS.
+- If you run it the first time, please open to request to AWS for the instance: "ml.m5.xlarge" ("ResourceLimitExceeded").
+  - https://repost.aws/knowledge-center/sagemaker-resource-limit-exceeded-error  
 
+**Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/mlops-sagemaker-github-codepipeline-codebuild-codedeploy 
 
-**Code:** 
 
 **Architecture:**
 - **Model Build Pipeline Source Code, modelbuild_pipeline:**  https://github.com/omerbsezer/modelbuild_pipeline 
