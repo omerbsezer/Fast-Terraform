@@ -15,8 +15,8 @@ This sample shows:
 **Code:** 
 
 **Architecture:**
-- **Model Build Pipeline Source Code, modelbuild_pipeline:**:  https://github.com/omerbsezer/modelbuild_pipeline 
-- **Model Deploy Pipeline Source Code, modeldeploy_pipeline:**: https://github.com/omerbsezer/modeldeploy_pipeline
+- **Model Build Pipeline Source Code, modelbuild_pipeline:**  https://github.com/omerbsezer/modelbuild_pipeline 
+- **Model Deploy Pipeline Source Code, modeldeploy_pipeline:** https://github.com/omerbsezer/modeldeploy_pipeline
 - AWS Code Pipeline for **Model Build** (CI)
   - AWS Code Pipeline (**modelbuild_ci_pipeline.tf**)
     - Stage: Source (Hook from GitHub: **modelbuild_hooks.tf**)
