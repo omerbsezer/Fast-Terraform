@@ -178,7 +178,11 @@ print(prediction["Body"].read())
 aws s3 sync s3://artifact-ml-11052023 C:\Users\oesezer\Desktop\aws-artifacts
 ```
 
-- Downloaded to the local:
-   ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/d1e30b6c-7497-4913-a25b-9e1bbd92556e)
+- Downloaded to the local PC:
 
- 
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/d1e30b6c-7497-4913-a25b-9e1bbd92556e)
+
+- Destroy with "terraform destroy":
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/cfcf5bc8-a3bc-4ef5-a661-ab6873aa5f65)
+
