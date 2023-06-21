@@ -69,6 +69,7 @@ These samples focus on how to create and use AWS components (EC2, EBS, EFS, IAM 
   - [SAMPLE-07: CI/CD on AWS => Provisioning CodeCommit and CodePipeline, Triggering CodeBuild and CodeDeploy, Running on Lambda Container](#ci_cd)
   - [SAMPLE-08: Provisioning S3 and CloudFront to serve Static Web Site](#s3_cloudfront)
   - [SAMPLE-09: Running Gitlab Server using Docker on Local Machine and Making Connection to Provisioned Gitlab Runner on EC2 in Home Internet without Using VPN](#gitlabrunner)
+  - [SAMPLE-10: Implementing MLOps Pipeline using GitHub, AWS CodePipeline, AWS CodeBuild, AWS CodeDeploy, and AWS Sagemaker (Endpoint)](#sagemaker)
 - [Details](#details)
 - [Terraform Cheatsheet](#cheatsheet)
 - [Other Useful Resources Related Terraform](#resource)
@@ -506,7 +507,21 @@ terraform workspace delete [WorkspaceName]     # delete existed workspace
 - **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/gitlabserver-on-premise-runner-on-EC2/
 - **Go to the Hands-On Sample:**
   - [SAMPLE-09: Running Gitlab Server using Docker on Local Machine and Making Connection to Provisioned Gitlab Runner on EC2 in Home Internet without Using VPN](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE09-GitlabServer-on-Premise-GitlabRunner-on-EC2.md)
-  
+
+ ### SAMPLE-10: Implementing MLOps Pipeline using GitHub, AWS CodePipeline, AWS CodeBuild, AWS CodeDeploy, and AWS Sagemaker (Endpoint) <a name="sagemaker"></a>
+
+- This sample shows:
+  - how to create MLOps Pipeline 
+  - how to use GitHub Hooks (Getting Source Code from Github to CodePipeline)
+  - how to create Build CodePipeline (Source, Build), CodeBuild (modelbuild_buildspec.yml), Deploy CodePipeline (Source, Build, DeployStaging, DeployProd), CodeBuild (modeldeploy_buildspec.yml)
+  - how to save the model and artifacts on S3
+  - how to create and test models using Notebooks
+- **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/mlops-sagemaker-github-codepipeline-codebuild-codedeploy
+- **Go to the Hands-On Sample:**
+  - [SAMPLE-10: Implementing MLOps Pipeline using GitHub, AWS CodePipeline, AWS CodeBuild, AWS CodeDeploy, and AWS Sagemaker (Endpoint)](https://github.com/omerbsezer/Fast-Terraform/blob/main/SAMPLE10-MLOps-SageMaker-GitHub-Codepipeline-CodeBuild-CodeDeploy.md)
+
+   ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/fcaf0b53-90d9-4e7b-af3d-69aa03592ac2)
+
 ## Details <a name="details"></a>
 - To validate the Terraform files:
   - "terraform validate"
