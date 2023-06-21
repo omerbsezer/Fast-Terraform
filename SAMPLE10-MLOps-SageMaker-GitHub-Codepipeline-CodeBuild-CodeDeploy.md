@@ -172,7 +172,8 @@ print(prediction["Body"].read())
 
   ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/2d30f570-ad34-4972-bee7-05a5058f7c3b)
 
- - Download artifacts on S3:
+- Delete stacks manually in Cloudformation.
+- Download artifacts on S3:
 
 ```
 aws s3 sync s3://artifact-ml-11052023 C:\Users\oesezer\Desktop\aws-artifacts
@@ -186,3 +187,4 @@ aws s3 sync s3://artifact-ml-11052023 C:\Users\oesezer\Desktop\aws-artifacts
 
   ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/cfcf5bc8-a3bc-4ef5-a661-ab6873aa5f65)
 
+- Check whether all created artifacts are deleted on CodePipeline, S3, CloudFormation, SageMaker, and CloudWatch (LogGroups) or not. If still some of the artifacts are in the AWS, please delete them all. 
