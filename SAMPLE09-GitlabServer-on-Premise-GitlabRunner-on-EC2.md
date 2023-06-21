@@ -45,6 +45,24 @@ services:
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/gitlabserver-on-premise-runner-on-EC2/docker-compose.yml
 
+- Run the following in where the dockercompose.yml is present:
+
+```
+docker-compose up -d
+# if u don't know the username and password
+docker container ls -a
+docker exec -it git-server_web_1 bash
+> gitlab-rake gitlab:password:reset  # run in the container
+> username: root
+> password:987aws12345
+> Password successfully updated for user with username root.
+> exit
+```
+
+![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/0c122fd7-645a-40c3-bfb6-799d9c2fcd82)
+
+- If you run docker in the WSL, call browser in the WSL: "sensible-browser http://gitlab.example.com:150/"
+
 - This runs on 127.0.0.1:150 when you run "netstat -an" on windows, but we want to run it on the host machine IP "192.168.178.28:150"
 - Use PORT Proxy from 127.0.0.1:150 to 192.168.178.28:150
 
