@@ -39,7 +39,7 @@ This sample shows:
       - Action: Approval (**Manual Approval by User**)
     - Stage: DeployProd:
       - Action: Deploy (**Cloudformation, DeployResourcesProd: modeldeploy_pipeline project => endpoint-config-template.yml**)
-- Notebooks (for testing)
+- Notebooks (for testing) (region: us-east-1)
   - End2end.ipynb
     - https://github.com/omerbsezer/Fast-Terraform/blob/main/samples/mlops-sagemaker-github-codepipeline-codebuild-codedeploy/Notebooks/SageMaker_Customer_Churn_XGB_end2end.ipynb
   - Pipeline.ipynb (Sagemaker Data Pipeline)
@@ -55,7 +55,7 @@ This sample shows:
 
 
 ## Steps
-
+- Before running Terraform, upload "Modelbuild_Pipeline" and "Modeldeploy_Pipeline" in your GitHub account.
 - Run:
 
 ```
@@ -65,3 +65,24 @@ terraform validate
 terraform plan
 terraform apply
 ```
+
+- After run:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/7e2060d0-af1c-4b5e-af43-a100f163453b)
+
+- AWS CodePipeline:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/7daef38d-2901-4087-b990-3d8b3676783e)
+
+- ModelBuild:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/1bc7cfe7-a7b5-4155-b4a1-cbb8763a036d)
+
+- ModelBuild Log:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/72ba0e56-a66f-4427-b35c-5680ae681fc6)
+  
+- AWS S3:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/5b6da22e-7ec8-4a61-821b-3ebc8d272593)
+
