@@ -38,7 +38,7 @@ This sample shows:
       - Action: Deploy (**Cloudformation, DeployResourcesProd: modeldeploy_pipeline project => endpoint-config-template.yml**)
 - Notebooks (for testing)
   - End2end.ipynb
-  - Pipeline.ipynb 
+  - Pipeline.ipynb (Sagemaker Data Pipeline) 
     
    ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/09c0ac8a-0fe5-4877-8440-b29a22bad5cf)
 
