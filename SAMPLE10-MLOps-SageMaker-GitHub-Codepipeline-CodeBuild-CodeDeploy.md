@@ -89,7 +89,15 @@ terraform apply
 - ModelBuild was done successfully:
 
   ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/9e4bad11-883e-463a-928e-d87834439e6f)
-  
+
+- CloudWatch to see the training accuracy:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/fa0dbc0e-e3a0-48d2-8c75-309d6dcf9e19)
+
+- CloudWatch, Log Groups, Train Error:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/095870fb-ff0d-4ce8-bbe1-348779d9be25)
+    
 - ModelDeploy:
 
   ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/a77c0467-3453-41dc-8f8c-c3995973bf82)
@@ -104,9 +112,13 @@ terraform apply
 
   ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/4121d5c4-c2db-4a2d-8a83-c5b2183e334b)
 
-- Model:
+- SageMaker, Model:
 
   ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/ab3e3090-5f5b-42aa-84ff-53cc17a9a380)
+
+- S3, Model, possible to download:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/09bdaf28-582a-45bc-b4b1-d053da0ec206)
 
 - Try Staging Endpoint with notebook (end2end.ipynb, last cell, enter the endpointname):
 
@@ -136,3 +148,37 @@ print(prediction["Body"].read())
 
   ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/58d56412-b3a2-42bc-978c-4c828d3d1af8)
 
+- Approve the Product on the CodePipeline:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/f2ee09ce-3d65-4448-9732-a5cc5a9277db)
+
+- SageMaker Dashboard, 2 Endpoints are in-service:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/cfd146dd-cbe5-4622-946f-0ca457597e26)
+
+- SageMaker, Prod Endpoint:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/444de0ff-f29d-42cd-b471-e17e4b13b904)
+
+- CloudFormation:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/f803e721-2d4c-4545-a0ba-d72a260cf2e0)
+
+- Test Prod Endpoint, returns results:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/e0ea3640-5b16-47ff-9fbf-cd1cdc81b974)
+
+- Delete Endpoints manually, if the endpoints are in-service, you have to pay their cost:
+
+  ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/2d30f570-ad34-4972-bee7-05a5058f7c3b)
+
+ - Download artifacts on S3:
+
+```
+aws s3 sync s3://artifact-ml-11052023 C:\Users\oesezer\Desktop\aws-artifacts
+```
+
+- Downloaded to the local:
+   ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/d1e30b6c-7497-4913-a25b-9e1bbd92556e)
+
+ 
