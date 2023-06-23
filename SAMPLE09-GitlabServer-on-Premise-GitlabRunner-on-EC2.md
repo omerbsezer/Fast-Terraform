@@ -89,6 +89,7 @@ netsh interface portproxy add v4tov4 listenport=150 connectaddress=127.0.0.1 con
   
   ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/2349083d-c9b2-4ad2-980a-24839d169e76)
 
+- Close/pause the firewall to reach the service from outside.
 - Learn the external IP with googling 'what is my IP', and test 'externalIP:150' on browser:
 
   ![image](https://github.com/omerbsezer/Fast-Terraform/assets/10358317/1a692453-4b6e-4bc6-9898-bfe31f28ee1d)
