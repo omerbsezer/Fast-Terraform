@@ -1,0 +1,2 @@
+this is test file 
+transferring this file to remote instance with "provisioner file"
