@@ -8,10 +8,12 @@ terraform {
   required_version = ">= 1.2.0"
 }
 
+# VPC on which region
 provider "aws" {
 	region = "eu-central-1"
 }
 
+# Creates a new VPC with a CIDR block of 10.0.0.0/16, which allows up to 65,536 IP addresses. DNS hostnames are enabled to allow DNS resolution inside the VPC. 
 resource "aws_vpc" "my_vpc" {
   cidr_block           = "10.0.0.0/16"
   enable_dns_hostnames = true
@@ -20,6 +22,7 @@ resource "aws_vpc" "my_vpc" {
   }
 }
 
+# Creates a public subnet within the VPC with a CIDR block of 10.0.0.0/24, which allows up to 256 IP addresses.
 resource "aws_subnet" "public" {
   vpc_id            = aws_vpc.my_vpc.id
   cidr_block        = "10.0.0.0/24"
@@ -29,6 +32,7 @@ resource "aws_subnet" "public" {
   }
 }
 
+# Creates an IG and attaches it to the VPC, allowing instances in the VPC to communicate with the internet.
 resource "aws_internet_gateway" "my_vpc_igw" {
   vpc_id = aws_vpc.my_vpc.id
   tags = {
@@ -36,6 +40,7 @@ resource "aws_internet_gateway" "my_vpc_igw" {
   }
 }
 
+# The route table for the VPC allows all outbound traffic (0.0.0.0/0) to be routed through the internet gateway.
 resource "aws_route_table" "my_vpc_eu_central_1c_public" {
     vpc_id = aws_vpc.my_vpc.id
     route {
@@ -46,11 +51,16 @@ resource "aws_route_table" "my_vpc_eu_central_1c_public" {
         Name = "Public Subnet Route Table"
     }
 }
+
+# Associates the route table with the public subnet, so the subnet can use the route to access the internet.
 resource "aws_route_table_association" "my_vpc_eu_central_1c_public" {
     subnet_id      = aws_subnet.public.id
     route_table_id = aws_route_table.my_vpc_eu_central_1c_public.id
 }
 
+# This SG is for only test/demo purpose. Please not leave open 22, 3389 for security reason if you have IG, and specific IP isn't defined.
+# Port 22 (SSH) for managing Linux instances. Port 80 (HTTP) for web traffic (Apache server). Port 3389 (RDP) for managing Windows instances. ICMP (ping), allowing pings from within the VPC.
+# Outbound traffic (egress): All outbound traffic is allowed (0.0.0.0/0).
 resource "aws_security_group" "allow_ssh" {
   name        = "allow_ssh_sg"
   description = "Allow SSH inbound connections"
@@ -94,6 +104,9 @@ resource "aws_security_group" "allow_ssh" {
   }
 }
 
+# Create Ubuntu instance. The AMI value varies from region to region and from OS to OS.
+# SSH Key pair: testkey
+# The user data script installs and starts an Apache web server and sets up a simple HTML page with the instance hostname.
 resource "aws_instance" "ubuntu2004" {
   ami                         = "ami-0e067cc8a2b58de59" # Ubuntu 20.04 eu-central-1 Frankfurt
   instance_type               = "t2.nano"
@@ -103,7 +116,7 @@ resource "aws_instance" "ubuntu2004" {
   associate_public_ip_address = true
   user_data = <<-EOF
 		           #! /bin/bash
-               sudo apt-get update
+                           sudo apt-get update
 		           sudo apt-get install -y apache2
 		           sudo systemctl start apache2
 		           sudo systemctl enable apache2
@@ -117,15 +130,16 @@ resource "aws_instance" "ubuntu2004" {
 resource "aws_instance" "win2019" {
 	ami                         = "ami-02c2da541ae36c6fc" # Windows 2019 Server eu-central-1 Frankfurt
 	instance_type               = "t2.micro"
-  key_name                    = "testkey"
-  vpc_security_group_ids      = [aws_security_group.allow_ssh.id]
-  subnet_id                   = aws_subnet.public.id  
+        key_name                    = "testkey"
+        vpc_security_group_ids      = [aws_security_group.allow_ssh.id]
+        subnet_id                   = aws_subnet.public.id  
 	associate_public_ip_address = true
-    tags = {
+        tags = {
 		Name = "Win 2019 Server"
 	}
 }
 
+# Output the public IP addresses of the Ubuntu and Windows EC2 instances
 output "instance_ubuntu2004_public_ip" {
   value = "${aws_instance.ubuntu2004.public_ip}"
 }
