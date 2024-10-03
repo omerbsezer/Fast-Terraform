@@ -21,6 +21,11 @@ There are 3 main parts:
 ## Steps
 
 - Create lambda.tf:
+  - **Terraform Configuration:** Specifies the AWS provider version and Terraform version.
+  - **IAM Role and Policy:** Creates an IAM role for the Lambda function and attaches a policy that allows the Lambda function to write logs to CloudWatch.
+  - **Zipping Lambda Code:** Prepares the Python code by zipping it into a format that Lambda can execute.
+  - **Lambda Function:** Creates a Lambda function using the specified IAM role, code, and runtime.
+  - **API Gateway Integration:** Grants API Gateway permission to invoke the Lambda function.
  
 ``` 
 terraform {
@@ -115,7 +120,10 @@ resource "aws_lambda_permission" "apigw" {
 
 ![image](https://user-images.githubusercontent.com/10358317/230722794-2ba9d223-90f3-4634-8fba-d5290ecf6e8a.png)
 
-- Create api-gateway.tf:
+- Create api-gateway.tf: 
+  - **Proxy Usage:** The {proxy+} path is used to dynamically route all requests to the Lambda function, eliminating the need to define individual paths and methods.
+  - **Flexibility:** The ANY method allows all HTTP methods, making the API flexible.
+  - **AWS_PROXY Integration:** Simplifies the interaction between API Gateway and Lambda by passing the entire request data to Lambda, allowing it to process dynamically.
  
 ```
 # Create API Gateway with Rest API type
