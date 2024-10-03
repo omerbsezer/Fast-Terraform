@@ -9,6 +9,8 @@ terraform {
 }
 
 # Create IAM Role for lambda
+# The assume_role_policy defines who or what can assume this role. In this case, it allows lambda to assume the role, which is necessary for Lambda functions to execute with this role's permissions.
+# The policy allows STS (Security Token Service) to manage temporary credentials for the Lambda service.
 resource "aws_iam_role" "lambda_role" {
  name   = "aws_lambda_role"
  assume_role_policy = <<EOF
@@ -28,7 +30,8 @@ resource "aws_iam_role" "lambda_role" {
 EOF
 }
 
-# IAM policy for the lambda
+# The policy gives permissions for Lambda to create log groups, log streams, and put log events in CloudWatch Logs.
+# Necessary permissions for Lambda to output logs for monitoring and debugging.
 resource "aws_iam_policy" "iam_policy_for_lambda" {
 
   name         = "aws_iam_policy_for_aws_lambda_role"
