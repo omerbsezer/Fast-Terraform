@@ -8,7 +8,7 @@ This sample shows:
 
 **Code:** https://github.com/omerbsezer/Fast-Terraform/tree/main/samples/ec2-vpc-ubuntu-win-ssh-rdp
 
-  ![1 VPC-IG-EC2](https://github.com/user-attachments/assets/072d4409-d312-44f0-9984-28540c702a8e)
+  ![1 VPC-IG-EC2](https://github.com/user-attachments/assets/29c5a207-bc35-43f1-8c4e-75d77acf77c1)
 
 ### Prerequisite
 
