@@ -4,7 +4,10 @@ This sample shows:
 - how to create Lambda function with Python code
 - how to create lambda role, policy, policy-role attachment, lambda api gateway permission, zipping code
 - how to create api-gateway resource and method definition, lambda - api gateway connection, deploying api gateway, api-gateway deployment URL as output
-- details on AWS Lambda, API-Gateway, IAM  
+- details on AWS Lambda, API-Gateway, IAM
+
+   ![3 Lambda-TF](https://github.com/user-attachments/assets/39e65457-5b4c-4ef7-b367-b8edbd549107)
+
 
 There are 3 main parts:
 - lambda.tf: It includes lambda function, lambda role, policy, policy-role attachment, lambda api gateway permission, zipping code
