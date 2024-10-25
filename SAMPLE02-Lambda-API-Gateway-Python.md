@@ -1,9 +1,9 @@
 ## SAMPLE-02: Provisioning Lambda Function, API Gateway and Reaching HTML Page in Python Code From Browser
 
 This sample shows:
-- how to create Lambda function with Python code
-- how to create lambda role, policy, policy-role attachment, lambda api gateway permission, zipping code
-- how to create api-gateway resource and method definition, lambda - api gateway connection, deploying api gateway, api-gateway deployment URL as output
+- how to create Lambda function with Python code,
+- how to create Lambda Role, Policy, Policy-Role attachment, Lambda API-gateway permission, uploading code,
+- how to create API-gateway resource and method definition, Lambda-API-gateway connection, deploying API-gateway,
 - details on AWS Lambda, API-Gateway, IAM
 
 ![3 Lambda-TF](https://github.com/user-attachments/assets/554cfb9b-44a3-4eb0-b278-a3ae5c25ffbe)
