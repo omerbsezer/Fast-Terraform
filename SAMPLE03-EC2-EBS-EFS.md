@@ -1,4 +1,4 @@
-## SAMPLE-03: EBS (Elastic Block Storage: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances)
+## SAMPLE-03: EBS (Elastic Block Store: HDD, SDD) and EFS (Elastic File System: NFS) Configuration with EC2s (Ubuntu and Windows Instances)
 
 This sample shows:
 - how to provision EBS, mount on Ubuntu and Windows Instances.
